@@ -1,0 +1,21 @@
+#notices=notice  
+%h1 All Recipes:
+%br
+- if user_signed_in?
+  = link_to 'Add new recipe', new_recipe_path, class: 'btn btn-primary', id: 'new-recipe-btn'
+%p
+
+
+
+#recipes-area
+- @recipes.each do |recipe|
+  %p
+  %div#box
+    //= link_to image_tag(recipe.image.url), recipe_path(recipe)
+    %b= link_to recipe.name, recipe_path(recipe.id)
+    %br
+    = truncate(recipe.description, length: 50)
+%br
+%br
+
+#paging= will_paginate @recipe

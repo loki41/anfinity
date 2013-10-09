@@ -1,0 +1,46 @@
+%p#notice= notice
+
+.row-fluid
+  .span12.hero-title= @project.name
+
+.row-fluid  
+  #portfolio-sidebar.span4
+    %table
+      %tr
+        %th= "Customer"
+      %tr
+        %td= @project.customer
+      %tr
+        %th= "Site Link"
+      %tr
+        %td= @project.site_link
+      %tr
+        %th= "Overview"
+      %tr
+        %td= @project.description
+      %tr
+        %th= "Duration"
+      %tr
+        %td= @project.duration  
+      %tr
+        %th= "Features"
+      %tr
+        %td= @project.features
+      %tr
+        %th= "Tecnologies"
+      %tr
+        %td= @project.tech
+
+      
+  #portfolio-area.span8
+    - file = "#{@project.name.downcase.tr(" ", "_")}_layout"
+    = render file rescue render 'comingsoon'
+
+   
+
+- if user_signed_in?
+  = link_to 'Edit', edit_project_path(@project)
+  |
+  = link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' } 
+  |
+  = link_to 'Back', projects_path

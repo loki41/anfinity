@@ -1,0 +1,14 @@
+- @projects.each do |p|
+  %div.span4.box
+    = link_to project_path(p.id) do
+      .content-item-img
+        .more-box
+          .mbl= "+"
+      .content-item-info= p.name
+  
+    
+%p
+
+- if user_signed_in?
+  .btn
+    = link_to 'New Project', new_project_path

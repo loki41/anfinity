@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Anfinity!</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+  <% if controller.action_name.to_s == "underconstruction" %>
+    <%= yield %>
+  <% else %>
+    <div class="row-fluid">
+  	  <div class="span8 container">
+
+  			<div id="header" class="row-fluid">
+  			  <div class="logo-box"> 
+  				<%= image_tag('logo.png') %> 
+  				<div class="logo-text">nfinty</div>
+  			  </div>
+			  
+  			  <div class="nav-menu">
+  			    <ul class="nav nav-pills">
+  				  <li> <%= link_to "portfolio", projects_path %>        </li>
+  			  	<li> <%= link_to "about",     about_path %>           </li>
+  				  <li> <%= link_to 'blog',      posts_path %> 	    		</li>
+  				  <li> <%= link_to 'cookbook',  recipes_path %> 			  </li>
+  				  <li> <%= link_to 'contact',   contact_path %>  			  </li>
+  				  <% if user_signed_in? %>
+  				    <li> <%= link_to "Logout", destroy_user_session_path, method: :delete%> </li>   
+  				  <% end %>
+  			    </ul>
+  			  </div>
+			 
+  			</div>
+      
+  		  <hr>
+
+  		  <div id="portfolio" class="row-fluid">
+  		    <%= yield %>
+  		  </div>
+	  
+  	    <hr>
+  	    <div id="footer">made with purpose</div>
+  	  </div>
+    </div>
+  <% end %>
+
+</body>
+</html>

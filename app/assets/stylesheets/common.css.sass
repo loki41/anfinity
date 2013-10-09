@@ -1,0 +1,185 @@
+//----------------------------------------------------------- CONSTRUCTION Styling
+#test-logo
+  width: 300px
+  height: 400px
+  margin: 0 auto
+  margin-top: 3%
+  font-size: 8.4em
+  a
+    color: #999
+    text-decoration: none
+    display: block
+
+.cs
+  font-size: 0.2em
+  letter-spacing: 6px
+  width: 300%
+  margin-left: -100.3%
+  text-align: center
+  
+
+
+//----------------------------------------------------------- COMMON Styling  
+@font-face
+  font-family: avenir
+  src: url('avenir.otf')
+
+  
+body 
+  line-height: 1
+  font-family: avenir !important
+  min-height: 740px
+  background-image: url(bkg_img.jpg)
+  
+.container
+  height: 100%
+  margin: 0 auto !important
+  float: none !important
+
+hr
+  height: 0.2px
+  display: block
+  position: relative
+  padding: 0
+  margin: 8px auto
+  margin-top: 0px !important
+  width: 100%
+  clear: both
+  border: none
+  border-top: 1px solid #ddd
+  border-bottom: 2px solid #fff
+  line-height: 0
+  overflow: visible
+
+.clear
+  clear: both
+  
+//----------------------------------------------------------- HEADER Styling  
+#header
+  margin-top: 1%
+  
+.logo-box
+  width: 230px
+  height: 105px
+  float: left
+
+.logo-box img
+  width: 80px
+  height: 100px
+  float: left
+
+.logo-text
+  float: left
+  font-size: 4em
+  margin-top: 31%
+  margin-left: -8%
+  font-family: avenir !important
+  
+//----------------------------------------------------------- NAV Styling
+.nav-menu
+  height: 0px
+  margin-top: 7%
+  font-size: 17px
+  letter-spacing: 2px
+
+
+.nav-menu ul
+  width: 65%
+  float: right
+
+
+.nav-menu ul li
+  text-align: center
+  width: 20%
+
+
+.nav-menu ul li a
+  color: #999
+  text-decoration: none
+  display: block
+
+  
+.nav-menu ul li a:hover 
+  color: #444
+  text-decoration: none
+
+
+.nav-pills>.active>a, .nav-pills>.active>a:hover, .nav-pills>.active>a:focus 
+  color: #fff
+  background-color: #ddd
+
+
+.active:hover a
+  -moz-box-shadow: -3px -1px 5px #ddd
+  -webkit-box-shadow: -3px -1px 5px #ddd
+  box-shadow: -3px -1px 5px #ddd
+
+
+.navbar .nav,
+.navbar .nav > li 
+  float: none
+  display: inline-block
+  display: inline
+  zoom: 1
+  vertical-align: top
+
+//----------------------------------------------------------- About Me Page
+#aboutMe
+  width: 880px
+  height: 300px
+  margin: 0 auto
+  border: 1px solid #ccc
+  .text-area
+    margin-left: 10px
+    height: 100%
+    width: 500px
+    float: left
+    display: block
+  .time-line  
+    margin-left: 10px
+    height: 100%
+    width: 350px
+    float: left
+    border-left: 1px solid #ccc
+    
+//---------------------------------Contact Page Styling:
+#contact
+  width: 880px
+  height: 150px
+  margin: 0 auto
+  border: 1px solid #ccc
+
+//---------------------------------Footer Styling:
+#footer
+  clear: both
+  width: 100%
+  height: 30px
+  padding-top: 10px
+  text-align: center
+
+//---------------------------------Informative styling:
+$error_color: #AB3938
+
+@mixin error_border 
+  border: 1px solid $error_color
+
+#notices
+  text-align: center
+  color: $error_color 
+
+#errors
+  @include error_border
+  text-align: center
+  color: $error_color
+
+
+.field_with_errors 
+  color: $error_color
+  input, textarea
+    @include error_border
+
+#form_error 
+  position: relative
+  bottom: 25px
+  left: 250px
+  color: $error_color

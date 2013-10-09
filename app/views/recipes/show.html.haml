@@ -1,0 +1,49 @@
+%h1
+  Recipe for - 
+  = @recipe.name  
+
+%br
+%p
+  .btn.btn-mini.btn-primary.control1.nav#text
+    = link_to 'View All', recipes_path 
+  .btn.btn-mini.btn-primary.control1.nav#text
+    = link_to 'previous', @recipe.previous
+  .btn.btn-mini.btn-primary.control1.nav#text
+    = link_to 'next', @recipe.next
+  - if user_signed_in?
+    .btn.btn-mini.btn-danger.control2#text
+      = link_to 'delete', recipe_path(@recipe), method: :delete, confirm: 'Are you sure you want to delete this recipe??'
+    .btn.btn-mini.btn-warning.control3#text
+      = link_to 'edit', edit_recipe_path(@recipe)
+  
+
+#pictureBox
+  //- unless @recipe.image.url.blank?
+  //  = image_tag @recipe.image.url
+    
+%p 
+  #ingredients  
+    %h3 Ingredients:
+    - str = @recipe.ingredients
+    - (str.split(',')).each do |item|
+      = item
+      %br
+      
+
+#infoBox
+  %h3 Name:
+  = @recipe.name
+  %p
+  %h3 Description:
+  = @recipe.description
+
+.tinymce#instructions
+  %h3 Instructions:
+  = raw(@recipe.instructions)
+  
+
+
+%p
+
+#Comms
+  //= render 'comments', recipe: @recipe
