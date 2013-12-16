@@ -10,4 +10,8 @@ class Post < ActiveRecord::Base
   def self.by_year(year)
     where("created_at >= ? and created_at <= ?", "#{year}-01-01", "#{year}-12-31")
   end
+  
+  def self.by_month(year, month)
+    where("created_at >= ? and created_at <= ?", "#{year}-#{month}-01", "#{year}-#{month}-31")
+  end
 end

@@ -9,9 +9,9 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     if params[:month]
-      @posts = Post.where("strftime('%Y %m', created_at) = ?", "#{params[:year]} #{params[:month]}").paginate(page: params[:page], per_page: 5)
+      @posts = Post.by_month(params[:year], params[:month]).to_a.paginate(page: params[:page], per_page: 5)
     elsif params[:year]
-       @posts = Post.by_year(params[:year]).to_a.paginate(page: params[:page], per_page: 5)
+       @posts = Post.by_year(params[:year]).paginate(page: params[:page], per_page: 5)
 	  elsif params[:cat]
 	    filter_cats
 	  elsif params[:tag]
