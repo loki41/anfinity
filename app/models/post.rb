@@ -8,10 +8,10 @@ class Post < ActiveRecord::Base
   acts_as_ordered_taggable
   
   def self.by_year(year)
-    where("created_at >= ? and created_at <= ?", "#{year}-01-01", "#{year}-12-32")
+    where("created_at >= ? and created_at <= ?", "#{year}-01-01", "#{year}-12-31")
   end
   
   def self.by_month(year, month)
-    where("created_at >= ? and created_at <= ?", "#{year}-#{month}-01", "#{year}-#{month}-32")
+    where("created_at >= ? and created_at <= ?", "#{year}-#{month}-01", "#{year}-#{month}-31")
   end
 end
