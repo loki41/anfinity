@@ -12,6 +12,6 @@ class Post < ActiveRecord::Base
   end
   
   def self.by_month(year, month)
-    where("created_at >= ? and created_at <= ?", "#{year}-#{month}-01", "#{year}-#{month}-31")
+    where("created_at >= ? and created_at <= ?", "#{year}-#{month}-01", "#{year}-#{month}-#{['01','03','05','07','08','10','12'].include? month ? '31' : '30' }")
   end
 end

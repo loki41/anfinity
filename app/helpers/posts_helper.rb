@@ -15,4 +15,13 @@ module PostsHelper
     	when "December" 	then '12'
   	end
   end
+  
+  def day_help m
+    case m
+	  when '04','06','09','11' 		          then '30'
+	  when '01','03','05','07','08','10','12' then '31'
+	  else 
+	    '30'
+	end
+  end
 end
