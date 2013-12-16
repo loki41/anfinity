@@ -11,7 +11,7 @@ class PostsController < ApplicationController
     if params[:month]
       @posts = Post.by_month(params[:year], params[:month]).to_a.paginate(page: params[:page], per_page: 5)
     elsif params[:year]
-       @posts = Post.where("extract (YEAR from created_at ?)", params[:year]).paginate(page: params[:page], per_page: 5)
+       @posts = Post.by_year(params[:year]).paginate(page: params[:page], per_page: 5)
 	  elsif params[:cat]
 	    filter_cats
 	  elsif params[:tag]
