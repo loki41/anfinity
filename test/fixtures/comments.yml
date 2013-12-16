@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  recipe_id: 1
-  author: MyString
+  name: MyString
   content: MyText
+  commentable_id: 1
+  commentable_type: MyString
 
 two:
-  recipe_id: 1
-  author: MyString
+  name: MyString
   content: MyText
+  commentable_id: 1
+  commentable_type: MyString

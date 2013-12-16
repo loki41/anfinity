@@ -1,0 +1,28 @@
+- if user_signed_in?
+  .btn.btn-primary= link_to 'New', new_post_path
+  - if params[:id]
+    .btn.btn-warning= link_to 'Edit', edit_post_path
+    .btn.btn-danger= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } 
+#recent
+  - if @recent
+    .section-title= "Recent Posts:"
+    - @recent.each do |p|
+      .titles= link_to p.title, post_path(p) 
+	  
+#Archive.hide
+  - if @archive      
+    .section-title= "Archive:"
+    - @archive.each do |year, monthname|
+      %h5= link_to year, post_year_path( year: year )
+      - monthname.each do |m|
+        .month
+          = link_to post_month_path( year: year, month: month_convert("#{m[0]}") ) do
+            .col-md-5= m[0]
+            .col-md-3= m[1].count             			
+
+#Categories.hide
+  - if @cats
+    .section-title= "Categories:"
+    - @cats.each do |c|
+      %ul
+        %li= link_to c.name, post_cat_path(c.id)

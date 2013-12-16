@@ -5,30 +5,41 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-
+  <%= metamagic  %>
+  <%= favicon_link_tag 'favicon.ico' %>
 </head>
 <body>
   <% if controller.action_name.to_s == "underconstruction" %>
     <%= yield %>
   <% else %>
-    <div class="row-fluid">
-  	  <div class="span8 container">
+    <div class="row">
+  	  <div class="container">
 
-  			<div id="header" class="row-fluid">
+  			<div id="header" class="row">
   			  <div class="logo-box"> 
   				<%= image_tag('logo.png') %> 
   				<div class="logo-text">nfinty</div>
   			  </div>
 			  
+			  <div id="beta-box"><%= link_to post_path('gone-beta') do %> 
+			    <span class="c1">B</span>
+				<span class="c2">E</span>
+				<span class="c3">T</span>
+				<span class="c4">A</span>
+			  <%end%></div>
+			  
   			  <div class="nav-menu">
   			    <ul class="nav nav-pills">
-  				  <li> <%= link_to "portfolio", projects_path %>        </li>
-  			  	<li> <%= link_to "about",     about_path %>           </li>
-  				  <li> <%= link_to 'blog',      posts_path %> 	    		</li>
-  				  <li> <%= link_to 'cookbook',  recipes_path %> 			  </li>
-  				  <li> <%= link_to 'contact',   contact_path %>  			  </li>
+  				  <li class= <%=active? 'projects'%> >  <%= link_to "portfolio", projects_path %>  </li>
+  			  	  <li class= <%=active? 'pages'%> >     <%= link_to "about",     about_path %>     </li>
+  				  <li class= <%=active? 'posts'%> >     <%= link_to 'blog',      posts_path %> 	   </li>
+  				  <li class= <%=active? 'recipes'%> >   <%= link_to 'cookbook',  recipes_path %>   </li>
+  				  <li class= <%=active? 'inquiries'%> > <%= link_to 'contact',   new_inquiry_path %> </li>
   				  <% if user_signed_in? %>
-  				    <li> <%= link_to "Logout", destroy_user_session_path, method: :delete%> </li>   
+  				    <li class= <%=active? 'projects'%> > <%= link_to "Logout", destroy_user_session_path, method: :delete%> </li>   
+					<li class= <%=active? 'categories'%> > <%= link_to "Categories", categories_path %> </li> 
+					<li class= <%=active? 'topics'%> > <%= link_to "Topics", topics_path %> </li> 
+					<li class= <%=active? 'todos'%> > <%= link_to "To Do List", todos_path %> </li>
   				  <% end %>
   			    </ul>
   			  </div>
@@ -37,12 +48,14 @@
       
   		  <hr>
 
-  		  <div id="portfolio" class="row-fluid">
+  		  <div id="portfolio">
+            <div class="hide"><%= render_breadcrumbs :separator => ' / ' %></div>
   		    <%= yield %>
   		  </div>
 	  
   	    <hr>
-  	    <div id="footer">made with purpose</div>
+  	    <div id="footer">.. and beyond</div>
+        <%= render 'layouts/footer' %>
   	  </div>
     </div>
   <% end %>

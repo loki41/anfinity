@@ -1,47 +1,21 @@
-.row-fluid
-  #posts-area.span9
+- meta :title => "Anfinity Blog",
+	   :description => "Anfinity Blog - Find out what i'm working on and what i'm currently interested in. ",
+       :keywords => %w(Anfinity Anthony-McLaughlin Cookbook recipes about blog anthony mclaughlin portfolio projects anthony's web design development User Interface design UI UX Ruby ROR Rails Wordpress opencart hire CMS posts)
+
+.row
+  #posts-area.col-md-10
     - @posts.each do |post|
       .post
-        .row-fluid
-          .span1
-          .post-info.span1
-            .day= post.created_at.day
-            .month= post.created_at.strftime("%b")
-            .year= post.created_at.year
-          .post-content.span8
+        .row.nml
+          = render 'post_info', content: post
+          .post-content.col-md-9
             .title= post.title
+            .content= truncate(post.content, length: 900, escape: false)
             %br
-            = post.content
-            %br
-            .right= link_to 'Read...', post
+            .right.btn.btn-primary= link_to 'Read...', post
 
 	  
-  #additional-posts.span2
-    #recent
-      - if @recent
-        .section-title= "Recent Posts:"
-        - @recent.each do |p|
-          .titles= link_to p.title, post_path(p) 
-		  
-    #Archive
-      - if @archive      
-        .section-title= "Archive:"
-        - @archive.each do |year, monthname|
-          %h5= link_to year, post_year_path( year: year )
-          %ul
-            - monthname.each do |m|
-              %li.month= link_to m[0], post_month_path( year: year, month: month_convert("#{m[0]}") )
-              - mnth = m[1]
-              %ul
-                - mnth.each do |p|
-                  %li.post-title= link_to p.title, post_path(p)          
+  #additional-posts.col-md-2
+    = render "side_bar"
 
-    #Categories
-      - if @cats
-        .section-title= "Categories:"
-        - @cats.each do |c|
-          %ul
-            %li= link_to c.name, post_cat_path(c.id)
-
-- if user_signed_in?
-  .btn= link_to 'New Post', new_post_path
+  #paging= will_paginate @posts

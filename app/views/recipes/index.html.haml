@@ -1,21 +1,25 @@
-#notices=notice  
-%h1 All Recipes:
-%br
-- if user_signed_in?
-  = link_to 'Add new recipe', new_recipe_path, class: 'btn btn-primary', id: 'new-recipe-btn'
+- meta :title => "Anfinity Cookbook",
+	   :description => "The Anfinity cookbook, a place to store and share recipes with the world. A place to show off my other interests out side of web design and development",
+       :keywords => %w(Anfinity cookbook recipes AnthonyMcLaughlin Anthony's Duck Confit Crab Cakes)
+
+.row#recipes
+  - @recipes.each do |recipe|
+    .col-md-3.box
+      = link_to recipe_path(recipe) do	  
+        .content-item-img
+          - if File.exist? "#{Rails.public_path}/assets/recipes/#{recipe.name.parameterize}.jpg"
+            = image_tag "/assets/recipes/#{recipe.name.parameterize}.jpg"
+          - else
+            = image_tag "/assets/recipes/no-image2.png"
+          .more-box
+            .mbl= "+"
+        .content-item-info= recipe.name
+
 %p
 
+- if user_signed_in?
+  .btn.btn-primary
+    = link_to 'Add new recipe', new_recipe_path
+	
+#paging= will_paginate @recipes
 
-
-#recipes-area
-- @recipes.each do |recipe|
-  %p
-  %div#box
-    //= link_to image_tag(recipe.image.url), recipe_path(recipe)
-    %b= link_to recipe.name, recipe_path(recipe.id)
-    %br
-    = truncate(recipe.description, length: 50)
-%br
-%br
-
-#paging= will_paginate @recipe

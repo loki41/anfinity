@@ -1,0 +1,16 @@
+#carousel-MCAC.carousel.slide{"data-ride" => "carousel"}
+
+  %ol.carousel-indicators
+    %li.active{"data-slide-to" => "0", "data-target" => "#carousel-MCAC"}
+    %li{"data-slide-to" => "1", "data-target" => "#carousel-MCAC"}
+    %li{"data-slide-to" => "2", "data-target" => "#carousel-MCAC"}
+	
+  .carousel-inner
+    .item.active= image_tag "/assets/content/MCAC/landing-slide.png"
+    .item= image_tag "/assets/content/MCAC/admin-toolbar-slide.png"
+    .item= image_tag "/assets/content/MCAC/Commitee-page-slide.png"
+	
+  %a.left.carousel-control{"data-slide" => "prev", href: "#carousel-MCAC"}
+    %span.glyphicon.glyphicon-chevron-left
+  %a.right.carousel-control{"data-slide" => "next", href: "#carousel-MCAC"}
+    %span.glyphicon.glyphicon-chevron-right

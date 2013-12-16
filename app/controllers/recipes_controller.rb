@@ -1,17 +1,19 @@
 class RecipesController < ApplicationController
   before_filter :set_recipe, except: [:index, :new, :create]
+  before_filter :login_required, :only => [:new, :create, :edit, :destroy], unless: :user_signed_in?
+
+  
+     add_breadcrumb "Cook Book", :recipes_path
+  
   
    def index
-     @recipes = Recipe.paginate(page: params[:page], per_page: 2)
-     respond_to do |format|
-        format.html
-        ajax_respond format, :section_id => "rec"
-       end
+     @recipes = Recipe.paginate(:page => params[:page], :per_page => 5)
    end
 
   # GET /recipes/1
   # GET /recipes/1.json
   def show
+    add_breadcrumb @recipe.name, @recipe
     respond_to do |format|
       format.html
       format.json { render json: @recipe }
@@ -67,11 +69,12 @@ class RecipesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_recipe
-      @recipe = Recipe.find(params[:id])
+      @recipe = Recipe.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recipe_params
-      params.require(:recipe).permit(:name, :description, :intructions, :ingredients, :image, :slug)
+      params.require(:recipe).permit(:name, :description, :intructions, :ingredients, :image, :prep, :cooking, 
+									 :level, :serves, :tips, :additional_info, :meta_title, :meta_description, :meta_keywords)
     end
 end

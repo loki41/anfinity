@@ -1,40 +1,32 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_filter :login_required, :only => [:new, :create, :edit, :destroy], unless: :user_signed_in?
+  before_action :recent, :archive, :cats, only: [:index, :show]
 
+  add_breadcrumb "Blog", :posts_path
+  
   # GET /posts
   # GET /posts.json
   def index
-    recent
-    archive
-	  cats
-
     if params[:month]
-      filter_month
+      @posts = Post.where("strftime('%Y %m', created_at) = ?", "#{params[:year]} #{params[:month]}").paginate(page: params[:page], per_page: 5)
     elsif params[:year]
-      filter_year
+       @posts = Post.where("strftime('%Y', created_at) = ?", params[:year]).to_a.paginate(page: params[:page], per_page: 5)
 	  elsif params[:cat]
 	    filter_cats
+	  elsif params[:tag]
+	    @posts = Post.tagged_with(params[:tag]).paginate(page: params[:page], per_page: 5)
     else
-      @posts = Post.all
+      @posts = Post.all.paginate(page: params[:page], per_page: 5)
     end
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
-    recent
-    archive
-	  cats
-
-    if params[:month]
-      filter_month
-    elsif params[:year]
-      filter_year
-	  elsif params[:cat]
-	    filter_cats
-    else
-      set_post
-    end
+    set_post
+    
+	  add_breadcrumb @post.title, @post
   end
 
   # GET /posts/new
@@ -85,24 +77,9 @@ class PostsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
-  def filter_year
-    posts
-    @posts.delete_if { |y| y.created_at.year != params[:year].to_i }
-  end
-  
-  def filter_month
-    posts
-    @posts.delete_if { |y| y.created_at.year != params[:year].to_i }.delete_if { |m| m.created_at.month != params[:month].to_i }
-  end
   
   def filter_cats
-    posts
-	@posts.delete_if { |c| c.category.to_i != params[:cat].to_i }
-  end
-  
-  def posts
-    @posts = Post.all
+	  @posts.delete_if { |c| c.category.to_i != params[:cat].to_i }.to_a.paginate(page: params[:page], per_page: 5)
   end
   
   def recent
@@ -121,11 +98,11 @@ class PostsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
-      @post = Post.find(params[:id])
+      @post = Post.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :content, :category)
+      params.require(:post).permit(:title, :content, :category, :tag_list, :comment, :created_at, :meta_title, :meta_description, :meta_keywords)
     end
 end

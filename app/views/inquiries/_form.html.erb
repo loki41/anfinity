@@ -1,0 +1,38 @@
+<div class='col-md-12' style="margin-left: -30px; margin-bottom: 2%">
+	<%= form_for inquiry do |f| %>
+	  <% if inquiry.errors.any? %>
+		<ul>
+		  <% inquiry.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+		  <% end %>
+		</ul>
+	  <% end %>
+	  
+	  <div style="display: none;">
+		<%= f.label :nickname %><br/>
+		<%= f.text_field :nickname %>
+	  </div>
+	  
+	  <div class='col-md-4' style="margin-left: 0px;">
+		  <div>
+			<%= f.label :name %>
+			<%= f.text_field :name, class: 'form-control' %>
+		  </div>
+		  
+		  <div>
+			<%= f.label :email %>
+			<%= f.text_field :email, class: 'form-control' %>
+		  </div>
+	  </div>
+	  <div class='col-md-8' style="text-align: left;">
+		  <div class='contact-msg'>
+			<%= f.label :message %>
+			<%= f.text_area :message, class: 'form-control' %>
+		  </div>
+		  
+		  <div>
+			<%= f.submit "Send", class: 'btn btn-primary' %>
+		  </div>
+		
+	</div><% end %>
+</div>

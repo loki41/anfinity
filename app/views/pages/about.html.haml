@@ -1,0 +1,48 @@
+= javascript_include_tag "pages"
+
+- meta :title => "Anfinity About",
+	   :description => "Anfinity - About Anthony McLaughlin, his web design and development work as well as other interests in life.",
+       :keywords => %w(Anfinity Anthony-McLaughlin Cookbook recipes about anthony mclaughlin portfolio projects anthony's web design development User Interface design UI UX Ruby ROR Rails Wordpress opencart hire CMS Derry londonderry Derry/Londonderry Ireland)
+
+.row
+  .col-md-12
+    .col-md-3
+      #profile-pic
+    .col-md-9#aboutme
+      .col-md-12
+        %h2= 'About Me'
+        Hi my name is Anthony and it you haven't guessed it already this is my portfolio site, and if you haven't already realised I very much 
+        love web design and development. You know how you can loose a few hours or even days enjoying your favourite hobby, well this is mine.
+        The exploration of the web to learn all I can to be the very best at what I enjoy doing.
+        %br/
+        %br/
+        If you must know I am currently a software developer for a company called 'Injixo' and currently my team and I are working to created 
+        a Scorm Compliant application built using Ruby on Rails. Ruby on Rails is awesome I really enjoy working with it, so much in fact that this
+        site is built using Ruby on Rails. That's not all I have worked with, I have experience with PHP, Wordpress, OpenCart, JavaScript(JQuery), 
+        HTML/CSS (of course) and many others.
+        %br/
+        %br/
+        So if you have a project that you would like me to work with you on, feel free to get in contact with me 
+        = link_to 'HERE', new_inquiry_path
+        and I'm sure we can create 
+        something awesome for you, your clients and the web! Or if you're a potential employer looking for your next great employee I can provide
+        my CV upon request.
+
+  .col-md-12#timeline-container
+    .timeline-top 
+      = render 'pit_down', {left: '0px',   content: "<h4>1986 - It's a BOY!</h4> <p> Yeah the same year Halley's Comet made a special appearance I got to join the world. </p>" }
+      = render 'pit_down', {left: '400px', content: "<h4>2003 - My first Website</h4> <p> My final year at high school. Upper 6th computer class was awesome! Ah, such memories.</p>" }
+      = render 'pit_down', {left: '550px', content: "<h4>2003 - Higher Ed</h4> <p> Started my National Diploma in Computing. Spoiler alert; I left with the highest grade possible </p>" }
+      = render 'pit_down', {left: '820px', content: "<h4>2010 - University</h4> <p> Four years and a lot of money later I walked away with a degree! How awesome is that!? </p>" }
+      = render 'pit_down', {left: '910px', content: "<h4>2011 - MCAC Site</h4> <p> Found an interest in Archery, joined Maiden City Archery Club and helped to create maidencityarchery.com. </p>" }	  
+      = render 'pit_down', {left: '990px', content: "<h4>2013 - Bridal Essentials</h4> <p> New client - got the change to create an e-commerce web site. </p>" }
+	  
+    .timeline-center
+    .timeline-bottom
+      = render 'pit_up', {left: '250px', content: "<h4>1997 - High School</h4> <p> The very year I started high school, I'm glad that's over I tell ye. </p>" }
+      = render 'pit_up', {left: '470px', content: "<h4>2003 - My First Job</h4> <p> I started working at Computer Warehouse! I learnt so much here! </p>" }
+      = render 'pit_up', {left: '620px', content: "<h4>2004 - Found the one</h4> <p> The year I found the right girl for me. We get married in 2014! </p>" }
+      = render 'pit_up', {left: '880px', content: "<h4>2010 - Started at InVision Software</h4> <p> Fresh out of university and straight in to my first full time job as a Quality Assurance Engineer </p>" }
+      = render 'pit_up', {left: '950px', content: "<h4>2012 - Made Developer!</h4> <p> After two years of hard work I received the opportunity to work as a software developer.</p>" }
+    #present
+    .present-text= 'Today'

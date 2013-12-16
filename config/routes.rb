@@ -1,8 +1,12 @@
 Anfinity::Application.routes.draw do
+  resources :todos
+
+  resources :topics
+
   devise_for :users
   
-  root 'pages#underconstruction'
-  #root 'projects#index'
+  #root 'pages#underconstruction'
+  root 'projects#index'
      
   resources :projects
 
@@ -13,56 +17,15 @@ Anfinity::Application.routes.draw do
   resources :categories
 
   resources :posts
+  
   get "/posts/year/:year"                 => "posts#index",  as: :post_year
   get "/posts/year/:year/month/:month"    => "posts#index",  as: :post_month
-  get "/posts/category/:cat"			        => "posts#index",  as: :post_cat
+  get "/posts/category/:cat"			  => "posts#index",  as: :post_cat
+  get "/posts/tags/:tag" 			      => "posts#index",	 as: :tag
   
   get '/about' => 'pages#about',      as: :about
-  get '/contact' => 'pages#contact',  as: :contact
   
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
-
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
-
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', on: :collection
-  #     end
-  #   end
-
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+  resources :inquiries, :only => [:new, :create] do
+    get 'thank_you', :on => :collection
+  end
 end

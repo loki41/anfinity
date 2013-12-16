@@ -7,4 +7,11 @@ module ApplicationHelper
     end  
   end
   
+  def url_with_protocol(url)
+    /^http/.match(url) ? url : "http://#{url}"
+  end
+  
+  def active? c
+    controller_name == c ? 'current' : 'none'
+  end
 end

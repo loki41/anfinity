@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @todo.name
+%p
+  %b Type:
+  = @todo.kind
+%p
+  %b Location:
+  = @todo.location
+%p
+  %b Status:
+  = @todo.status
+%p
+  %b Due:
+  = @todo.due
+
+= link_to 'Edit', edit_todo_path(@todo)
+\|
+= link_to 'Back', todos_path

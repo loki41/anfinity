@@ -1,3 +1,8 @@
 class Project < ActiveRecord::Base
-  attr_accessible :name, :category, :customer, :description, :feature_image, :tech, :duration, :features, :site_link
+  default_scope order('created_at DESC')
+  attr_accessible :name, :category, :customer, :description, :feature_image, :tech, :duration, :features, :site_link, :slug, :meta_title, 
+					:meta_description, :meta_keywords
+  
+  extend FriendlyId
+  friendly_id :name, use: :slugged
 end

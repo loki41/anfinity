@@ -1,14 +1,23 @@
-- @projects.each do |p|
-  %div.span4.box
-    = link_to project_path(p.id) do
-      .content-item-img
-        .more-box
-          .mbl= "+"
-      .content-item-info= p.name
+- meta :title => "Anfinity Portfolio",
+	   :description => "Anfinity Portfolio - Dive head first in to what Projects I have completed and the ones that i'm currently working on. ",
+       :keywords => %w(Anfinity Anthony-McLaughlin Cookbook recipes about blog anthony mclaughlin portfolio projects anthony's web design development User Interface design UI UX Ruby ROR Rails Wordpress opencart hire CMS posts)
+
+.row
+  - @projects.each do |p|
+    .col-md-4.box
+      = link_to p do
+        .content-item-img
+          - if File.exist? "#{Rails.public_path}/assets/#{p.name.parameterize}-main.png"
+            = image_tag "/assets/#{p.name.parameterize}-main.png"
+          - else
+            = image_tag "/assets/no-image.png"
+          .more-box
+            .mbl= "+"
+        .content-item-info= p.name
   
     
 %p
 
 - if user_signed_in?
-  .btn
+  .btn.btn-primary
     = link_to 'New Project', new_project_path

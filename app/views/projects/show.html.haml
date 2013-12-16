@@ -1,46 +1,48 @@
 %p#notice= notice
 
-.row-fluid
-  .span12.hero-title= @project.name
+.row
+  .col-md-12.portfolio-title= @project.name
 
-.row-fluid  
-  #portfolio-sidebar.span4
+.row#portfolio-content
+  #portfolio-sidebar.col-md-4
     %table
-      %tr
-        %th= "Customer"
-      %tr
-        %td= @project.customer
-      %tr
-        %th= "Site Link"
-      %tr
-        %td= @project.site_link
+      - if cat(@project) == "Web Design"
+        %tr
+          %th= "Customer"
+        %tr
+          %td= @project.customer
+      - if @project.name != "Final Year Project"
+        %tr
+          %th= "Site Link"
+        %tr
+          %td= link_to @project.site_link, url_with_protocol(@project.site_link), target: '_blank'
       %tr
         %th= "Overview"
       %tr
         %td= @project.description
+      - if cat(@project) == "Web Design" || cat(@project) == "University Project"
+        %tr
+          %th= "Features"
+        %tr
+          %td= @project.features
+      %tr
+        %th= "Technologies"
+      %tr
+        %td= @project.tech
       %tr
         %th= "Duration"
       %tr
-        %td= @project.duration  
-      %tr
-        %th= "Features"
-      %tr
-        %td= @project.features
-      %tr
-        %th= "Tecnologies"
-      %tr
-        %td= @project.tech
+        %td= @project.duration
 
-      
-  #portfolio-area.span8
-    - file = "#{@project.name.downcase.tr(" ", "_")}_layout"
-    = render file rescue render 'comingsoon'
+    - if user_signed_in?
+      = link_to 'Edit', edit_project_path(@project)
+      |
+      = link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' } 
+      |
+      = link_to 'Back', projects_path  
+	  
+	  
+  #portfolio-show.col-md-8
+    = render "#{@project.feature_image.to_s}" rescue render 'comingsoon'
 
-   
 
-- if user_signed_in?
-  = link_to 'Edit', edit_project_path(@project)
-  |
-  = link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' } 
-  |
-  = link_to 'Back', projects_path

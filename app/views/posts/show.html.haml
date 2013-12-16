@@ -1,40 +1,14 @@
-.row-fluid
-  #posts-area.span9
+.row
+  #posts-area.col-md-10
     .post
-      .row-fluid 
-        .post-content.span11
+      .row.nml
+        = render 'post_info', content: @post
+        .post-content.col-md-9
           .title= @post.title
-          = @post.content
+          .content= @post.content.html_safe
           .title
-          .right= "Created On: #{@post.created_at.day} #{@post.created_at.strftime('%b')} #{@post.created_at.year}    Last Updated On: #{@post.updated_at.day} #{@post.updated_at.strftime('%b')}  #{@post.updated_at.year}"
-
+          .right= "Last Updated On: #{@post.updated_at.strftime("%eth %B %Y")}"
 	  
-  #additional-posts.span2
-    #recent
-      - if @recent
-        .section-title= "Recent Posts:"
-        - @recent.each do |p|
-          .titles= link_to p.title, post_path(p) 
-		  
-    #Archive
-      - if @archive      
-        .section-title= "Archive:"
-        - @archive.each do |year, monthname|
-          %h5= link_to year, post_year_path( year: year )
-          %ul
-            - monthname.each do |m|
-              %li.month= link_to m[0], post_month_path( year: year, month: month_convert("#{m[0]}") )
-              - mnth = m[1]
-              %ul
-                - mnth.each do |p|
-                  %li.post-title= link_to p.title, post_path(p)          
-
-    #Categories
-      - if @cats
-        .section-title= "Categories:"
-        - @cats.each do |c|
-          %ul
-            %li= link_to c.name, post_cat_path(c.id)
-
-- if user_signed_in?
-  .btn= link_to 'New Post', new_post_path
+  #additional-posts.col-md-2
+    = render "side_bar"
+  #Comms

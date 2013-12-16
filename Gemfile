@@ -1,21 +1,33 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0.rc1'
+gem 'rails', '4.0.0'
 
 gem 'haml-rails'
+gem "bootstrap-sass"
+gem 'protected_attributes'
+gem "font-awesome-rails"
+gem 'friendly_id', '~> 5.0.0'
+gem 'acts-as-taggable-on'
+gem "breadcrumbs_on_rails"
+gem 'metamagic'
 gem 'will_paginate'
 gem 'ajax_pagination'
 gem 'bootstrap-will_paginate'
-gem 'bootstrap-sass'
-gem 'friendly_id'
-gem 'protected_attributes'
+
+#provides login authentication
 gem 'devise'
 
-gem 'rails_12factor', group: :production
+#pony sends the emails for the contact form
+gem 'pony'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+group :development, :test do
+  gem 'sqlite3'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0.rc1'

@@ -1,49 +1,71 @@
-%h1
-  Recipe for - 
-  = @recipe.name  
+- meta :title => @recipe.meta_title,
+	   :description => @recipe.meta_description,
+       :keywords => @recipe.meta_keywords
 
-%br
-%p
-  .btn.btn-mini.btn-primary.control1.nav#text
-    = link_to 'View All', recipes_path 
-  .btn.btn-mini.btn-primary.control1.nav#text
-    = link_to 'previous', @recipe.previous
-  .btn.btn-mini.btn-primary.control1.nav#text
-    = link_to 'next', @recipe.next
-  - if user_signed_in?
-    .btn.btn-mini.btn-danger.control2#text
-      = link_to 'delete', recipe_path(@recipe), method: :delete, confirm: 'Are you sure you want to delete this recipe??'
-    .btn.btn-mini.btn-warning.control3#text
-      = link_to 'edit', edit_recipe_path(@recipe)
-  
+.row
+  .col-md-12.rel
+    - if user_signed_in?
+      .recipe-controls
+        .btn.btn-mini.btn-danger.control2#text
+          = link_to 'delete', recipe_path(@recipe), method: :delete, confirm: 'Are you sure you want to delete this recipe??'
+        .btn.btn-mini.btn-warning.control3#text
+          = link_to 'edit', edit_recipe_path(@recipe)
 
-#pictureBox
-  //- unless @recipe.image.url.blank?
-  //  = image_tag @recipe.image.url
-    
-%p 
-  #ingredients  
-    %h3 Ingredients:
-    - str = @recipe.ingredients
-    - (str.split(',')).each do |item|
-      = item
+.row
+  .col-md-12.recipe_info  
+    .col-md-3#pictureBox
+      - if File.exist? "#{Rails.public_path}/assets/recipes/#{@recipe.name.parameterize}.jpg"
+        = image_tag "/assets/recipes/#{@recipe.name.parameterize}.jpg"
+      - else
+        = image_tag "/assets/recipes/no-image2.png"
+    .col-md-9.recipe_details
+      .col-md-12.recipe-title
+        .pull-left= @recipe.name
+      .col-md-3.nml
+        .col-md-4.np
+          .Ricon= fa_icon "clock-o"        
+        .col-md-8.np
+          %h5 Prep Time:
+          = @recipe.prep
+      .col-md-3.nml
+        .col-md-4.np
+          .Ricon= fa_icon "clock-o"        
+        .col-md-8.np
+          %h5 Cooking Time:
+          = @recipe.cooking
+      .col-md-3.nml
+        .col-md-4.np
+          .Ricon= fa_icon "signal"        
+        .col-md-8
+          %h5 Difficulty:
+          = @recipe.level
+      .col-md-3.nml
+        .col-md-4.np	
+          .Ricon= fa_icon "users"        
+        .col-md-8
+          %h5 Serves:
+          = @recipe.serves
       %br
+      .col-md-12.nml
+        %h5 Description:
+        = @recipe.description
       
+.row    
+  .col-md-12
+    .col-md-3#ingredients
+      %h3 Ingredients:
+      - (@recipe.ingredients.split(',')).each do |item|
+        = item
+        %br
+      
+    .col-md-8#instructions
+      %h3 Instructions:
+      - (@recipe.instructions.split('-')).each_with_index do |instr, i|
+        - if (i != 0)
+          = "#{i}  #{instr}"
+          %br
 
-#infoBox
-  %h3 Name:
-  = @recipe.name
-  %p
-  %h3 Description:
-  = @recipe.description
-
-.tinymce#instructions
-  %h3 Instructions:
-  = raw(@recipe.instructions)
+  #Comms
+    //= render 'comments', recipe: @recipe
   
-
-
 %p
-
-#Comms
-  //= render 'comments', recipe: @recipe

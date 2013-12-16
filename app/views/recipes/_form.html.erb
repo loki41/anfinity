@@ -32,8 +32,41 @@
     <%= f.text_field :image %>
   </div>
   <div class="field">
-    <%= f.label :slug %><br>
-    <%= f.text_field :slug %>
+    <%= f.label :prep %><br>
+    <%= f.text_field :prep %>
+  </div>
+  <div class="field">
+    <%= f.label :cooking %><br>
+    <%= f.text_field :cooking %>
+  </div>
+  <div class="field">
+    <%= f.label :level, "Difficulty Level (Easy - Medium - Hard)" %><br>
+    <%= f.text_field :level %>
+  </div>
+  <div class="field">
+    <%= f.label :serves	%><br>
+    <%= f.text_field :serves %>
+  </div>
+  <div class="field">
+    <%= f.label :tips %><br>
+    <%= f.text_field :tips %>
+  </div>
+  <div class="field">
+    <%= f.label :additional_info %><br>
+    <%= f.text_field :additional_info %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :meta_title %><br>
+    <%= f.text_field :meta_title %>
+  </div>
+  <div class="field">
+    <%= f.label :meta_description %><br>
+    <%= f.text_area :meta_description %>
+  </div>
+  <div class="field">
+    <%= f.label :meta_keywords %><br>
+    <%= f.text_field :meta_keywords %>
   </div>
   <div class="actions">
     <%= f.submit %>
