@@ -11,7 +11,7 @@ class PostsController < ApplicationController
     if params[:month]
       @posts = Post.where("strftime('%Y %m', created_at) = ?", "#{params[:year]} #{params[:month]}").paginate(page: params[:page], per_page: 5)
     elsif params[:year]
-       @posts = Post.where("strftime('%Y', created_at) = ?", params[:year]).to_a.paginate(page: params[:page], per_page: 5)
+       @posts = Post.by_year(params[:year]).to_a.paginate(page: params[:page], per_page: 5)
 	  elsif params[:cat]
 	    filter_cats
 	  elsif params[:tag]
@@ -103,6 +103,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :content, :category, :tag_list, :comment, :created_at, :meta_title, :meta_description, :meta_keywords)
+      params.require(:post).permit(:title, :content, :category, :tag_list, :comment, :created_at, :meta_title, :meta_description, :meta_keywords, :created_at)
     end
 end

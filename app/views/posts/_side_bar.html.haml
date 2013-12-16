@@ -9,11 +9,11 @@
     - @recent.each do |p|
       .titles= link_to p.title, post_path(p) 
 	  
-#Archive.hide
+#Archive
   - if @archive      
     .section-title= "Archive:"
     - @archive.each do |year, monthname|
-      %h5= link_to year, post_year_path( year: year )
+      %h5.year= link_to year, post_year_path( year: year )
       - monthname.each do |m|
         .month
           = link_to post_month_path( year: year, month: month_convert("#{m[0]}") ) do

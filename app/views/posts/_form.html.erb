@@ -35,7 +35,11 @@
     <%= f.label :category %><br>
     <%= f.select :category, Category.all.collect {|c| [c.name, c.id]} %>
   </div>
-    
+
+  <div class="field">
+    <%= f.label :created_at %><br>
+    <%= f.text_field :created_at %>
+  </div>
   <div class="field">
     <%= f.label :meta_title %><br>
     <%= f.text_field :meta_title %>
