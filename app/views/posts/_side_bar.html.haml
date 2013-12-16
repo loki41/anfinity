@@ -9,7 +9,7 @@
     - @recent.each do |p|
       .titles= link_to p.title, post_path(p) 
 	  
-#Archive
+#Archive.hide
   - if @archive      
     .section-title= "Archive:"
     - @archive.each do |year, monthname|
