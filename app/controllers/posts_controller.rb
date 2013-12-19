@@ -9,13 +9,13 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     if params[:month]
-      @posts = Post.by_month(params[:year], params[:month]).to_a.paginate(page: params[:page], per_page: 5)
+      @posts = filter_month.to_a.paginate(page: params[:page], per_page: 5)
     elsif params[:year]
-       @posts = Post.by_year(params[:year]).paginate(page: params[:page], per_page: 5)
-	  elsif params[:cat]
-	    filter_cats
-	  elsif params[:tag]
-	    @posts = Post.tagged_with(params[:tag]).paginate(page: params[:page], per_page: 5)
+	  @posts = filter_year.to_a.paginate(page: params[:page], per_page: 5)
+	elsif params[:cat]
+	  filter_cats
+	elsif params[:tag]
+	  @posts = Post.tagged_with(params[:tag]).paginate(page: params[:page], per_page: 5)
     else
       @posts = Post.all.paginate(page: params[:page], per_page: 5)
     end
@@ -78,8 +78,16 @@ class PostsController < ApplicationController
     end
   end
   
+  def filter_month
+    @posts.delete_if { |y| y.created_at.strftime("%Y") != params[:year] }.delete_if { |m| m.created_at.strftime("%m") != params[:month] }
+  end
+  
+  def filter_year
+    @posts.delete_if { |y| y.created_at.strftime("%Y") != params[:year] }
+  end
+  
   def filter_cats
-	  @posts.delete_if { |c| c.category.to_i != params[:cat].to_i }.to_a.paginate(page: params[:page], per_page: 5)
+	  @posts.delete_if { |c| c.category.to_i != params[:cat].to_i }
   end
   
   def recent
