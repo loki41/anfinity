@@ -11,13 +11,13 @@
     = f.text_field :name
   .field
     = f.label :kind, "Type"
-    = f.select :kind, ["New Feature", "New Section", "Technical Update", "Bug", "New Content", "Design Update", "Redesign"]
+    = f.select :kind, TOPIC_KINDS
   .field
     = f.label :location
-    = f.select :location, ["Under the hood", "New Section", "Portfolio", "About", "Blog", "Cook Book", "Contact"]
+    = f.select :location, LOCATIONS
   .field
     = f.label :status
-    = f.select :status, ["Pending", "In Progress", "Complete", "Cancelled"]
+    = f.select :status, STATUS
   .field
     = f.label :due
     = f.date_select :due
