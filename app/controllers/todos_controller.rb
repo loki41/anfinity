@@ -4,7 +4,8 @@ class TodosController < ApplicationController
   # GET /todos
   # GET /todos.json
   def index
-    @todos = Todo.all
+    get_complete
+	get_incomplete
   end
 
   # GET /todos/1
@@ -61,7 +62,22 @@ class TodosController < ApplicationController
     end
   end
 
+  def get_incomplete
+   get_all
+   @incomplete = @todos.delete_if { |y| y.status == "Complete" }
+  end
+  
+  def get_complete
+   get_all
+   @completed = @todos.delete_if { |y| y.status != "Complete" }
+  end
+  
+  def get_all
+    @todos = Todo.all
+  end
+  
   private
+  
     # Use callbacks to share common setup or constraints between actions.
     def set_todo
       @todo = Todo.find(params[:id])

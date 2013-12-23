@@ -1,27 +1,10 @@
-%h1 To Do List:
+%h1 To Do List
 
-.row
-  .col-md-12.bold
-    .col-md-3.np Name
-    .col-md-2.np Type
-    .col-md-2.np Location
-    .col-md-2.np Status
-    .col-md-1.np Created On
-    .col-md-1.np Due Date
-  - @todos.each do |td|
-    .col-md-12      
-      .col-md-3.np= td.name
-      .col-md-2.np= td.kind
-      .col-md-2.np= td.location
-      .col-md-2.np= td.status
-      .col-md-1.np= td.created_at.strftime("%e %b %Y")
-      .col-md-1.np= td.due.strftime("%e %b %Y")  
-      .col-md-1  
-        - if user_signed_in?
-          = link_to edit_todo_path(td) do
-            = fa_icon "pencil"
-          = link_to td, :method => :delete, :data => { :confirm => 'Are you sure?' } do
-            = fa_icon "trash-o"
+%h3 To Do:
+= render 'todo_status', status: @incomplete
+
+%h3 Completed:
+= render 'todo_status', status: @completed
 
 - if user_signed_in?
   .btn.btn-primary
