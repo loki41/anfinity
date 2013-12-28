@@ -17,3 +17,5 @@
 //= require bootstrap
 //= require bootstrap/tooltip
 //= require bootstrap/carousel
+//= require bootstrap/dropdown
+//= require bootstrap/collapse
