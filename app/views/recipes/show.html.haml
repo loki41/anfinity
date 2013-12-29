@@ -21,32 +21,32 @@
     .col-md-9.recipe_details
       .col-md-12.recipe-title
         .pull-left= @recipe.name
-      .col-md-3.nml
-        .col-md-4.np
+      .col-md-3.recipe-stat.nml
+        .col-md-4.recipe-icon.np
           .Ricon= fa_icon "clock-o"        
-        .col-md-8.np
+        .col-md-8.recipe-stat-value.np
           %h5 Prep Time:
           = @recipe.prep
-      .col-md-3.nml
-        .col-md-4.np
+      .col-md-3.recipe-stat.nml
+        .col-md-4.recipe-icon.np
           .Ricon= fa_icon "clock-o"        
-        .col-md-8.np
+        .col-md-8.recipe-stat-value.np
           %h5 Cooking Time:
           = @recipe.cooking
-      .col-md-3.nml
-        .col-md-4.np
+      .col-md-3.recipe-stat.nml
+        .col-md-4.recipe-icon.np
           .Ricon= fa_icon "signal"        
-        .col-md-8
+        .col-md-8.recipe-stat-value
           %h5 Difficulty:
           = @recipe.level
-      .col-md-3.nml
-        .col-md-4.np	
+      .col-md-3.recipe-stat.nml
+        .col-md-4.recipe-icon.np	
           .Ricon= fa_icon "users"        
-        .col-md-8
+        .col-md-8.recipe-stat-value
           %h5 Serves:
           = @recipe.serves
       %br
-      .col-md-12.nml
+      .col-md-12#recipe-description.nml
         %h5 Description:
         = @recipe.description
       

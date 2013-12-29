@@ -17,8 +17,8 @@
       - monthname.each do |m|
         .month
           = link_to post_month_path( year: year, month: month_convert("#{m[0]}") ) do
-            .col-md-5= m[0]
-            .col-md-3= m[1].count             			
+            .col-md-5.post-month= m[0]
+            .col-md-3.post-count= m[1].count             			
 
 #Categories.hide
   - if @cats

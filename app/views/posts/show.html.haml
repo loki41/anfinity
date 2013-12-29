@@ -7,7 +7,7 @@
           .title= @post.title
           .content= @post.content.html_safe
           .title
-          .right= "Last Updated On: #{@post.updated_at.strftime("%eth %B %Y")}"
+          = "Last Updated On: #{@post.updated_at.strftime("%eth %B %Y")}"
 	  
   #additional-posts.col-md-2
     = render "side_bar"
