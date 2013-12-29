@@ -13,7 +13,8 @@ module Anfinity
     config.generators do |g|
      g.stylesheets false
     end
-    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+	config.assets.enabled = true
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif *.js)
     
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
