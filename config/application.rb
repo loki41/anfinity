@@ -13,7 +13,6 @@ module Anfinity
     config.generators do |g|
      g.stylesheets false
     end
-	config.assets.initialize_on_precompile = false
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
     
     # Settings in config/environments/* take precedence over those specified here.
