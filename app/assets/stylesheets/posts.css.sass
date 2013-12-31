@@ -63,10 +63,14 @@
   clear: both
 
 //-------------------------------------------- Posts MOBILE styling:
-@media(max-width:320px)
+//-mobile
+
+@media(max-width: 320px)
   .post-info
     margin-left: 1.7%
     margin-bottom: 1px
+    .np
+      clear: both
 
   .post-content
     padding-bottom: 18px
@@ -77,11 +81,45 @@
   .post-month
     width: 40% !important
     float: left
-	
+        
   #recent
     margin-bottom: 5% !important
     margin-left: 6%
   
   #Archive
-    margin-bottom: 5%
+    margin-bottom: 5% !important
     margin-left: 6%
+	
+
+//-tablet
+
+@media(min-width: 480px) and (max-width: 991px)
+  .post-info
+    margin-left: 1.7%
+    margin-bottom: 1px
+    height: 32px
+
+  .post-content
+    padding-bottom: 18px
+
+  .post-month
+    width: 40% !important
+    float: left
+
+  .post-btn
+    margin-top: -3%
+
+  #recent
+    margin-bottom: 5% !important
+    margin-left: 4%
+    float: left
+    width: 45%
+  
+  #Archive
+    margin-bottom: 5% !important
+    margin-left: 4%
+    float: left
+    width: 45%
+ 
+  #paging
+    text-align: right !important

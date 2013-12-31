@@ -4,16 +4,16 @@
 
 .row#recipes
   - @recipes.each do |recipe|
-    .col-md-3.box
+    .col-md-3.rbox
       = link_to recipe_path(recipe) do	  
-        .content-item-img
+        .content-recipe-img
           - if File.exist? "#{Rails.public_path}/assets/recipes/#{recipe.name.parameterize}.jpg"
             = image_tag "/assets/recipes/#{recipe.name.parameterize}.jpg"
           - else
             = image_tag "/assets/recipes/no-image2.png"
-          .more-box
-            .mbl= "+"
-        .content-item-info= recipe.name
+          .recipe-more-box
+            .rmbl= "+"
+        .content-recipe-info= recipe.name
 
 %p
 
