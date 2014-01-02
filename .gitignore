@@ -14,6 +14,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-#/public/assests/*.js
-#/public/assests/*.gz
-#/public/assests/*.json
+/public/assests/*.js
+/public/assests/*.gz
+/public/assests/*.json
+/config/initializers/pony.rb 
