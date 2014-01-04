@@ -1,8 +1,8 @@
 module PostsHelper
   def month_convert mnth
     case mnth
-    	when "Janurary" 	then '01'
-    	when "Feburary" 	then '02'
+    	when "January" 		then '01'
+    	when "February" 	then '02'
     	when "March" 		then '03'
     	when "April" 		then '04'
     	when "May" 			then '05'
