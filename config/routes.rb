@@ -35,6 +35,6 @@ Anfinity::Application.routes.draw do
   get "/errors/server_error" => 'errors#server_error'
  
   unless Rails.application.config.consider_all_requests_local
-    match '*not_found', to: 'errors#error_404'
+    match '*not_found', to: 'errors#error_404', via: :get
   end
 end
