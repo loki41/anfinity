@@ -5,6 +5,8 @@
         = render 'post_info', content: @post
         .post-content.col-md-9
           .title= @post.title
+          - if user_signed_in?
+            .post_status.alert{class: "#{post.status == 'Draft' ? 'alert-info' : 'alert-success'}"}= post.status
           .content= @post.content.html_safe
           .title
           = "Last Updated On: #{@post.updated_at.strftime("%eth %B %Y")}"
