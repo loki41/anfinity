@@ -9,6 +9,8 @@
         .row.nml
           = render 'post_info', content: post
           .post-content.col-md-9
+            - if user_signed_in?
+              .post_status.alert{class: "#{post.status == 'Draft' ? 'alert-info' : 'alert-success'}"}= post.status
             .title= post.title
             .content= truncate(post.content, length: 900, escape: false)
             %br

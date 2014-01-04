@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
   default_scope order('created_at DESC')
-  attr_accessible :title, :content, :category, :slug, :tag_list, :topic, :meta_title, :meta_description, :meta_keywords, :created_at
+  attr_accessible :title, :content, :category, :slug, :tag_list, :topic, :meta_title, :meta_description, :meta_keywords, :created_at, :status
   
   extend FriendlyId
   friendly_id :title, use: :slugged
