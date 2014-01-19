@@ -1,14 +1,14 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_filter :login_required, :only => [:new, :create, :edit, :destroy], unless: :user_signed_in?
-  before_action :recent, :archive, :cats, only: [:index, :show]
+  before_action :recent, :archive, :cats, :tops, only: [:index, :show]
 
   add_breadcrumb "Blog", :posts_path
+  include PostsHelper
   
   # GET /posts
   # GET /posts.json
   def index
-   
    index_filter
   end
 
@@ -80,6 +80,10 @@ class PostsController < ApplicationController
 	publish_filter.delete_if { |c| c.category.to_i != params[:cat].to_i }
   end
   
+  def filter_tops
+	publish_filter.delete_if { |t| t.topic.to_s != params[:top] }
+  end
+  
   def recent
     @recent = publish_filter.limit(5)
   end
@@ -93,6 +97,10 @@ class PostsController < ApplicationController
     @cats = Category.all
   end
   
+  def tops
+    @tops = Topic.all
+  end
+  
   def index_filter
     if params[:month]
       @posts = filter_month.to_a.paginate(page: params[:page], per_page: 5)
@@ -100,6 +108,8 @@ class PostsController < ApplicationController
 	  @posts = filter_year.to_a.paginate(page: params[:page], per_page: 5)
 	elsif params[:cat]
 	  filter_cats
+	elsif params[:top]
+	  @posts = filter_tops.to_a.paginate(page: params[:page], per_page: 5)
 	elsif params[:tag]
 	  @posts = publish_filter.tagged_with(params[:tag]).paginate(page: params[:page], per_page: 5)
     else

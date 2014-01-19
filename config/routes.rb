@@ -21,6 +21,7 @@ Anfinity::Application.routes.draw do
   get "/posts/year/:year"                 => "posts#index",  as: :post_year
   get "/posts/year/:year/month/:month"    => "posts#index",  as: :post_month
   get "/posts/category/:cat"			  => "posts#index",  as: :post_cat
+  get "/posts/topic/:top"				  => "posts#index",  as: :post_top
   get "/posts/tags/:tag" 			      => "posts#index",	 as: :tag
   
   get '/about' => 'pages#about',      as: :about

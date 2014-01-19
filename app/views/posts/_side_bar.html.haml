@@ -23,6 +23,13 @@
 #Categories.hide
   - if @cats
     .section-title= "Categories:"
-    - @cats.each do |c|
-      %ul
-        %li= link_to c.name, post_cat_path(c.id)
+    .row
+      - @cats.each do |c|
+        .col-md-12= link_to c.name, post_cat_path(c.id)
+
+#Topics
+  - if @tops
+    .section-title= "Topics:"
+    .row
+      - @tops.each do |t|
+        .col-md-12= link_to t.name, post_top_path(t.id)
