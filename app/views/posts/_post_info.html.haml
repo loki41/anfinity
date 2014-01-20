@@ -6,7 +6,7 @@
     .col-sm-4.col-md-12.nml.np
       .pull-left= fa_icon "folder-open"
       .topic= topic_name content
-  - if content.tag_list.count > 1
+  - if content.tag_list.count > 0
     .col-sm-4.col-md-12.nml.np
       .pull-left= fa_icon "tag"
-      .tags= raw content.tag_list.map{ |t| link_to t, tag_path(t), class: "label label-default" }.join(' ')
+      .tags= raw content.tag_list.map{ |t| link_to t, post_tag_path(t), class: "label label-default" }.join(' ')

@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_filter :login_required, :only => [:new, :create, :edit, :destroy], unless: :user_signed_in?
-  before_action :recent, :archive, :cats, :tops, only: [:index, :show]
+  before_action :recent, :archive, :cats, :tops, :tag_cloud, only: [:index, :show]
 
   add_breadcrumb "Blog", :posts_path
   include PostsHelper
@@ -115,6 +115,10 @@ class PostsController < ApplicationController
     else
       @posts = publish_filter.all.paginate(page: params[:page], per_page: 5)
     end
+  end
+  
+  def tag_cloud
+    @tags = publish_filter.tag_counts_on(:tags)
   end
   
   private

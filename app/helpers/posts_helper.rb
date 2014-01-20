@@ -1,4 +1,6 @@
 module PostsHelper
+  include ActsAsTaggableOn::TagsHelper
+  
   def month_convert mnth
     case mnth
     	when "January" 		then '01'

@@ -33,3 +33,10 @@
     .row
       - @tops.each do |t|
         .col-md-12= link_to t.name, post_top_path(t.id)
+		
+
+#Tags
+  - if @tags
+    .section-title= "Tags:"
+    - tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class|
+      = link_to tag.name, post_tag_path(tag.name), :class => css_class
