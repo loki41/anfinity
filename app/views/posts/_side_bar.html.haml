@@ -5,13 +5,13 @@
     .btn.btn-danger= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } 
 #recent
   - if @recent
-    .section-title= "Recent Posts:"
+    %h4.section-title= "Recent Posts:"
     - @recent.each do |p|
       .titles= link_to p.title, post_path(p) 
 	  
 #Archive
   - if @archive      
-    .section-title= "Archive:"
+    %h4.section-title= "Archive:"
     - @archive.each do |year, monthname|
       %h5.year= link_to year, post_year_path( year: year )
       - monthname.each do |m|
@@ -22,14 +22,14 @@
 
 #Categories.hide
   - if @cats
-    .section-title= "Categories:"
+    %h4.section-title= "Categories:"
     .row
       - @cats.each do |c|
         .col-md-12= link_to c.name, post_cat_path(c.id)
 
 #Topics
   - if @tops
-    .section-title= "Topics:"
+    %h4.section-title= "Topics:"
     .row
       - @tops.each do |t|
         .col-md-12= link_to t.name, post_top_path(t.id)
@@ -37,6 +37,6 @@
 
 #Tags
   - if @tags
-    .section-title= "Tags:"
+    %h4.section-title= "Tags:"
     - tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class|
       = link_to tag.name, post_tag_path(tag.name), :class => css_class
