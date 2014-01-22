@@ -83,6 +83,9 @@ h1, h2, h3, h4, h5
 
 .bold
   font-weight: bold
+ 
+.print-link
+  display: none
 	
 //----------------------------------------------------------- HEADER Styling  
 #header
@@ -272,7 +275,7 @@ $error_color: #AB3938
 
 //-tablet
 
-@media(min-width: 480px) and (max-width: 991px)
+@media(min-width: 480px) and (max-width: 767px)
   .nav-menu
     margin-top: 0
     ul
@@ -285,4 +288,21 @@ $error_color: #AB3938
   #beta-box
     margin-top: -9.5% !important
     margin-left: 0
-	
+
+  .mobile_btn
+    margin-top: -10%
+    margin-left: 2%
+
+@media(min-width: 768px) and (max-width: 991px)
+  .nav-menu
+    margin-top: 0
+    ul
+      width: 88%
+
+  .logo-box
+    float: none
+    margin: 0 auto
+
+  #beta-box
+    margin-top: -9.5% !important
+    margin-left: 0

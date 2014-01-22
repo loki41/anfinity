@@ -109,9 +109,22 @@
   font-size: 17px
  
 //--------------------------------------------------------------- About Mobile Styling:
-//-tablet
+//- small desktop
 
-@media(max-width:991px)
+@media(min-width: 992px) and (max-width:1199px)
   #profile-pic
     margin: 0 auto
- 
+  
+  #aboutme
+    padding: 0px 0px 0px 50px
+	
+	
+//- tablet	  
+	  
+@media(min-width: 480px) and (max-width: 991px)
+  #profile-pic
+    margin: 0 auto
+  
+  #aboutme
+    padding: 0px !important
+    width: 105%

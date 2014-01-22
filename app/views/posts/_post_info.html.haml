@@ -1,12 +1,12 @@
 .post-info.col-md-2
-  .col-sm-4.col-md-12.nml.np
+  .col-xs-4.col-sm-4.col-md-12.nml.np
     .pull-left= fa_icon "calendar"
     .date= content.created_at.strftime("%e %b %Y")
   - if topic_name(content) != ""
-    .col-sm-4.col-md-12.nml.np
+    .col-xs-4.col-sm-4.col-md-12.nml.np
       .pull-left= fa_icon "folder-open"
       .topic= topic_name content
   - if content.tag_list.count > 0
-    .col-sm-4.col-md-12.nml.np
+    .col-xs-4.col-sm-4.col-md-12.nml.np
       .pull-left= fa_icon "tag"
       .tags= raw content.tag_list.map{ |t| link_to t, post_tag_path(t), class: "label label-default" }.join(' ')
