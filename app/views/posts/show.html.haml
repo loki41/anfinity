@@ -12,7 +12,7 @@
           - if user_signed_in?
             .post_status.alert{class: "#{@post.status == 'Draft' ? 'alert-info' : 'alert-success'}"}= @post.status
           .title= @post.title
-          .content= @post.content.html_safe
+          .content= markdown(@post.content)
           .title
           = "Last Updated On: #{@post.updated_at.strftime("%eth %B %Y")}"
 	  

@@ -12,7 +12,7 @@
             - if user_signed_in?
               .post_status.alert{class: "#{post.status == 'Draft' ? 'alert-info' : 'alert-success'}"}= post.status
             %h3.title= post.title
-            .content= truncate(post.content, length: 900, escape: false)
+            .content= truncate(markdown(post.content), length: 900, escape: false)
             %br
             .right.btn.btn-primary.post-btn= link_to 'Read...', post
 

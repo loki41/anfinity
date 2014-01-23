@@ -15,6 +15,11 @@ gem 'will_paginate'
 gem 'ajax_pagination'
 gem 'bootstrap-will_paginate'
 
+
+#code syntax highlighting
+gem "redcarpet"
+gem "rouge"
+
 #provides login authentication
 gem 'devise'
 
