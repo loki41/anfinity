@@ -14,7 +14,7 @@
       = "#{count_imgs(content.content)} Images"
       
   - if content.tag_list.count > 0
-    .col-xs-4.col-sm-4.col-md-12.nml.np
+    .col-xs-12.col-sm-4.col-md-12.nml.np
       .pull-left= fa_icon "tag"
       .tags= raw content.tag_list.map{ |t| link_to t, post_tag_path(t), class: "label label-default" }.join(' ')
 
