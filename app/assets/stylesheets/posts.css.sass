@@ -58,6 +58,7 @@
   margin-bottom: 0 !important
   width: 12%
   text-align: center
+  overflow: hidden
 	
 .no-LS
   list-style: none
@@ -90,16 +91,17 @@
 @media(max-width: 320px)
   .post-info
     margin-left: 1.7%
-    margin-bottom: 1px
-    height: 69px
+    z-index: 9
     .np
       clear: both
     .col-xs-4
       width: 100% !important
+    .tags
+      padding-bottom: 1%
 	 
   .post-content
     padding-bottom: 18px
-
+    
   .post-btn
     margin-top: -8%
 
@@ -118,6 +120,9 @@
     margin-left: 1.7%
     margin-bottom: 1px
     height: 32px
+    .tags
+      height: 22px
+      overflow: hidden
 
   .post-content
     padding-bottom: 18px

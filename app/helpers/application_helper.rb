@@ -33,7 +33,9 @@ module ApplicationHelper
     Redcarpet::Markdown.new(renderer, extensions).render(text).html_safe
   end
   
-  
+  def count_imgs text
+    text.to_s.scan(/\<img src=\"(.+)">/).size 
+  end
   
   class HTML < Redcarpet::Render::HTML
     # to use Rouge with Redcarpet

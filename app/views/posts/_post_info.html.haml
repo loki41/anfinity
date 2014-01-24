@@ -1,12 +1,21 @@
 .post-info.col-md-2
-  .col-xs-4.col-sm-4.col-md-12.nml.np
+  .col-xs-4.col-sm-3.col-md-12.nml.np
     .pull-left= fa_icon "calendar"
     .date= content.created_at.strftime("%e %b %Y")
+    
   - if topic_name(content) != ""
-    .col-xs-4.col-sm-4.col-md-12.nml.np
+    .col-xs-4.col-sm-3.col-md-12.nml.np
       .pull-left= fa_icon "folder-open"
       .topic= topic_name content
+      
+  - if count_imgs(content.content) > 0
+    .col-xs-4.col-sm-2.col-md-12.nml.np
+      .pull-left= fa_icon "picture-o"
+      = "#{count_imgs(content.content)} Images"
+      
   - if content.tag_list.count > 0
     .col-xs-4.col-sm-4.col-md-12.nml.np
       .pull-left= fa_icon "tag"
       .tags= raw content.tag_list.map{ |t| link_to t, post_tag_path(t), class: "label label-default" }.join(' ')
+
+      
