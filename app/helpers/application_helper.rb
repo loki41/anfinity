@@ -16,7 +16,7 @@ module ApplicationHelper
   
   def markdown(text)
     render_options = {
-      filter_html:     true,
+      filter_html:     false,
       hard_wrap:       true, 
       link_attributes: { rel: 'nofollow' }
     }
