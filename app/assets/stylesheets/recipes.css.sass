@@ -127,7 +127,7 @@ $border_color: #cccccc
         height: 188px
 
   .recipe-title
-    font-size: 1.5em
+    font-size: 2.2em
     font-wight: bold
 
   #instructions, #ingredients 
@@ -148,15 +148,56 @@ $border_color: #cccccc
       padding: 0
     .recipe-stat
       clear: both
+      width: 100%
     #recipe-description
       clear: both
       margin-top: 2%
       width: 104%
 	  
+// wide mobile	  
+	  
+@media(min-width: 321px) and (max-width: 660px)
+  #recipes
+    margin-bottom: 10%
+    .rbox 
+      margin-bottom: 6% !important
+      img
+        height: 188px
+
+  #instructions, #ingredients 
+    width: 104%
+
+  .recipe_details
+    width: 100%
+    clear: both
+    margin-top: 4%
+    padding: 0 !important
+    .recipe-title
+      margin-bottom: 5%
+      font-size: 3.2em
+      font-wight: bold
+    .recipe-icon
+      width: 40%
+      float: left
+    .recipe-stat-value
+      width: 55%
+      float: left
+      padding: 0
+    #recipe-description
+      clear: both
+      margin-top: 2%
+      width: 104%
+  
+  #pictureBox
+    clear: both
+    margin: 0 auto
+    width: 281px
+	  
+	  
 
 //- tablet	  
 	  
-@media(min-width: 480px) and (max-width: 768px)
+@media(min-width: 660px) and (max-width: 991px)
   #recipes
     .rbox
       width: 32.6%
@@ -196,3 +237,10 @@ $border_color: #cccccc
     .recipe-icon
       float: left
       margin-right: 5%
+      
+      
+// custom responsive stuff:
+@media(max-width: 375px)
+  .Ricon
+    font-size: 37px
+    margin-top: 2%
