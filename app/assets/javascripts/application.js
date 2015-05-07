@@ -18,4 +18,5 @@
 //= require bootstrap/carousel
 //= require bootstrap/dropdown
 //= require bootstrap/collapse
+//= require jquery.sticky.js
 //= require_tree .

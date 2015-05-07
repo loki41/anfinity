@@ -11,24 +11,11 @@
     - if controller.action_name.to_s == "underconstruction"
       = yield
     - else
-      .row
-        .container
-          #header.row
-            .logo-box
-              = image_tag('logo.png')
-              %h1.logo-text nfinty
-            #beta-box
-              = link_to post_path('gone-beta') do
-                %span.c1 B
-                %span.c2 E
-                %span.c3 T
-                %span.c4 A
-            .hidden-xs= render 'layouts/nav'
-            .visible-xs= render 'layouts/nav_mobile'
-          %hr
-          #portfolio
-            .hide= render_breadcrumbs :separator => ' / '
-            = yield
-          %hr
-          #footer .. and beyond
-          = render 'layouts/footer'
+      - if params[:controller] == "projects" && controller.action_name.to_s == "index"
+        #background
+
+      .container
+        = yield
+
+      #footer
+        = render 'layouts/footer'

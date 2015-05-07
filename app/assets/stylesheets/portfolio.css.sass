@@ -1,4 +1,4 @@
-//----------------------------------------------------------- Portfolio INDEX Styling  
+//----------------------------------------------------------- Portfolio INDEX Styling
 #portfolio
   margin-top: 2%
   border: 0 !important
@@ -16,14 +16,25 @@
 
 
 #portfolio-sidebar
+  margin: 0 auto
+  float: none
   th
     text-align: left
 
+
+#projects_container
+  width: 80%
+  margin: 0 auto
+
 .box
-  height: 188px
-  position: relative
-  margin-bottom: 2% !important
+  height: 35vh
+  display: inline-block
+  margin-left: auto
+  margin-right: auto
   .content-item-img
+    border: 1px solid lightgrey
+    &:hover
+      border: 1px solid white
     img
       height: auto
       width: 100%
@@ -34,49 +45,35 @@
   a:hover
     color: #f33
     text-decoration: none
-  .content-item-info 
+  .content-item-info
     width: 100%
     height: 20%
-  .more-box
-    width: 50px
-    height: 70px
-    background: white
-    position: absolute
-    bottom: -28px
-    right: -18px
-    overflow: hidden
-    transform: rotate(45deg)
-    -webkit-transform: rotate(45deg)
-    -moz-transform: rotate(45deg)
-    -ms-transform: rotate(45deg)
-    -o-transform: rotate(45deg)
-  .mbl
-    background-image: url(bkg_img.jpg)
-    line-height: 5.5
-    text-indent: 32px
-    width: 60px
-    height: 60px
-    margin-top: -2px
-    margin-left: -30px
-    transform: rotate(-45deg)
-    -webkit-transform: rotate(-45deg)
-    -moz-transform: rotate(-45deg)
-    -ms-transform: rotate(-45deg)
-    -o-transform: rotate(-45deg)
-    font-size: 1.1em
 
 
-//----------------------------------------------------------- Portfolio ITEM Styling 	
+//----------------------------------------------------------- Portfolio ITEM Styling
+.title_banner
+  position: absolute
+  background-color: lightblue
+  width: 100%
+  height: 15vh
+  left: 0
+  z-index: -99
+
 .portfolio-title
   line-height: 1.1
   margin-left: -0.4% !important
   font-size: 5.5em
   letter-spacing: 3px
   overflow: hidden
-  color: #888
+  text-align: center
+  color: white
+  height: 10vh
+  margin-top: 5vh
 
 #portfolio-show
   margin-bottom: 2%
+  margin: 0 auto
+  float: none
   img
     width: 100%
     padding: 1%
@@ -87,8 +84,8 @@
   width: 102%
 
 .carousel-control
-  height: 98.3%  
-  
+  height: 98.3%
+
 .carousel-control.right
   right: -2% !important
   left: auto
@@ -106,9 +103,9 @@
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.2) 100%)
     background-repeat: repeat-x
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1)
-  
-  
-  
+
+
+
 .carousel-control.left
   background-image: -webkit-gradient(linear, 0% top, 100% top, from(rgba(0, 0, 0, 0.0)), to(rgba(0, 0, 0, 0.0001)))
   background-image: -webkit-linear-gradient(left, color-stop(rgba(0, 0, 0, 0.0) 0%), color-stop(rgba(0, 0, 0, 0.0001) 100%))
@@ -123,36 +120,36 @@
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.0001) 100%)
     background-repeat: repeat-x
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1)
- 
+
 .carousel-indicators
   bottom: -30px
   li
     border: 1px solid #aaa !important
-  
+
 #feature-image
   width: 550px
   height: 200px
   background-color: white
-  
+
 #comingsoon
   padding-top: 10%
   text-align: center
   font-size: 1.4em
 
-.video-container 
+.video-container
   position: relative
   padding-bottom: 56.25%
   padding-top: 30px
   height: 0
   overflow: hidden
- 
-.video-container iframe, .video-container object, .video-container embed 
+
+.video-container iframe, .video-container object, .video-container embed
   position: absolute
   top: 0
   left: 0
   width: 100%
   height: 100%
-  
+
 
 //--------------------------------------------------------------------------- Portfolio MOBILE stlying:
 //-mobile
@@ -160,11 +157,11 @@
 @media(max-width: 320px)
   .box
     width: 104% !important
-  
+
   .portfolio-title
     font-size: 1.5em !important
     font-weight: bold
-	
+
 //-tablet
 
 @media(min-width: 480px) and (max-width: 991px)

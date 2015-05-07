@@ -3,13 +3,16 @@
        :keywords => @project.meta_keywords
 
 
-%p#notice= notice
+.title_banner
+
+
+.portfolio-title= @project.name
 
 .row
-  .col-md-12.portfolio-title= @project.name
+  %p#notice= notice
 
 .row#portfolio-content
-  #portfolio-sidebar.col-md-4
+  #portfolio-sidebar.col-md-8
     %table
       - if cat(@project) == "Web Design"
         %tr
@@ -42,11 +45,11 @@
     - if user_signed_in?
       = link_to 'Edit', edit_project_path(@project)
       |
-      = link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' } 
+      = link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' }
       |
-      = link_to 'Back', projects_path  
-	  
-	  
+      = link_to 'Back', projects_path
+
+
   #portfolio-show.col-md-8
     = render "#{@project.feature_image.to_s}" rescue render 'comingsoon'
 

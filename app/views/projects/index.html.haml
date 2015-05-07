@@ -1,23 +1,115 @@
-- meta :title => "My personal portfolio page",
+- meta :title => "Anfintiy - Personal portfolio - index",
        :description => "Dive head first in to what Projects I have completed and the ones that i'm currently working on. ",
        :keywords => %w(Anfinity Anthony-McLaughlin Cookbook recipes about blog anthony mclaughlin portfolio projects anthony's web design development User Interface design UI UX Ruby ROR Rails Wordpress opencart hire CMS posts)
 
-.row
-  - @projects.each do |p|
-    .col-md-4.box
-      = link_to p do
-        .content-item-img
-          - if File.exist? "#{Rails.public_path}/assets/#{p.name.parameterize}-main.png"
-            = image_tag "/assets/#{p.name.parameterize}-main.png"
-          - else
-            = image_tag "/assets/no-image.png"
-          .more-box
-            .mbl= "+"
-        .content-item-info= p.name
-  
-    
-%p
 
-- if user_signed_in?
-  .btn.btn-primary
-    = link_to 'New Project', new_project_path
+.row
+  #welcome.section
+    #logo
+      .logo_img= image_tag('anfinity-logo-white.png')
+      .logo_border
+      .slogan= "Welcome to Anfinity"
+
+    #scrolldown.scroll-down
+      %i.fa.fa-angle-double-down
+
+
+.row
+  #about_area.section
+    #about_content.content
+      .section_header
+        %h1= "About"
+
+        %p
+          %h3= "My name is Anthony McLaughlin."
+
+          %h5
+            = "My life revolves around the web, I work with it day in, day out."
+            %br
+            = "I've been a web developer for almost 4 years, but I like to think of my"
+            %br
+            = "self as a jack of all trades."
+            %br
+            = "This is my portfolio website, a place for me to showcase all the little projects"
+            %br
+            = "I have enjoyed being apart of over the years."
+
+      %br
+      %p
+        %h5= "Some of the tools I've worked with:"
+        #toolbox
+          %span.skill.skill-html
+            %i.fa.fa-html5
+            %p= "HTML / HAML"
+
+          %span.skill.skill-css
+            %i.fa.fa-css3
+            %p= "CSS / SASS,SCSS"
+
+          %span.skill.skill-rwd
+            %i.fa.fa-expand
+            %p= "Bootstrap / Foundation"
+
+          %span.skill.skill-code
+            %i.fa.fa-code
+            %p= "JS / CoffeeScript, PHP"
+
+          %span.skill.skill-rails
+            %i.fa.fa-diamond
+            %p= "Ruby on Rails"
+
+          %span.skill.skill-db
+            %i.fa.fa-database
+            %p= "SQL"
+
+          %span.skill.skill-cms
+            %i.fa.fa-wordpress
+            %p= "CMS / LMS"
+
+          %span.skill.skill-git
+            %i.fa.fa-github
+            %p= "Git"
+
+          %span.skill.skill-analytics
+            %i.fa.fa-bar-chart-o
+            %p= "Google Analytics"
+
+      #about-scrolldown.scroll-down
+        %i.fa.fa-angle-double-down
+
+.row
+  #projects_area.section
+    #projects_content.content
+      .section_header
+        %h1= "Projects"
+
+      #projects_container
+        - @projects.each do |p|
+          .col-md-6.box
+            = link_to p do
+              .content-item-img
+                - if File.exist? "#{Rails.public_path}/assets/#{p.name.parameterize}-main.png"
+                  = image_tag "/assets/#{p.name.parameterize}-main.png"
+                - else
+                  = image_tag "/assets/no-image.png"
+              .content-item-info
+                .content-item-type= cat(p)
+                .content-item-name= p.name
+      %br
+
+      - if user_signed_in?
+        = link_to 'New Project', new_project_path, class: "btn btn-primary"
+
+      #project-scrolldown.scroll-down
+        %i.fa.fa-angle-double-down
+
+
+.row
+  #contact_area
+    #contact_content.content
+      .section_header
+        %h1= "Contact"
+
+        %h3 Want to get in touch?
+        %p Please fill out the form below and I promise to get back to you as soon as possible.
+        = render 'inquiries/form', :inquiry => @inquiry

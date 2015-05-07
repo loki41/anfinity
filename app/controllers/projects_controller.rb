@@ -1,9 +1,9 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
   before_filter :set_project, except: [:index, :new, :create]
-  before_filter :login_required, :only => [:new, :create, :edit, :destroy], unless: :user_signed_in?
-  
-  
+  before_action :authenticate_user!, only: [:edit, :update, :destroy]
+
+
   add_breadcrumb "Projects", :projects_path
   # GET /projects
   # GET /projects.json
@@ -11,8 +11,9 @@ class ProjectsController < ApplicationController
     if params[:sort] && params[:direction]
       params[:direction]  = "asc" ? @projects = Project.all.sort_by(&:duration) : @projects = Project.all.sort_by(&:duration).reverse
     else
-      @projects = Project.all
+      @projects = Project.all.limit(4)
     end
+    @inquiry = Inquiry.new
   end
 
   # GET /projects/1
@@ -81,7 +82,7 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:name, :category, :site_link, :customer, :description, :feature_image, :tech, :duration, 
+      params.require(:project).permit(:name, :category, :site_link, :customer, :description, :feature_image, :tech, :duration,
 										:features, :meta_title, :meta_description, :meta_keywords)
     end
 end

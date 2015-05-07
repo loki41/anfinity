@@ -1,6 +1,6 @@
 <%- meta :title => "Get in contact with me!",
 	   :description => "If you want to find out more about me or would be interested in working together then please contact me.",
-       :keywords => %w(Anfinity Anthony-McLaughlin Cookbook recipes about anthony mclaughlin portfolio projects anthony's web design development User Interface design UI UX Ruby ROR Rails Wordpress 
+       :keywords => %w(Anfinity Anthony-McLaughlin Cookbook recipes about anthony mclaughlin portfolio projects anthony's web design development User Interface design UI UX Ruby ROR Rails Wordpress
 	   opencart hire CMS Derry londonderry Derry/Londonderry Ireland) %>
 
 
@@ -14,18 +14,18 @@
 		  <% end %>
 		</ul>
 	  <% end %>
-	  
+
 	  <div style="display: none;">
 		<%= f.label :nickname %><br/>
 		<%= f.text_field :nickname %>
 	  </div>
-	  
+
 	  <div class='col-md-4' style="margin-left: 0px;">
 		  <div>
 			<%= f.label :name %>
 			<%= f.text_field :name, class: 'form-control' %>
 		  </div>
-		  
+
 		  <div>
 			<%= f.label :email %>
 			<%= f.text_field :email, class: 'form-control' %>
@@ -36,10 +36,10 @@
 			<%= f.label :message %>
 			<%= f.text_area :message, class: 'form-control' %>
 		  </div>
-		  
+
 		  <div>
 			<%= f.submit "Send", class: 'btn btn-primary' %>
 		  </div>
-		
+
 	</div><% end %>
 </div>
