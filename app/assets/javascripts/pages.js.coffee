@@ -16,3 +16,9 @@ $(document).ready ->
     $('html, body').animate { scrollTop: $('#footer').offset().top }, 1000
     return
   return
+
+
+
+$(window).scroll ->
+  $('#nav').show()
+  return
