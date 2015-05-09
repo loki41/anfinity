@@ -16,8 +16,3 @@ $(document).ready ->
     $('html, body').animate { scrollTop: $('#footer').offset().top }, 1000
     return
   return
-
-
-$(document).ready ->
-  $('.nav-menu').sticky topSpacing: 0
-  return

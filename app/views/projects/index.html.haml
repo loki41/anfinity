@@ -13,6 +13,9 @@
     #scrolldown.scroll-down
       %i.fa.fa-angle-double-down
 
+#nav
+  .nav-logo="A"
+  .navi-menu= "menu"
 
 .row
   #about_area.section
@@ -20,7 +23,7 @@
       .section_header
         %h1= "About"
 
-        %p
+        .about_me
           %h3= "My name is Anthony McLaughlin."
 
           %h5
@@ -34,9 +37,10 @@
             %br
             = "I have enjoyed being apart of over the years."
 
-      %br
-      %p
-        %h5= "Some of the tools I've worked with:"
+            %br
+            %p
+              %h5= "Some of the tools I've worked with:"
+
         #toolbox
           %span.skill.skill-html
             %i.fa.fa-html5
