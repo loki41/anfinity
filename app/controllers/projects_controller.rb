@@ -8,7 +8,7 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all.where(show: true).limit(4)
+    @projects = Project.all.limit(4)
     @inquiry = Inquiry.new
   end
 
