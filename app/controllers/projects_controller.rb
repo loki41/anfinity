@@ -8,7 +8,7 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all.limit(4)
+    @projects = Project.all.where(show: true).limit(4)
     @inquiry = Inquiry.new
   end
 
@@ -81,6 +81,6 @@ class ProjectsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
       params.require(:project).permit(:name, :category, :site_link, :customer, :description, :feature_image, :tech, :duration,
-										:features, :meta_title, :meta_description, :meta_keywords)
+										:features, :show, :meta_title, :meta_description, :meta_keywords)
     end
 end

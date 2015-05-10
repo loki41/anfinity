@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140104154351) do
+ActiveRecord::Schema.define(version: 20150510212619) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 20140104154351) do
     t.string   "meta_title"
     t.text     "meta_description"
     t.string   "meta_keywords"
+    t.boolean  "show"
   end
 
   add_index "projects", ["slug"], name: "index_projects_on_slug", unique: true
