@@ -8,13 +8,11 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    if params[:sort] && params[:direction]
-      params[:direction]  = "asc" ? @projects = Project.all.sort_by(&:duration) : @projects = Project.all.sort_by(&:duration).reverse
-    else
-      @projects = Project.all.limit(4)
-    end
+    @projects = Project.all.limit(4)
     @inquiry = Inquiry.new
   end
+
+
 
   # GET /projects/1
   # GET /projects/1.json

@@ -1,10 +1,22 @@
-.nav-menu
-  %ul.nav.nav-pills
-    %li{class: "#{active? 'projects'}"}= 	link_to "portfolio", projects_path
-    %li{class: "#{active? 'pages'}"}= 	 	link_to "about",     about_path
-    %li{class: "#{active? 'posts'}"}= 		link_to 'blog',      posts_path
-    %li{class: "#{active? 'recipes'}"}=  	link_to 'cookbook',  recipes_path
-    %li{class: "#{active? 'inquiries'}"}= 	link_to 'contact',   new_inquiry_path
+#nav{style: "#{project_index? ? 'display: none' : ''}"}
+  .container
+    .nav-logo= image_tag('anfinity-logo-white.png')
+    - if project_index?
+      .navi-menu.col-md-10
+        #navl-home.nav-item{class: "#{active? 'projects'}"}=     "Home"
+        #navl-about.nav-item{class: "#{active? 'pages'}"}=       "About Me"
+        #navl-projects.nav-item{class: "#{active? 'projects'}"}= "Portfolio"
+        //#navl-blog.nav-item{class: "#{active? 'posts'}"}=        link_to 'Blog',      posts_path
+        #navl-contact.nav-item{class: "#{active? 'inquiries'}"}= 'contact'
+
+    - else
+      .navi-menu.col-md-10
+        .nav-item{class: "#{active? 'projects'}"}=     link_to "Home",      root_path
+        .nav-item{class: "#{active? 'pages'}"}=       link_to "About Me",  root_path(:anchor => "about_area")
+        .nav-item{class: "#{active? 'projects'}"}= link_to "Portfolio", root_path(:anchor => "projects_area")
+        //.nav-item{class: "#{active? 'posts'}"}=        link_to 'Blog',      posts_path
+        .nav-item{class: "#{active? 'inquiries'}"}= link_to 'contact',   root_path(:anchor => "contact_area")
+
     - if user_signed_in?
       .btn-group
         %button.btn.btn-default.dropdown-toggle{"data-toggle" => "dropdown", :type => "button"}

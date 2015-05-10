@@ -11,11 +11,15 @@
     - if controller.action_name.to_s == "underconstruction"
       = yield
     - else
-      - if params[:controller] == "projects" && controller.action_name.to_s == "index"
+      - if project_index?
         #background
 
-      .container
+      .hidden-xs= render 'layouts/nav'
+      .visible-xs= render 'layouts/nav_mobile'
+
+      .container{class: "#{ project_index? ? '' : 'container-plus' }"}
         = yield
+
 
       #footer
         = render 'layouts/footer'

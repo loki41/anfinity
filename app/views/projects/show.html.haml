@@ -12,7 +12,7 @@
   %p#notice= notice
 
 .row#portfolio-content
-  #portfolio-sidebar.col-md-8
+  #portfolio-sidebar.col-md-10
     %table
       - if cat(@project) == "Web Design"
         %tr
@@ -37,10 +37,7 @@
         %th= "Technologies"
       %tr
         %td= @project.tech
-      %tr
-        %th= "Duration"
-      %tr
-        %td= @project.duration
+
 
     - if user_signed_in?
       = link_to 'Edit', edit_project_path(@project)
