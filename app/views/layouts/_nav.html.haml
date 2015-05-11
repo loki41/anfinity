@@ -2,20 +2,20 @@
   .container
     .nav-logo= image_tag('anfinity-logo-white.png')
     - if project_index?
-      .navi-menu.col-md-10
+      .navi-menu.col-sm-10.col-md-10
         #navl-home.nav-item{class: "#{active? 'projects'}"}=     "Home"
-        #navl-about.nav-item{class: "#{active? 'pages'}"}=       "About Me"
+        #navl-about.nav-item{class: "#{active? 'pages'}"}=       "About"
         #navl-projects.nav-item{class: "#{active? 'projects'}"}= "Portfolio"
         //#navl-blog.nav-item{class: "#{active? 'posts'}"}=        link_to 'Blog',      posts_path
-        #navl-contact.nav-item{class: "#{active? 'inquiries'}"}= 'contact'
+        #navl-contact.nav-item{class: "#{active? 'inquiries'}"}= 'Contact'
 
     - else
-      .navi-menu.col-md-10
+      .navi-menu.col-sm-10.col-md-10
         .nav-item{class: "#{active? 'projects'}"}=     link_to "Home",      root_path
-        .nav-item{class: "#{active? 'pages'}"}=       link_to "About Me",  root_path(:anchor => "about_area")
+        .nav-item{class: "#{active? 'pages'}"}=       link_to "About",  root_path(:anchor => "about_area")
         .nav-item{class: "#{active? 'projects'}"}= link_to "Portfolio", root_path(:anchor => "projects_area")
         //.nav-item{class: "#{active? 'posts'}"}=        link_to 'Blog',      posts_path
-        .nav-item{class: "#{active? 'inquiries'}"}= link_to 'contact',   root_path(:anchor => "contact_area")
+        .nav-item{class: "#{active? 'inquiries'}"}= link_to 'Contact',   root_path(:anchor => "contact_area")
 
     - if user_signed_in?
       .btn-group

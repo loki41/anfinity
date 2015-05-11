@@ -1,16 +1,22 @@
-%button.btn.btn-default.mobile_btn{"data-target" => "#menu", "data-toggle" => "collapse", type: "button"}
-  %i= fa_icon "bars" 
-#menu.mobile_menu.collapse
-  %ul.nav.nav-pills.nav-stacked
-    %li{class: "#{active? 'projects'}"}= 	link_to "portfolio", projects_path
-    %li{class: "#{active? 'pages'}"}= 	 	link_to "about",     about_path
-    %li{class: "#{active? 'posts'}"}= 		link_to 'blog',      posts_path
-    %li{class: "#{active? 'recipes'}"}=  	link_to 'cookbook',  recipes_path
-    %li{class: "#{active? 'inquiries'}"}= 	link_to 'contact',   new_inquiry_path
-    - if user_signed_in?
-      %li.divider
-      %li= link_to "Categories", categories_path
-      %li= link_to "Topics", topics_path
-      %li= link_to "To Do List", todos_path
-      %li.divider
-      %li= link_to "Logout", destroy_user_session_path, method: :delete
+
+#mobile-nav{style: "#{project_index? ? 'display: none' : ''}"}
+  .container
+    .nav-logo= image_tag('anfinity-logo-white.png')
+
+    %button.btn.btn-default.mobile_btn{"data-target" => "#menu", "data-toggle" => "collapse", type: "button"}
+      %i= fa_icon "bars"
+
+    #menu.mobile_menu.collapse
+      %ul.nav.nav-pills.nav-stacked
+        %li{class: "#{active? 'projects'}"}=  link_to "portfolio", projects_path
+        %li{class: "#{active? 'pages'}"}=     link_to "about",     about_path
+        %li{class: "#{active? 'posts'}"}=     link_to 'blog',      posts_path
+        %li{class: "#{active? 'recipes'}"}=   link_to 'cookbook',  recipes_path
+        %li{class: "#{active? 'inquiries'}"}=   link_to 'contact',   new_inquiry_path
+        - if user_signed_in?
+          %li.divider
+          %li= link_to "Categories", categories_path
+          %li= link_to "Topics", topics_path
+          %li= link_to "To Do List", todos_path
+          %li.divider
+          %li= link_to "Logout", destroy_user_session_path, method: :delete

@@ -2,10 +2,9 @@ jQuery ->
   $("a[data-rel='tooltip-top']").tooltip(html: true)
   $("a[data-rel='tooltip-bottom']").tooltip(html: true)
 
-
-
-
 $(document).ready ->
+  window.viewportUnitsBuggyfill.init()
+
   $('#scrolldown, #navl-about').click ->
     $('html, body').animate { scrollTop: $('#about_area').offset().top }, 1000
     return
@@ -22,7 +21,7 @@ $(document).ready ->
 
 
 $(window).scroll ->
-  $('#nav').show()
+  $('#nav, #mobile-nav').show()
   return
 
 $(window).scroll ->
