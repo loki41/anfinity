@@ -157,10 +157,6 @@
   .box
     width: 104% !important
 
-  .portfolio-title
-    font-size: 1.5em !important
-    font-weight: bold
-
 //-tablet
 
 @media(min-width: 480px) and (max-width: 991px)
@@ -171,5 +167,43 @@
   #portfolio .box:nth-child(2n+1)
     margin-left: 2% !important
 
+
+
+
+
+//PHONE - LANDSCAPE
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape)
   .portfolio-title
-    font-size: 5em !important
+    font-size: 2em !important
+    line-height: 1 !important
+    margin-top: 15vh !important
+
+  .title_banner
+    height: 30vh !important
+
+  #portfolio-content
+    margin-top: 5%
+
+
+
+//PHONE - PORTRAIT
+@media only screen and (min-device-width: 360px) and (max-device-width: 667px) and (orientation: portrait)
+  .portfolio-title
+    font-size: 2em !important
+    line-height: 2 !important
+
+//IPAD - LANDSCAPE
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
+
+
+
+
+
+//IPAD - PORTRAIT
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)
+
+
+
+
+//Desktop and above
+@media(min-width: 1025px)
