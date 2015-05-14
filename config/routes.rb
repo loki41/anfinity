@@ -9,7 +9,11 @@ Anfinity::Application.routes.draw do
   root 'projects#index'
   #root 'pages#index'
 
-  resources :projects
+  resources :projects do
+    collection do
+      get :portfolio
+    end
+  end
 
   resources :recipes
 
@@ -18,8 +22,6 @@ Anfinity::Application.routes.draw do
   resources :categories
 
   resources :posts
-
-  get "/projects/portfolio" => 'projects#portfolio'
 
   get "/posts/year/:year"                 => "posts#index",  as: :post_year
   get "/posts/year/:year/month/:month"    => "posts#index",  as: :post_month

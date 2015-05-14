@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
-  before_filter :set_project, except: [:index, :new, :create]
+  before_filter :set_project, except: [:index, :portfolio, :new, :create]
   before_action :authenticate_user!, only: [:edit, :update, :destroy]
 
 
@@ -22,6 +22,10 @@ class ProjectsController < ApplicationController
       format.html
       format.json { render json: @project }
      end
+  end
+
+  def portfolio
+    @projects = Project.all
   end
 
   # GET /projects/new

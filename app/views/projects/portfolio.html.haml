@@ -1,22 +1,43 @@
 .row
-  #projects_area.section
+  #portfolio_screen.section
     #projects_content.content
       .section_header
         %h1= "Projects"
 
-      #projects_container
-        - @projects.each do |p|
-          .col-md-6.box
-            = link_to p do
-              .content-item-img
-                - if File.exist? "#{Rails.public_path}/assets/#{p.name.parameterize}-main.png"
-                  = image_tag "/assets/#{p.name.parameterize}-main.png"
-                - else
-                  = image_tag "/assets/no-image.png"
-              .content-item-info
-                .content-item-type= cat(p)
-                .content-item-name= p.name
+
+      - @projects.each do |p|
+        .col-md-4.box
+          = link_to p do
+            .content-item-img
+              - if File.exist? "#{Rails.public_path}/assets/#{p.name.parameterize}-main.png"
+                = image_tag "/assets/#{p.name.parameterize}-main.png"
+              - else
+                = image_tag "/assets/no-image.png"
+            .content-item-info
+              .content-item-type= cat(p)
+              .content-item-name= p.name
       %br
 
       - if user_signed_in?
         = link_to 'New Project', new_project_path, class: "btn btn-primary"
+
+
+
+/ .row
+/   #projects_area.section
+/     #projects_content.content
+/       .section_header
+/         %h1= "Projects"
+
+/     #projects_container
+/       - @projects.each do |p|
+/         .col-md-4.box
+/           = link_to p do
+/             .content-item-img
+/               - if File.exist? "#{Rails.public_path}/assets/#{p.name.parameterize}-main.png"
+/                 = image_tag "/assets/#{p.name.parameterize}-main.png"
+/               - else
+/                 = image_tag "/assets/no-image.png"
+/               .more-box
+/                 .mbl= "+"
+/             .content-item-info= p.name
