@@ -4,10 +4,10 @@
     - if project_index?
       .navi-menu.col-sm-10.col-md-10
         %ul.nav
-          %li.nav-item.active= link_to "Home", '#background'
-          %li.nav-item= link_to "About", '#about_area'
-          %li.nav-item= link_to "Portfolio", '#projects_area'
-          %li.nav-item= link_to "Contact", '#contact_area'
+          %li#navl-home.nav-item.active= link_to "Home", '#background'
+          %li#navl-about.nav-item= link_to "About", '#about_area'
+          %li#navl-projects.nav-item= link_to "Portfolio", '#projects_area'
+          %li#navl-contact.nav-item= link_to "Contact", '#contact_area'
 
     - else
       .navi-menu.col-sm-10.col-md-10
