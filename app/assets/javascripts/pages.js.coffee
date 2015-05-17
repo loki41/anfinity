@@ -2,6 +2,8 @@ jQuery ->
   $("a[data-rel='tooltip-top']").tooltip(html: true)
   $("a[data-rel='tooltip-bottom']").tooltip(html: true)
 
+  $('body').scrollspy({ target: '.navi-menu' })
+
 $(document).ready ->
   window.viewportUnitsBuggyfill.init()
 
@@ -25,6 +27,9 @@ $(window).scroll ->
   return
 
 $(window).scroll ->
+  $top = $(window).scrollTop()
+
   if $(window).scrollTop() == 0  && (window.location.href == "http://www.anfinity.co.uk/" || window.location.href == "http://localhost:3000/")
     $('#nav').hide()
     return
+

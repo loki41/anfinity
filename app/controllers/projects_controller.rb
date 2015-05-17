@@ -9,7 +9,8 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     @projects = Project.all.where(show: true).limit(4)
-    @inquiry = Inquiry.new
+    @inquiry  = Inquiry.new
+    @tab      = "home"
   end
 
 
@@ -17,15 +18,12 @@ class ProjectsController < ApplicationController
   # GET /projects/1
   # GET /projects/1.json
   def show
-	add_breadcrumb @project.name, @project
-    respond_to do |format|
-      format.html
-      format.json { render json: @project }
-     end
+    @tab = "portfolio"
   end
 
   def portfolio
     @projects = Project.all
+    @tab = "portfolio"
   end
 
   # GET /projects/new

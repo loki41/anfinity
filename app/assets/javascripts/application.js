@@ -12,10 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require bootstrap
 //= require bootstrap/tooltip
 //= require bootstrap/carousel
 //= require bootstrap/dropdown
 //= require bootstrap/collapse
+//= require bootstrap/scrollspy
 //= require_tree .

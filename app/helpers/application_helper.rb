@@ -10,8 +10,8 @@ module ApplicationHelper
     /^http/.match(url) ? url : "http://#{url}"
   end
 
-  def active? c
-    controller_name == c ? 'current' : 'none'
+  def active? c, a
+    controller_name == c && params[:action] == a ? 'current' : 'none'
   end
 
   def markdown(text)
