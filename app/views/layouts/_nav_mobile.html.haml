@@ -10,13 +10,13 @@
       %ul.nav.nav-pills.nav-stacked
         %li{class: "#{active? 'projects', 'index'}"}=  link_to "portfolio", projects_path
         %li{class: "#{active? 'pages', 'index'}"}=     link_to "about",     about_path
-        %li{class: "#{active? 'posts', 'index'}"}=     link_to 'blog',      posts_path
-        %li{class: "#{active? 'recipes', 'index'}"}=   link_to 'cookbook',  recipes_path
         %li{class: "#{active? 'inquiries', 'index'}"}=   link_to 'contact',   new_inquiry_path
         - if user_signed_in?
           %li.divider
+          %li= link_to 'blog',       posts_path
+          %li= link_to 'cookbook',   recipes_path
           %li= link_to "Categories", categories_path
-          %li= link_to "Topics", topics_path
+          %li= link_to "Topics",     topics_path
           %li= link_to "To Do List", todos_path
           %li.divider
           %li= link_to "Logout", destroy_user_session_path, method: :delete
