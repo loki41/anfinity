@@ -44,26 +44,16 @@ body
 
 
 
-#logo
-  font-family: 'quicksand', cursive
-  position: absolute
-  transform: translate(-50%, -50%)
-
 
 //PHONE - LANDSCAPE
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape)
+@media only screen and (min-width: 375px) and (max-width: 667px) and (orientation: landscape)
   #logo
-    left: 50%
-    margin-top: -22%
+    margin-top: -32%
 
   .logo_img
     img
       top: -87px
       width: 130px
-
-  .logo_border
-    width: 100px
-    height: 100px
 
   .slogan
     font-size: 1.8em
@@ -87,19 +77,14 @@ body
 
 
 //PHONE - PORTRAIT
-@media only screen and (min-device-width: 360px) and (max-device-width: 667px) and (orientation: portrait)
+@media only screen and (min-width: 360px) and (max-width: 667px) and (orientation: portrait)
   #logo
-    left: 50%
-    margin-top: -30%
+    margin-top: -50%
 
   .logo_img
     img
       top: -87px
       width: 60px
-
-  .logo_border
-    width: 100px
-    height: 100px
 
   .slogan
     font-size: 1.3em
@@ -113,19 +98,14 @@ body
 
 
 //IPAD - LANDSCAPE
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape)
   #logo
-    left: 0%
     margin-top: -50%
 
   .logo_img
     img
       top: -150px
       width: 200px
-
-  .logo_border
-    width: 200px
-    height: 200px
 
   .slogan
     font-size: 2em
@@ -137,19 +117,14 @@ body
 
 
 //IPAD - PORTRAIT
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait)
   #logo
-    left: 0%
     margin-top: -45%
 
   .logo_img
     img
       top: -150px
       width: 170px
-
-  .logo_border
-    width: 200px
-    height: 200px
 
   .slogan
     font-size: 2em
@@ -163,17 +138,12 @@ body
 //Desktop and above
 @media(min-width: 1025px)
   #logo
-    left: 50%
-    margin-top: -40%
+    margin-top: -50%
 
   .logo_img
     img
       top: -151px
       width: 250px
-
-  .logo_border
-    width: 200px
-    height: 200px
 
   .slogan
     font-size: 2em
@@ -187,28 +157,18 @@ body
 
 
 
-
-
-
-
-
-
 #logo
+  font-family: 'quicksand', cursive
+  position: absolute
   width: 100%
   text-align: center
+  left: 0%
 
 
 .logo_img
   img
     margin: 0 auto
     display: block
-
-.logo_border
-  border: 3px solid white
-  border-radius: 130px
-  position: relative
-  margin: 0 auto
-  top: -175px
 
 .slogan
   color: white
