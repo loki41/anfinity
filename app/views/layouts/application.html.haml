@@ -22,5 +22,5 @@
         = yield
 
 
-        #footer
+        %div{id: "#{ project_index? ? 'footer' : 'footer-standard' }"}
           = render 'layouts/footer'
