@@ -1,16 +1,16 @@
 - if user_signed_in?
-  .btn.btn-primary= link_to 'New', new_post_path
+  .btn.btn-primary.outline= link_to 'New', new_post_path
   - if params[:id]
     .btn.btn-warning= link_to 'Edit', edit_post_path
-    .btn.btn-danger= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } 
+    .btn.btn-danger= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' }
 #recent
   - if @recent
     %h4.section-title= "Recent Posts:"
     - @recent.each do |p|
-      .titles= link_to p.title, post_path(p) 
-	  
+      .titles= link_to p.title, post_path(p)
+
 #Archive
-  - if @archive      
+  - if @archive
     %h4.section-title= "Archive:"
     - @archive.each do |year, monthname|
       %h5.year= link_to year, post_year_path( year: year )
@@ -18,7 +18,7 @@
         .month
           = link_to post_month_path( year: year, month: month_convert("#{m[0]}") ) do
             .col-md-5.post-month= m[0]
-            .col-md-3.post-count= m[1].count             			
+            .col-md-3.post-count= m[1].count
 
 #Categories.hide
   - if @cats
@@ -33,7 +33,7 @@
     .row
       - @tops.each do |t|
         .col-md-12= link_to t.name, post_top_path(t.id)
-		
+
 
 #Tags
   - if @tags

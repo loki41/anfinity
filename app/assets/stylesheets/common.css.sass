@@ -1,6 +1,14 @@
+//------------------------------------------------------------------------------------------ VARIABLES
+$primary-blue: #8ccded
+$dark-blue: #4098c2
+$mid-blue: #64b5dc
+$light-blue: #bbe5f9
 
 
-//----------------------------------------------------------- COMMON Styling
+
+
+
+//------------------------------------------------------------------------------------------ COMMON Styling
 @font-face
   font-family: Quicksand
   src: url('Quicksand-Regular.ttf')
@@ -41,121 +49,6 @@ body
   .scroll-down
     margin-top: -8%
     color: white
-
-
-
-
-//PHONE - LANDSCAPE
-@media only screen and (min-width: 375px) and (max-width: 667px) and (orientation: landscape)
-  #logo
-    margin-top: -32%
-
-  .logo_img
-    img
-      top: -87px
-      width: 130px
-
-  .slogan
-    font-size: 1.8em
-
-  .skill
-    min-height: 150px
-
-  #projects_area
-    height: 120vh
-
-    .box
-      margin-bottom: 60px
-
-  #background
-    width: 100%
-    height: 100vh
-    img
-      width: 100%
-      height: 100vh
-
-
-
-//PHONE - PORTRAIT
-@media only screen and (min-width: 360px) and (max-width: 667px) and (orientation: portrait)
-  #logo
-    margin-top: -50%
-
-  .logo_img
-    img
-      top: -87px
-      width: 60px
-
-  .slogan
-    font-size: 1.3em
-
-  .skill
-    min-height: 150px
-
-  #projects_area
-    height: 150vh
-
-
-
-//IPAD - LANDSCAPE
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape)
-  #logo
-    margin-top: -50%
-
-  .logo_img
-    img
-      top: -150px
-      width: 200px
-
-  .slogan
-    font-size: 2em
-
-  .skill
-    min-height: 90px
-
-
-
-
-//IPAD - PORTRAIT
-@media only screen and (min-width: 668px) and (max-width: 1024px) and (orientation: portrait)
-  #logo
-    margin-top: -45%
-
-  .logo_img
-    img
-      top: -150px
-      width: 170px
-
-  .slogan
-    font-size: 2em
-
-  .skill
-    min-height: 90px
-
-
-
-
-//Desktop and above
-@media(min-width: 1025px)
-  #logo
-    margin-top: -50%
-
-  .logo_img
-    img
-      top: -151px
-      width: 250px
-
-  .slogan
-    font-size: 2em
-
-  .skill
-    min-height: 90px
-
-
-
-
-
-
 
 #logo
   font-family: 'quicksand', cursive
@@ -370,10 +263,168 @@ body
 
 
 
-//------------------------------------------------- Third party bug fixes
+
+
+
+//------------------------------------------------------------------------------------------ Mobile Styling
+
+//PHONE - LANDSCAPE
+@media only screen and (min-width: 375px) and (max-width: 667px) and (orientation: landscape)
+  #logo
+    margin-top: -32%
+
+  .logo_img
+    img
+      top: -87px
+      width: 130px
+
+  .slogan
+    font-size: 1.8em
+
+  .skill
+    min-height: 150px
+
+  #projects_area
+    height: 120vh
+
+    .box
+      margin-bottom: 60px
+
+  #background
+    width: 100%
+    height: 100vh
+    img
+      width: 100%
+      height: 100vh
+
+
+
+//PHONE - PORTRAIT
+@media only screen and (min-width: 360px) and (max-width: 667px) and (orientation: portrait)
+  #logo
+    margin-top: -50%
+
+  .logo_img
+    img
+      top: -87px
+      width: 60px
+
+  .slogan
+    font-size: 1.3em
+
+  .skill
+    min-height: 150px
+
+  #projects_area
+    height: 150vh
+
+
+
+//IPAD - LANDSCAPE
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape)
+  #logo
+    margin-top: -50%
+
+  .logo_img
+    img
+      top: -150px
+      width: 200px
+
+  .slogan
+    font-size: 2em
+
+  .skill
+    min-height: 90px
+
+
+
+
+//IPAD - PORTRAIT
+@media only screen and (min-width: 668px) and (max-width: 1024px) and (orientation: portrait)
+  #logo
+    margin-top: -45%
+
+  .logo_img
+    img
+      top: -150px
+      width: 170px
+
+  .slogan
+    font-size: 2em
+
+  .skill
+    min-height: 90px
+
+
+
+
+//Desktop and above
+@media(min-width: 1025px)
+  #logo
+    margin-top: -50%
+
+  .logo_img
+    img
+      top: -151px
+      width: 250px
+
+  .slogan
+    font-size: 2em
+
+  .skill
+    min-height: 90px
+
+
+
+
+
+
+
+
+//------------------------------------------------------------------------------------------ Third party bug fixes
 
 //Bootstrap font issue for image slider
 
 .carousel-control i
   position: absolute
   top: 50%
+
+
+// bootstrap button styles
+
+.outline
+  background-color: none !important
+  padding: 12px 22px
+
+.btn-primary
+  a
+    color: white
+
+
+.btn-primary.outline
+  border: 1px solid $mid-blue
+  background: $mid-blue
+  a
+    color: white
+
+.btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary
+  color: #fff
+  border-color: $primary-blue
+  background-color: $primary-blue
+  a
+    color: #fff
+    display: block
+    text-decoration: none
+
+.btn-primary.outline:active, .btn-primary.outline.active
+  border-color: #007299
+  color: #007299
+  box-shadow: none
+
+
+
+//------------------------------------------------------------------------------------------ VARIABLES
+// $primary-blue: #8ccded
+// $dark-blue: #4098c2
+// $mid-blue: #64b5dc
+// $light-blue: #bbe5f9
