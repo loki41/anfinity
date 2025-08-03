@@ -1,0 +1,40 @@
+%nav.navbar
+  .navbar__left
+    = image_tag "logo-white.png", class: "navbar__logo navbar__logo--white", alt: "Logo White"
+    = image_tag "logo-primary.png", class: "navbar__logo navbar__logo--primary", alt: "Logo Primary"
+
+
+
+    .navbar__links
+      = link_to "Home", root_path, class: "navbar__link #{'active' if current_page?(root_path)}"
+      = link_to "About", about_path, class: "navbar__link #{'active' if current_page?(about_path)}"
+      = link_to "Portfolio", portfolio_path, class: "navbar__link #{'active' if current_page?(portfolio_path)}"
+      - if user_signed_in? && current_user.admin?
+        = link_to "Admin", admin_projects_path, class: "navbar__link #{'active' if current_page?(admin_projects_path)}"
+
+
+  .navbar__right
+    - if user_signed_in? && current_user.admin?
+      .nav-profile-dropdown
+
+        = render 'components/button', id: 'menu-button', text: "#{current_user.email}", icon: "chevron-down", icon_position: 'right', variant: 'link', html_options: {aria: { expanded: "true", haspopup: "true" }}
+
+        / Dropdown menu
+        .nav-profile-dropdown
+          %ul
+            %li= link_to "Admin Panel", admin_users_path
+            %li= link_to "Edit Profile", edit_user_registration_path
+            %li= button_to "Sign Out", destroy_user_session_path, method: :delete
+    - else
+      = render 'components/button', text: "Let's Talk", variant: 'primary', url: contact_path
+
+
+%nav.mobile-nav
+  .mobile-nav__toggle{ role: "button", tabindex: 0 }
+    = tabler_icon('menu-2')
+
+  .mobile-nav__menu
+    = link_to "Home", root_path, class: "mobile-nav__link"
+    = link_to "About", about_path, class: "mobile-nav__link"
+    = link_to "Portfolio", portfolio_path, class: "mobile-nav__link"
+    = link_to "Contact", contact_path, class: "mobile-nav__link"

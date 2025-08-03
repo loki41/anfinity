@@ -1,0 +1,51 @@
+-# locals:
+-# images: array of hashes (file, title, description)
+-# layout: integer (1–4)
+-# orientation: "left" or "right" (for layout 1 only)
+
+- case layout.to_i
+- when 1
+  - orientation_toggle = (orientation == "right")
+  - images.each_with_index do |img, index|
+    .gallery-row.layout-1{ class: orientation_toggle ? "right" : "left" }
+      - if orientation_toggle
+        .text
+          %h3= img["title"]
+          %p= img["description"]
+        .image
+          = image_tag("/projects/#{img['file']}")
+      - else
+        .image
+          = image_tag("/projects/#{img['file']}")
+        .text
+          %h3= img["title"]
+          %p= img["description"]
+    - orientation_toggle = !orientation_toggle
+
+- when 2
+  - main = images.first
+  - thumbs = images.drop(1)
+  .gallery-row.layout-2
+    .image-large
+      = image_tag("/projects/#{main['file']}")
+    .info
+      %h3= main["title"]
+      %p= main["description"]
+      .thumbnails
+        - thumbs.each do |thumb|
+          = image_tag("/projects/#{thumb['file']}")
+
+- when 3
+  - main = images.first
+  - rest = images.drop(1)
+  .gallery-row.layout-3
+    .image-large
+      = image_tag("/projects/#{main['file']}")
+    .grid-images
+      - rest.each do |thumb|
+        = image_tag("/projects/#{thumb['file']}")
+
+- when 4
+  .gallery-row.layout-4
+    - images.each do |img|
+      = image_tag("/projects/#{img['file']}")

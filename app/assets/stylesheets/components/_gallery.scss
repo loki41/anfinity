@@ -1,0 +1,131 @@
+.gallery-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+  gap: 1rem;
+
+  &.layout-1,
+  &.layout-2,
+  &.layout-3 {
+    align-items: center;
+  }
+
+  &.left .image,
+  &.layout-2 .image-large,
+  &.layout-3 .image-large {
+    flex: 1;
+  }
+
+  &.right .image,
+  .text,
+  .info {
+    flex: 1;
+  }
+
+  .image img,
+  .image-large img {
+    max-width: 100%;
+    border-radius: 4px;
+  }
+
+  .text,
+  .info {
+    padding: 1rem;
+  }
+
+  .thumbnails {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+
+    img {
+      width: 80px;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  }
+
+  .grid-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0.5rem;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &.layout-3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+
+    .image-large {
+      flex: 1 1 100%;
+      aspect-ratio: 16 / 9;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 4px;
+      }
+    }
+
+    .grid-images {
+      flex: 1 1 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 0.5rem;
+      align-self: start;
+
+      img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 4px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      flex-wrap: nowrap;
+
+      .image-large {
+        flex: 1 1 60%;
+        aspect-ratio: auto;
+
+        img {
+          height: 100%;
+        }
+      }
+
+      .grid-images {
+        flex: 1 1 40%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        grid-auto-rows: 1fr;
+        align-content: start;
+        gap: 0.5rem;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  &.layout-4 {
+    justify-content: center;
+    gap: 1rem;
+
+    img {
+      width: 32.7%;
+      height: auto;
+      border-radius: 4px;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+
+
+- image_url = @project.hero_image.attached? ? url_for(@project.hero_image) : image_path('bg2.jpg')
+
+.section-hero-portfolio{ style: "background-image: url(#{image_url});" }
+  .hero-overlay
+    .back-link
+      = link_to projects_path do
+        %span.arrow ←
+        Back to Portfolio
+
+    .project-title.row
+      .hero-text
+        %h1.page-title= @project.title
+        %p= @project.description
+
+      .cta-buttons.row
+        - if @project.figma_file.length > 0
+          = render 'components/button', text: "Figma file", icon: 'brand-figma', variant: 'secondary', url: @project.figma_file
+        - if @project.figma_prototype.length > 0
+          = render 'components/button', text: "Prototype", icon: 'player-play', variant: 'tertiary', url: @project.figma_prototype
+
+
+
+= render 'partials/sections/overview_and_meta', project_details: @project_details
+= render 'partials/sections/design_process', project_details: @project_details
+= render 'partials/sections/user_research_and_insights', project_details: @project_details
+= render 'partials/sections/challenge_and_solution', project_details: @project_details
+= render 'partials/sections/visual_design_approach', project_details: @project_details
+= render 'partials/sections/testing_and_validation', project_details: @project_details
+= render 'partials/sections/results_and_impact', project_details: @project_details
+= render 'partials/sections/key_learnings', project_details: @project_details
+= render 'partials/sections/future_opportunities', project_details: @project_details
+
+
+.cta.section
+  .cta-container.box
+    .cta-content
+      %h2 Interested in working together?
+      %p I'm always excited to take on new challenges and collaborate on meaningful projects. Let's discuss how we can create something amazing together.
+
+      .cta-buttons
+        = render 'components/button', text: "Get in Touch", variant: 'primary', url: contact_path
+        = render 'components/button', text: "Download Portfolio", variant: 'tertiary', url: contact_path
+
+
+= render "partials/footer"

@@ -1,0 +1,19 @@
+- description = project_details[:visual_design_approach][:description]
+- elements = project_details[:visual_design_approach][:key_elements]
+- return unless description.present?
+
+.section
+  %h2 Visual Design Approach
+
+  .design-approach-container.box
+    %p= description
+
+    - if elements.present?
+      .key-elements
+        %h4 Key Design Elements
+        .element-list
+          - elements.each_slice((elements.size / 2.0).ceil).each do |column_items|
+            .column
+              %ul
+                - column_items.each do |item|
+                  %li= item

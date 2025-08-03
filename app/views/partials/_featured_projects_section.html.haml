@@ -1,0 +1,8 @@
+/ Featured Projects Section
+
+.projects-container
+  %h2 Featured Projects
+  %p.subheading A few selected works that highlight my design and development experience.
+
+  .project-grid
+    = render partial: "components/project_tile", collection: projects, as: :project

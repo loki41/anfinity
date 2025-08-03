@@ -1,0 +1,32 @@
+- return unless project_details[:project_overview].present?
+
+.section
+  .overview-meta-grid
+    .overview
+      %h2 Project Overview
+      %p= project_details[:project_overview]
+
+    - if project_details[:project_meta].present?
+      .meta.box
+        %h3 Meta
+        - meta = project_details[:project_meta]
+        %ul
+          - if meta[:timeline]
+            %li
+              %strong Timeline:
+              = meta[:timeline]
+          - if meta[:people].present?
+            %li
+              %strong People:
+              = meta[:people].join(', ')
+          - if meta[:role]
+            %li
+              %strong Role:
+              = meta[:role]
+
+  - if project_details[:tools_and_technology].present?
+    .tools
+      %h3 Tools & Technology
+      .tool-chips
+        - project_details[:tools_and_technology].each do |tool|
+          %span.tool-chip= tool

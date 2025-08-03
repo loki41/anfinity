@@ -1,0 +1,47 @@
+-# Components::Button
+-# Params:
+-# id: optional string to set the HTML id
+-# text: optional string
+-# icon: optional string (name of Tabler icon, ex: "search")
+-# icon_position: "left" or "right" (default: left)
+-# size: "small", "medium", "large", "hero" (default: medium)
+-# variant: "primary", "secondary", "tertiary", "danger", "link" (default: primary)
+-# html_options: any additional HTML options (e.g., data attrs, type)
+
+
+-# .section
+-#   = render 'components/button', text: 'Delete', icon: 'trash', variant: 'danger', icon_position: 'right'
+-#   = render 'components/button', text: 'Save', icon: 'check', variant: 'primary'
+  
+-#   = render 'components/button', icon: 'search', variant: 'tertiary', size: 'small'
+-#   = render 'components/button', text: 'Get Started', size: 'hero', variant: 'secondary'
+
+-#   = render 'components/button', id: 'menu-button', text: "open", icon: "chevron-down", icon_position: 'right', variant: 'secondary', html_options: {aria: { expanded: "true", haspopup: "true" }}
+
+
+- id ||= nil
+- text ||= ''
+- icon ||= ''
+- size ||= 'medium'
+- variant ||= 'primary'
+- icon_position ||= 'left'
+- html_options ||= {}
+- url ||= ''
+
+- classes = ["btn", "btn--#{variant}", "btn--#{size}"]
+- classes << "btn--icon-only" if text.blank? && icon.present?
+
+- tag = url.present? ? :a : :button
+- attrs = { class: classes.join(' '), **html_options }
+- attrs[:id] = id if id.present?
+- attrs[:href] = url if tag == :a
+
+= content_tag(tag, attrs) do
+  - if icon.present? && icon_position == 'left'
+    = tabler_icon(icon)
+  = text if text.present?
+  - if icon.present? && icon_position == 'right'
+    = tabler_icon(icon)
+
+
+

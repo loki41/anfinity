@@ -1,0 +1,52 @@
+.section-hero.portfolio-hero
+  .hero-container
+    .hero-text.column 
+      %h1 Portfolio
+      %p “A user interface is like a joke. If you have to explain it, it’s not that good.”
+      %p.quote-name - Martin LeBlanc
+
+.portfolio-container
+  .featured-projects.white.section
+    = render partial: "partials/featured_projects_section", locals: { projects: @featured_projects } 
+
+  .all-projects.white.section
+    %h2 All Projects
+    .project-grid
+      = render partial: "components/project_tile", collection: @projects, as: :project
+
+  -# Define the steps outside of the loop block
+  - design_steps = [['Empathize', 'Understand the users through research and observation.'],
+    ['Define', 'Clearly outline the problem based on research insights.'],
+    ['Ideate', 'Explore solutions through brainstorming and sketching.'],
+    ['Prototype', 'Build and refine interactive design prototypes.'],
+    ['Test', 'Validate designs with real users to ensure usability.'],
+    ['Iterate', 'Repeat any step until user and business needs are met.']]
+            
+  .design-process.section
+    .process-container
+      %h2 My Design Process
+      .process-grid
+        - design_steps.each_with_index do |(title, desc), index|
+          .process-step
+            .step-number
+              %span.step-square
+                %span.step-circle= index + 1
+            .step-text
+              %h4= title
+              %p= desc
+
+  .cta.section
+    .cta-container
+      .cta-content
+        %h2 Interested in working together?
+        %p I'm always excited to take on new challenges and collaborate on meaningful projects. Let's discuss how we can create something amazing together.
+
+        .cta-buttons
+          = render 'components/button', text: "Get in Touch", variant: 'primary', url: contact_path
+          = render 'components/button', text: "Download Portfolio", variant: 'tertiary', url: contact_path
+
+
+
+
+/ Footer Section
+= render "partials/footer"

@@ -1,0 +1,33 @@
+@use "partials/variables" as *;
+
+.admin_projects_actions {
+    display: flex;    
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 4rem;
+}
+
+// -------------------- Create project page
+
+.create-project {
+    padding: 2rem 4rem;
+    max-width: 340px;
+
+    .field {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin: 16px 0px;
+    }
+}
+
+
+//------------------------------- fixes
+
+.admin_projects {
+  margin-top: 80px;
+
+  .all-projects {
+    background-color: white;
+  }
+}

@@ -1,0 +1,26 @@
+- data = project_details[:user_research_and_insights]
+- return unless data.present?
+
+.section{ "data-controller" => "gallery" }
+  %h2 User Research & Insights
+
+  .research-insights-grid
+    - if data[:methods].present?
+      .methods
+        %h4 Research Methods
+        %ul.research-methods
+          - data[:methods].each do |method|
+            %li= method
+
+    - if data[:insights].present?
+      .insights
+        %h4 Key Insights
+        .insight-grid
+          - data[:insights].each do |insight|
+            .insight-box.box
+              %p= insight
+
+  - if data[:gallery].present?
+    = render partial: "components/gallery", locals: { images: data[:gallery], layout: 4, orientation: "left" }
+
+

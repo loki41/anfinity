@@ -1,0 +1,420 @@
+@use "partials/variables" as *;
+
+
+// Projects index page
+
+.section-hero.portfolio-hero {
+
+  .hero-container {
+    .quote {
+      font-size: $h4;
+      font-weight: $regular;
+      color: $gray-600;
+      margin: 0px;
+      font-style: italic;
+      max-width: 100%
+    }
+
+    .quote-name {
+      color: $gray-600;
+      font-style: italic;
+    }
+  }
+}
+
+
+.design-process {
+  padding: 2rem 4rem;
+
+  .process-container {
+    background-color: $primary-green-50;
+    border-radius: $radius-medium;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .process-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+
+    @media (max-width: $breakpoint-tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .step-number {
+    .step-square {
+      background: $primary-green-100;
+      padding: 1rem;
+      border-radius: $radius-medium;
+      display: inline-block;
+
+      .step-circle {
+        background-color: $primary-green-500;
+        color: white;
+        border-radius: 50%;
+        padding: 0.5rem 0.5rem;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}
+
+
+.cta {
+  padding: 2rem 4rem;
+  text-align: center;
+
+  .cta-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 2rem;
+  }
+
+
+  h2 {
+    font-size: $h2;
+    font-weight: $bold;
+    margin: 0;
+  }
+
+  p {
+    max-width: 600px;
+    margin: 1rem auto 2rem;
+    font-size: $body;
+    color: $gray-700;
+  }
+
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .button.primary {
+    background-color: $primary-green-500;
+    color: white;
+  }
+
+  .button.secondary {
+    background-color: transparent;
+    border: 1px solid $primary-green-500;
+    color: $primary-green-500;
+  }
+}
+
+
+
+
+// Projects Show Pages
+// --------------------------- Project show header
+.section-hero-portfolio {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-height: 60vh;
+  display: flex;
+  color: white;
+
+  .hero-overlay {
+    background: linear-gradient(0deg, rgb(9 8 28) 0%, rgba(145, 145, 145, 0.5) 70%);
+    height: 60vh;
+    width: 100%;
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-end;
+  }
+
+  .back-link {
+    font-size: $small;
+    font-weight: $medium;
+    color: white;
+    text-decoration: none;
+    margin-top: 5rem;
+
+    a {
+      color: white;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      .arrow {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .project-title {
+    justify-content: space-between;
+  }
+
+  .projects-hero-text {
+    max-width: 70%;
+    padding-bottom: 1rem;
+
+    h1 {
+      font-size: $h1;
+      font-weight: $bold;
+      line-height: $lh-heading;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: $body;
+      line-height: $lh-base;
+      font-weight: $regular;
+    }
+  }
+}
+
+
+// --------------------------- Overview & Meta
+
+.overview-meta-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  .overview {
+    flex: 3;
+  }
+
+  .meta {
+    flex: 1;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.tool-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+
+  .tool-chip {
+    background-color: $primary-green-100;
+    color: $gray-800;
+    font-size: $small;
+    padding: 0.4rem 0.75rem;
+    border-radius: $radius-default;
+  }
+}
+
+// --------------------------- design process
+
+.design-process {
+  .step-text h4 {
+    font-size: $h4;
+    margin-top: 0.5rem;
+  }
+
+  .step-text p {
+    font-size: $small;
+    color: $gray-600;
+  }
+}
+
+
+
+
+.process-step {
+  padding: 1.25rem;
+  border-radius: $radius-default;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  h4 {
+    font-size: $h4;
+    font-weight: $medium;
+    margin-bottom: 0.25rem;
+  }
+
+  p {
+    font-size: $body;
+    color: $gray-700;
+  }
+}
+
+// --------------------------- User Research and Insights
+
+
+.research-insights-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.research-methods {
+  list-style: disc inside;
+  padding-left: 1rem;
+
+  li {
+    color: $gray-800;
+    margin-bottom: 0.4rem;
+  }
+}
+
+
+
+// --------------------------- Challenge and Solutions
+
+
+.challenge-solution-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: 1fr;
+  }
+
+  .challenge,
+  .solution {
+    p {
+      color: $gray-700;
+      font-size: $body;
+      line-height: $lh-base;
+    }
+
+    h4 {
+      font-size: $h4;
+      font-weight: $medium;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+// --------------------------- Visual Design Approach
+
+.key-elements {
+  margin-top: 1rem;
+
+  h4 {
+    font-size: $h4;
+    font-weight: $medium;
+    margin-bottom: 0.5rem;
+  }
+
+  .element-list {
+    display: flex;
+    gap: 2rem;
+
+    .column {
+      flex: 1 1 50%;
+
+      ul {
+        list-style: disc inside;
+
+        li {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+// --------------------------- Testing and ValidationTesting and Validation
+
+
+.research-insights-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.research-methods {
+  list-style: disc inside;
+  padding-left: 1rem;
+
+  li {
+    color: $gray-800;
+    margin-bottom: 0.4rem;
+  }
+}
+
+
+
+// --------------------------- Results and Impact
+
+.design-process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.design-process-card {
+  padding: 2rem;
+
+  p {
+    font-size: $body;
+    line-height: $lh-base;
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+
+
+// --------------------------- Key Learnings & Future Opportunities
+
+
+.insight-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.insight-box {
+  font-style: italic;
+  display: flex;
+  align-items: start;
+  gap: 0.5rem;
+
+  &.future {
+    font-style: normal;
+  }
+
+  .arrow {
+    color: $primary-green-500;
+    font-weight: $bold;
+    font-size: 1.2rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+}

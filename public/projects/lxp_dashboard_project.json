@@ -1,0 +1,98 @@
+{
+  "project_overview": "The LXP Dashboard redesign aimed to address growing concerns from sales and enterprise customers around usability, scalability, and visual design. The existing dashboard was often described as outdated, cramped, and unintuitive—leading to lost bids and poor learner engagement. Our objective was to overhaul the user experience, focusing on navigation, content prioritization, and user actions, all while operating within the constraints of the existing platform architecture.",
+
+  "project_meta": {
+    "timeline": "6 months",
+    "people": ["UX Team", "Bids Team", "Customer Success", "Stakeholders"],
+    "role": "Lead UX Designer"
+  },
+
+  "tools_and_technology": ["Figma", "Maze", "3M Eye Tracking", "Rails", "Sass"],
+
+  "design_process": [
+    {
+      "stage": "Empathize",
+      "summary": "Conducted deep-dive interviews with Sales, Support, Customer Success, and internal stakeholders to identify core frustrations and business risks."
+    },
+    {
+      "stage": "Define",
+      "summary": "Mapped out three critical user experience gaps: navigation scalability, content discoverability, and hidden or unclear content actions."
+    },
+    {
+      "stage": "Ideate",
+      "summary": "Explored design solutions that would remain compatible with the existing API and platform while delivering a more modern and intuitive experience."
+    },
+    {
+      "stage": "Prototype",
+      "summary": "Developed vertical navigation, redesigned content tiles, and an action-enhanced hover state with dedicated Info and Launch buttons."
+    },
+    {
+      "stage": "Test",
+      "summary": "Tested design iterations via Figma prototypes and 3M eye-tracking tools to validate performance and usability gains."
+    }
+  ],
+
+  "user_research_and_insights": {
+    "methods": ["Stakeholder Interviews", "Usability Testing", "Eye Tracking", "Sales Feedback"],
+    "insights": [
+      "Users couldn’t identify critical content due to overloaded tiles and poor information hierarchy.",
+      "Over 70% of test participants struggled to find content actions.",
+      "Stakeholders demanded better scalability and theming customisation.",
+      "Customers wanted clear branding options, mobile support, and consistent UI patterns across products."
+    ]
+  },
+
+  "challenge_and_solution": {
+    "challenge": "The outdated dashboard UI led to poor content discovery, low engagement, and ultimately lost enterprise bids. Navigation was cramped, content was overwhelming, and core actions were hidden or unclear.",
+    "solution": "We introduced a scalable vertical nav, simplified tile interaction with a hover state for context and action, and implemented configurable theming. These changes maintained compatibility with the existing tech stack while delivering significant UX improvements."
+  },
+
+  "visual_design_approach": {
+    "description": "The visual strategy focused on clarity, hierarchy, and scalability. The dashboard was redesigned to accommodate future features, improve visual consistency, and enhance content legibility.",
+    "key_elements": [
+      "Scalable vertical navigation with clear labels",
+      "Simplified tile interactions and hover states",
+      "Dedicated action buttons for Info and Launch",
+      "Theming options including light/dark mode and brand color tokens",
+      "Responsive layout optimized for both web and mobile devices"
+    ]
+  },
+
+  "testing_and_validation": {
+    "methods": ["3M Eye Tracking", "Figma Prototypes", "Maze Tests", "Live Event Feedback"],
+    "findings": [
+      "Vertical nav improved discoverability of dashboard sections",
+      "New tile interactions reduced mis-clicks and task completion time",
+      "Participants preferred action buttons on hover over previous sidebar interaction",
+      "Customers at Learning Pool Live responded positively to the updated design and requested early rollout"
+    ]
+  },
+
+  "results_and_impact": {
+    "changes_made": [
+      "Adopted vertical navigation to support expansion",
+      "Replaced confusing tile layout with simplified, informative hover states",
+      "Enhanced accessibility with inclusive font and WCAG 3-compliant contrast",
+      "Introduced customizable theming for enterprise branding"
+    ],
+    "outcomes": [
+      "Marked reduction in support tickets related to content actions",
+      "Improved internal confidence during customer demos and sales bids",
+      "UX team praised for cross-product design system efforts",
+      "Early reports from Sales indicated improved customer sentiment"
+    ]
+  },
+
+  "key_learnings": [
+    "Conversations with Sales and Support revealed blind spots in our initial assumptions.",
+    "Accessibility and theming were not just nice-to-haves—they were deal breakers for enterprise clients.",
+    "Testing even within technical constraints leads to measurable UX gains."
+  ],
+
+  "future_opportunities": [
+    "Expand vertical nav patterns across other products for a unified design system.",
+    "Continue improving tile performance and transitions based on user feedback.",
+    "Evaluate the new dashboard against usage KPIs to inform next phase of improvements.",
+    "Introduce more powerful personalization tools for learners within the LXP."
+  ]
+}

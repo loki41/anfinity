@@ -1,0 +1,10 @@
+- return unless project_details[:design_process].present?
+
+.section
+  %h2 Design Process
+
+  .design-process-grid
+    - project_details[:design_process].each do |step|
+      .process-step
+        %h4= step[:stage]
+        %p.mt-1= step[:summary]

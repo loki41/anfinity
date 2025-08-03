@@ -1,0 +1,12 @@
+- raw_data = project_details[:key_learnings]
+- return unless raw_data.present?
+
+- learnings = raw_data.is_a?(Array) ? raw_data : [raw_data]
+
+.section
+  %h2 Key Learnings
+
+  .insight-grid
+    - learnings.each do |learning|
+      .insight-box.box
+        %p= learning

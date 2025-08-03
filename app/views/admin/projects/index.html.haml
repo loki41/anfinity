@@ -1,0 +1,10 @@
+
+
+.admin_projects_actions
+  %h1 All Projects
+  = render 'components/button', text: "New Project", variant: 'primary', url: new_admin_project_path
+
+.section.projects
+  .all-projects
+    .project-grid
+      = render partial: "components/project_tile", collection: @projects, as: :project, locals: { admin: true }

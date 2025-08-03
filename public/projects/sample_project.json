@@ -1,0 +1,65 @@
+{
+  "project_overview": "This was a project to redesign the onboarding flow for a fintech app.",
+  "project_meta": {
+    "timeline": "4 months",
+    "people": ["Jane Doe", "John Smith"],
+    "role": "Lead Designer"
+  },
+  "tools_and_technology": ["Figma", "Rails", "PostgreSQL", "Hotjar"],
+  "design_process": [
+    {
+      "stage": "Empathize",
+      "summary": "User interviews and journey mapping."
+    },
+    {
+      "stage": "Define",
+      "summary": "Mapped pain points and key user needs."
+    },
+    {
+      "stage": "Ideate",
+      "summary": "Sketches, wireframes, and brainstorming sessions."
+    }
+  ],
+  "user_research_and_insights": {
+    "methods": ["User Interviews", "Surveys", "Heatmaps"],
+    "insights": [
+      "“Users felt overwhelmed by the sign-up process.”",
+      "“Most users dropped off during the second step.”"
+    ],
+    "gallery": [ {"file": "showcase/p1.jpg", "title": "image one", "description": "hello world this is a description"}, 
+                {"file": "showcase/p2.jpg", "title": "image one", "description": "hello world this is a description"}, 
+                {"file": "showcase/p3.jpg", "title": "image one", "description": "hello world this is a description"}
+              ]
+  },
+  "challenge_and_solution": {
+    "challenge": "Long and confusing onboarding",
+    "solution": "Streamlined steps and added progress indicators"
+  },
+  "visual_design_approach": {
+    "description": "We aimed for a visually inviting, brand-consistent design with emphasis on discoverability and responsiveness. The layout focused on reducing friction and increasing scannability across devices.",
+    "key_elements": [
+      "Image-led content tiles with accessible scrims",
+      "Mobile-first layout with optimized collection views",
+      "Reusable Figma components and mini design system",
+      "Grayscale wireframes evolving into hi-fi prototypes",
+      "Tag-based filters and clear CTAs"
+    ]
+  },
+  "results_and_impact": {
+    "changes_made": [
+      "Introduced a third content level accessible via navigation rather than tags alone",
+      "Redesigned filters to be immediately visible and more intuitive",
+      "Added a new 'libraries' view for enhanced navigation",
+      "Improved mobile interaction models, especially for collection tiles"
+    ],
+    "outcomes": [
+      "15% increase in sales within 6 months post-launch",
+      "50% reduction in time spent completing a sale",
+      "Significant boost in cross-departmental collaboration with the UX team",
+      "Project received internal recognition from C-Suite leadership",
+      "Increased inbound requests from other departments for UX support"
+    ]
+  },
+  "key_learnings": "“Iterating with real users was critical to success.”",
+  "future_opportunities": "“Explore multilingual onboarding for international users.”"
+}

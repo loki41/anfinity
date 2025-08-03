@@ -1,0 +1,45 @@
+@use "variables" as *;
+
+h1 {
+  font-size: $h1;
+  font-weight: $bold;
+  line-height: $lh-heading;
+}
+
+h2 {
+  font-size: $h2;
+  font-weight: $bold;
+  line-height: $lh-heading;
+}
+
+h3 {
+  font-size: $h3;
+  font-weight: $medium;
+  line-height: $lh-heading;
+}
+
+h4 {
+  font-size: $h4;
+  font-weight: $medium;
+}
+
+h5 {
+  font-size: $h5;
+  font-weight: $medium;
+}
+
+p {
+  font-size: $body;
+  font-weight: $regular;
+  line-height: $lh-base;
+}
+
+label {
+  font-size: $label;
+  font-weight: $medium;
+}
+
+button {
+  font-size: $button;
+  font-weight: $bold;
+}

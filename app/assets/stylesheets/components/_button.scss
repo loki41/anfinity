@@ -1,0 +1,105 @@
+@use "../partials/variables" as *;
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-size: $button;
+  font-weight: $medium;
+  line-height: $lh-base;
+  border: none;
+  border-radius: $radius-default;
+  cursor: pointer;
+  gap: 0.5rem;
+  height: fit-content;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  text-decoration: none;
+
+  svg.icon {
+    width: 1em;
+    height: 1em;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  &--icon-only {
+    padding: 0.5rem;
+    aspect-ratio: 1 / 1;
+    justify-content: center;
+  }
+
+  // Sizes
+  &--small {
+    font-size: $small;
+    padding: 0.25rem 0.75rem;
+    border-radius: $radius-small;
+  }
+
+  &--medium {
+    font-size: $button;
+    padding: 0.5rem 1rem;
+    border-radius: $radius-default;
+  }
+
+  &--large {
+    font-size: $h5;
+    padding: 0.75rem 1.25rem;
+    border-radius: $radius-default;
+  }
+
+  &--hero {
+    font-size: $h4;
+    padding: 1rem 2rem;
+    border-radius: $radius-hero;
+  }
+
+  // Variants
+  &--primary {
+    background-color: $primary-green-500;
+    color: $gray-50;
+
+    &:hover {
+      background-color: $primary-green-600;
+    }
+  }
+
+  &--secondary {
+    background-color: $gray-700;
+    color: $gray-50;
+
+    &:hover {
+      background-color: $gray-800;
+    }
+  }
+
+  &--tertiary {
+    background-color: #ffffff;
+    color: $gray-800;
+    border: 1px solid $gray-300;
+
+    &:hover {
+      background-color: $gray-100;
+    }
+  }
+
+  &--link {
+    background-color: #ffffff;
+    color: $gray-800;
+
+    &:hover {
+      background-color: $primary-green-50;
+    }
+  }
+
+  &--danger {
+    background-color: #e74c3c; // Fallback
+    color: $gray-50;
+
+    &:hover {
+      background-color: darken(#e74c3c, 10%);
+    }
+  }
+}

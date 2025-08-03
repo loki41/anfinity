@@ -1,0 +1,32 @@
+.experience-container.box
+  .experience-header    
+    .experience-left
+      %h2.role-title= experience[:role]
+      %p.company-name= experience[:company]
+    .experience-right
+      %p.dates= "#{experience[:from]} – #{experience[:to] || 'Present'}"
+      %p.location= experience[:location]
+
+  %p.role-description= experience[:description]
+
+  - if experience[:to].nil?
+    %span.badge Current Role
+
+  .role
+    - if experience[:responsibilities_and_achievements].present?
+      .key-achievements
+        %h4 Responsibilities & Achievements
+        %ul
+          - experience[:responsibilities_and_achievements].each do |item|
+            %li
+              %span.icon-green →
+              = item
+
+  - if experience[:previous_roles].present? && experience[:previous_roles].length > 0
+    .previous-roles
+      %h4 Previous Roles at #{experience[:company]}
+      %ul
+        - experience[:previous_roles].each do |prev|
+          %li
+            %strong= prev[:role]
+            %span.meta= " (#{prev[:from]} – #{prev[:to]})"

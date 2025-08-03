@@ -1,0 +1,19 @@
+
+- results = project_details[:results_and_impact]
+- return unless results.present?
+
+.section
+  %h2 Results & Impact
+
+  .design-process-grid
+    - if results[:changes_made].present?
+      %ul.design-process-card.box
+        %h3 Changes Made
+        - results[:changes_made].each do |change|
+          %li= change
+
+    - if results[:outcomes].present?
+      %ul.design-process-card.box
+        %h3 Outcomes
+        - results[:outcomes].each do |outcome|
+          %li= outcome

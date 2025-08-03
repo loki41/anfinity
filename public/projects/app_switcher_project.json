@@ -1,0 +1,99 @@
+{
+  "project_overview": "The App Switcher project was initiated to provide a seamless, centralized way for users to move between Learning Pool's suite of applications. With 15+ apps in the ecosystem, each requiring separate logins and no native navigation between them, users faced unnecessary friction. This project introduced an app switcher component integrated across platforms, backed by a shared design system and single sign-on functionality to deliver a unified, user-first experience.",
+
+  "project_meta": {
+    "timeline": "5 months (initial release)",
+    "people": ["UX Team", "Marketing", "Engineering", "Stakeholders"],
+    "role": "Lead UX Designer"
+  },
+
+  "tools_and_technology": ["Figma", "Rails", "3M Eye Tracking", "BrowserStack", "Internal CMS"],
+
+  "design_process": [
+    {
+      "stage": "Empathize",
+      "summary": "Collaborated with internal stakeholders and customers to understand multi-app usage pain points and login frustration."
+    },
+    {
+      "stage": "Define",
+      "summary": "Mapped access issues, user roles, and scaling challenges across customers with varying permission sets and app access."
+    },
+    {
+      "stage": "Ideate",
+      "summary": "Designed an MVP experience focusing on visibility, brand-agnostic identity, and internal-only SSO testing with a phased rollout plan."
+    },
+    {
+      "stage": "Prototype",
+      "summary": "Developed grayscale wireframes evolving into high-fidelity mockups, including future-state responsive UI and logo concepts."
+    },
+    {
+      "stage": "Test",
+      "summary": "Conducted internal usability testing, Marketing reviews, and external feedback sessions including Learning Pool Live attendees."
+    }
+  ],
+
+  "user_research_and_insights": {
+    "methods": ["Workshops", "Stakeholder Interviews", "Internal & External Feedback", "Event Observations"],
+    "insights": [
+      "Many users manually bookmarked and logged into each app daily.",
+      "Confusion arose when app icons lacked branding or used only color differentiation.",
+      "Admins, not learners, were primary users of app switching—guiding persona-driven design.",
+      "Rebrand guidelines from Marketing significantly impacted recognizability and accessibility."
+    ]
+  },
+
+  "challenge_and_solution": {
+    "challenge": "With no central place for users to view or access their applications—and rebranding constraints removing names and icons—users struggled to navigate the ecosystem effectively.",
+    "solution": "We built an SSO-powered app switcher embedded across apps, featuring scalable UI and accessible iconography. A compromise between Product and Marketing allowed icon/name usage in product UX while preserving brand intent."
+  },
+
+  "visual_design_approach": {
+    "description": "The UI design evolved through multiple stages—from grayscale popovers to branded, responsive components. A balance was struck between brand minimalism and product usability.",
+    "key_elements": [
+      "Popover UI with app grouping by function",
+      "Accessible, color-independent visual identifiers",
+      "Stream Suite naming and labeling conventions",
+      "Mobile-first responsive implementation",
+      "Logo concept exploration with cross-team workshops"
+    ]
+  },
+
+  "testing_and_validation": {
+    "methods": ["Internal Alpha Testing", "Customer Beta Feedback", "Event-based Observations", "Icon Learnability Mockups"],
+    "findings": [
+      "Popover needed to scale visually for customers with many apps.",
+      "Customers misinterpreted color dots on icons as notifications.",
+      "Users preferred named labels and app grouping despite branding restrictions.",
+      "Workshop-driven icon exploration resulted in higher recognition rates."
+    ]
+  },
+
+  "results_and_impact": {
+    "changes_made": [
+      "Implemented SSO across selected apps with app switcher integration",
+      "Introduced branded-but-accessible icons and labels post-marketing collaboration",
+      "Designed a shared dialog component used both inline and within the vertical nav",
+      "Created space within Stream Hub for app switcher management"
+    ],
+    "outcomes": [
+      "Positive user sentiment from customers and internal users",
+      "Improved login workflows and reduced support requests",
+      "Streamlined app discovery, especially for admins",
+      "Enabled feature scalability through the shared design system"
+    ]
+  },
+
+  "key_learnings": [
+    "User access to multiple products is highly fragmented without shared UX conventions.",
+    "Branding decisions need to be tested for accessibility and usability.",
+    "Customer feedback—even from small interactions—can uncover major UX wins.",
+    "Design systems help ensure long-term consistency across evolving platforms."
+  ],
+
+  "future_opportunities": [
+    "Introduce contextual app surfacing based on user roles or behavior.",
+    "Add custom link capability for admins to expand their workflow tools.",
+    "Allow non-purchased apps to be displayed as upgrade opportunities.",
+    "Explore usage data from Stream Hub to personalize app access further."
+  ]
+}

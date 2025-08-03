@@ -1,0 +1,21 @@
+- data = project_details[:testing_and_validation]
+- return unless data.present?
+
+.section
+  %h2 Testing & Validation
+
+  .research-insights-grid
+    - if data[:methods].present?
+      .methods
+        %h4 Testing Methods
+        %ul.research-methods
+          - data[:methods].each do |method|
+            %li= method
+
+    - if data[:findings].present?
+      .insights
+        %h4 Key Findings
+        .insight-grid
+          - data[:findings].each do |finding|
+            .insight-box.box
+              %p= finding

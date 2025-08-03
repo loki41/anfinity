@@ -1,0 +1,14 @@
+- raw_data = project_details[:future_opportunities]
+- return unless raw_data.present?
+
+- opportunities = raw_data.is_a?(Array) ? raw_data : [raw_data]
+
+.section
+  %h2 Future Opportunities
+
+  .insight-grid
+    - opportunities.each do |opportunity|
+      .insight-box.future.box
+        %p
+          %span.arrow → 
+          = opportunity

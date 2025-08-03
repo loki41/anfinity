@@ -1,0 +1,109 @@
+- icon = ''
+
+.section-hero.about-hero
+  .hero-container
+    .hero-text.column
+      %h1 About me
+      %p
+        Hi! My name is Anthony, I'm a passionate UX designer with over 8 years of experience creating meaningful digital experiences that solve real user problems and drive business results.
+
+
+.section-about-summary
+  .summary-layout
+    .summary-text
+      %h2 Professional Summary
+      %p
+        Most recently at Omniplex Learning, I served as the sole principal designer for a growing SaaS product team. 
+        I built the design function from the ground up—introducing scalable systems, shaping processes, and leading 
+        a full UI redesign that significantly improved usability and positioned the product for long-term growth.
+      %p
+        Prior to that, I spent nearly a decade at Learning Pool, where I advanced from full-stack developer to 
+        frontend specialist, and ultimately to UX Team Lead after founding the company’s first dedicated UX team.
+        I led UX efforts across 15 products within a fast-paced e-learning company of over 400 employees, 
+        delivering user-centered solutions from discovery through to testing.
+      %p
+        What drives me is the depth and variety of UX—transforming real problems into clear, testable, and 
+        effective solutions. I thrive on bringing structure to ambiguity and creating experiences that are both 
+        intuitive and impactful.
+
+
+    .quick-facts-column
+      .quick-facts-box.column.box
+        %h4 Quick Facts
+        .fact
+          .icon= tabler_icon('map-pin')
+          %span= "Derry City, N.Ireland"
+        .fact
+          .icon= tabler_icon('brush')
+          %span= "UI/UX: 8+ Years"
+        .fact
+          .icon= tabler_icon('devices-code')
+          %span= "Dev: 12 Years"
+
+      .action-buttons
+        = render 'components/button', text: "View CV", variant: 'primary'
+        = render 'components/button', text: "LinkedIn", variant: 'secondary'
+
+
+.section-professional-experience
+  %h2.section-title Professional Experience
+
+  - @experiences.each do |experience|
+    = render partial: 'partials/sections/role_experience', locals: { experience: experience }
+
+
+
+.section-skills
+  .section-title Skills & Expertise
+
+  .skills-grid
+    - @skills.each do |category, items|
+      .expertise-container.column.box
+        %h3.expertise-title= category
+        .expertise-list
+          - items.each do |item|
+            .expertise-item= item
+
+
+.section-education
+  .section-title Education
+
+  - @education_history.each do |edu|
+    .education-container.box
+      .education-header
+        .education-left
+          %h3.education-course= edu[:course]
+          %p.education-institution= edu[:institution]
+        .education-right
+          %p.education-dates= "#{edu[:from]} – #{edu[:to]}"
+          %p.education-location= edu[:location]
+
+      .education-description= edu[:description]
+
+
+.section-design-philosophy
+  .section-title Design Philosophy
+
+  .philosophy-container.box
+    .philosophy-columns
+      - @philosophies.each do |item|
+        .philosophy-column
+          .icon-circle
+            = render 'components/icon', name: item[:icon], style: 'icon icon--lg'
+          %h4.philosophy-title= item[:title]
+          %p.philosophy-text= item[:text]
+
+
+.section-lets-work-together
+  .cta-container.column.box
+    %h2.section-title Let's work together
+    %p.cta-text
+      I'm always interested in new challenges and opportunities to create impactful user experiences.
+      Let's discuss how we can collaborate.
+
+    .cta-buttons      
+      = render 'components/button', text: "Get in touch", variant: 'primary'
+      = render 'components/button', text: "LinkedIn", variant: 'tertiary'
+
+
+= render "partials/footer"

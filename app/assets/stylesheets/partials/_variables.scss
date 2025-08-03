@@ -1,0 +1,65 @@
+// Responsive breakpoints
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+// Font Sizes
+$h1: 3rem;
+$h2: 2.25rem;
+$h3: 1.875rem;
+$h4: 1.5rem;
+$h5: 1.125rem;
+$body: 1rem;
+$small: 0.875rem;
+$label: 0.75rem;
+$button: 0.95rem;
+
+// Font Weights
+$light: 200;
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+// Line Heights
+$lh-base: 1.8;
+$lh-tight: 1.5;
+$lh-heading: 1.2;
+
+
+// Text Colours
+$gray-50:  #f9fafb;
+$gray-100: #f3f4f6;
+$gray-200: #e5e7eb;
+$gray-300: #d1d5db;
+$gray-400: #9ca3af;
+$gray-500: #6b7280;
+$gray-600: #4b5563;
+$gray-700: #374151;
+$gray-800: #1f2937;
+$gray-900: #111827;
+
+$text-color: $gray-600;
+
+
+
+// Brand colour
+$primary-green-50:  #f3fafa;
+$primary-green-100: #e0f0ee;
+$primary-green-200: #c0e0dc;
+$primary-green-300: #9bcfc7;
+$primary-green-400: #7bbeb5;
+$primary-green-500: #72a9a1; // base color
+$primary-green-600: #5f958e;
+$primary-green-700: #4b7c76;
+$primary-green-800: #3a625e;
+$primary-green-900: #2b4a47;
+
+
+// Border Radius
+$radius-small: 4px;
+$radius-default: 8px;
+$radius-medium: 16px;
+$radius-large: 24px;
+$radius-hero: 32px;
+
+

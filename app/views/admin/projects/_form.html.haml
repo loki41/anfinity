@@ -1,0 +1,40 @@
+= form_with model: project, url: path, local: true, html: { multipart: true, class: "create-project" }  do |f|
+  .field
+    = f.label :title
+    = f.text_field :title
+
+  .field
+    = f.label :slug
+    = f.text_field :slug
+
+  .field
+    = f.label :description
+    = f.text_area :description
+
+  .field
+    = f.label :featured
+    = f.check_box :featured
+
+  .field
+    = f.label :published
+    = f.check_box :published
+
+  .field
+    = f.label :figma_file, "Figma File URL"
+    = f.text_field :figma_file
+
+  .field
+    = f.label :figma_prototype, "Figma Prototype URL"
+    = f.text_field :figma_prototype
+
+  .field
+    = f.label :hero_image
+    = f.file_field :hero_image
+
+  .field
+    = f.label :json_filename
+    = f.select :json_filename, options_for_select(available_json_files), prompt: "Choose a JSON file"
+
+
+
+  = f.submit "Save Project", class: "btn btn--primary btn--medium"

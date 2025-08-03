@@ -1,0 +1,22 @@
+@use "partials/variables" as *;
+@use "partials/fonts";
+@use "global";
+@use "homepage";
+@use "projects";
+@use "about";
+@use "admin";
+@use "contact";
+@use "components/tiles";
+@use "components/navbar";
+@use "components/footer";
+@use "components/button";
+@use "components/icon";
+@use "components/gallery";
+
+body {
+    font-family: "Comfortaa", sans-serif;
+    font-size: $body;
+    padding: 0 0;
+    margin: 0 0;
+    line-height: 1.5;
+}

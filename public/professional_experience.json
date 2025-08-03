@@ -1,0 +1,87 @@
+[
+  {
+    "role": "Principle UX Designer",
+    "company": "Omniplex Learning",
+    "from": "Oct 2023",
+    "to": "Jul 2025",
+    "location": "London / Remote",
+    "description": "At Omniplex Learning, I joined the sole designer for the Guide platform - a digital adoption tool that provides in-context learning via guided tooltips created from recorded user workflows. A product which had no previous design direction or process, in which I:",
+    "responsibilities_and_achievements": [
+      "Rebuilt a fragmented design function by establishing a scalable UX practice; integrating the Product, Dev and QA departments for closer collaboration.",
+      "Implemented a comprehensive shared design system with documentation, using the atomic design methodology.",
+      "Introduced a structured design-to-development handoff process.",
+      "Owned the full design lifecycle—from discovery to delivery—while collaborating cross-functionally to drive consistent, measurable improvements across the platform.",
+      "Led over 120 design and research initiatives across core product features",
+      "Biggest project to date was a complete UI and navigation overhaul that increased dashboard approval ratings from 2/10 to 8/10.",
+      "Built trust and alignment with key stakeholders by maintaining transparent communication and involving them at each critical stage of the project."
+
+    ],
+    "previous_roles": [ ]
+  },
+  {
+    "role": "UX Team Lead",
+    "company": "Learningpool",
+    "from": "Jun 2021",
+    "to": "Oct 2023",
+    "location": "Derry, Northern Ireland",
+    "description": "My time at Learning Pool had a profound impact on both my personal and professional growth. Beginning as a developer and quickly becoming recognised as a front-end specialist within the company, to being  promoted to senior developer. Driven by a passion for user experience, I went on to champion and lead the creation of a dedicated UX process and team. This evolution not only shaped my career path but also played a key role in developing and designing market-leading products across the business. ",
+    "responsibilities_and_achievements": [
+      "Championed and established Learning Pool’s first dedicated UX team and formalised UX processes from the ground up",
+      "Scaled the UX team from a solo function to a high-performing group of ten designers and researchers",
+      "Led UX strategy and delivery across 15 distinct products, each with unique user needs and project demands",
+      "Created and maintained a shared design system to drive consistency, efficiency, and scalability across all products",
+      "Maintained a hands-on role across the full design lifecycle, from discovery and ideation to prototyping and testing",
+      "Provided ongoing technical and UX mentorship, supporting team growth and navigating complex design challenges"
+
+    ],
+    "previous_roles": [
+      {
+        "role": "Senior UX Specialist",
+        "from": "Sept 2019",
+        "to": "Jun 2021"
+      }
+    ]
+  },
+  {
+    "role": "Senior Software Developer",
+    "company": "Learningpool",
+    "from": "Apr 2019",
+    "to": "Sept 2019",
+    "location": "Derry, Northern Ireland",
+    "description": "During my employment at Learningpool I have had the pleasure of working on all of the flag ship products that Learningpool currently has to offer. These include Totara, Adapt, Headsteam, Campaigns as well as the Custom Development products they also offer. The languages I have had exposure to during my time at Learningpool include: PHP, JavaScript, SASS, React, Node, Mustache, SQL, and YUI. Through the years at Learningpool I have also been given the opportunity to attend several formal training courses on the following: PHP, JavaScript, React, Node, SQL, UX Foundation 1 and UX Foundation 2. Since joining Learningpool I have been utilised primarily as a frontend developer in each of the main product focused teams; However, in each case I have been instrumental in the UI and UX design decisions and implementation for each product. With the help of a colleague we have initiated the process of forming the first “Product Experience” team at Learningpool. This team is responsible for the Research, Design and Testing of the UI and UX for all current and upcoming projects across the company. ",
+    "responsibilities_and_achievements": [ ],
+    "previous_roles": [
+      {
+        "role": "Software Developer",
+        "from": "Apr 2015",
+        "to": "Apr 2019"
+      }
+    ]
+  },
+  {
+    "role": "Web Developer",
+    "company": "Examtime",
+    "from": "Jan 2014",
+    "to": "Apr 2015",
+    "location": "Belfast, Northern Ireland",
+    "description": "Working with a small development team to refine and add new features to the ExamTime web application. An application that provides studying tools like Notes, Mind-Maps, Flash Cards and Quizzes. ExamTime develop their product in Ruby on Rails. Projects ranging from site wide redesign, resourcing sharing functionality, spam filtering and a number of other backend administration and management tools. In addition, I was given responsibility of the Google Analytics integration and management. Finally, I also helped Design and QA teams to investigate UI and design issues that involved a lot of user testing.",
+    "responsibilities_and_achievements": [],
+    "previous_roles": [ ]
+  },
+  {
+    "role": "Web Developer",
+    "company": "Invision",
+    "from": "Nov 2012",
+    "to": "Jan 2014",
+    "location": "Derry, Northern Ireland",
+    "description": "After joining the company, first as a QA engineer. Then in 2010 I made an opportunity for myself to become a developer; from which I got to work the Learn team with the task of implementing a Scorm compliant e-learning application using Ruby on Rails. At the end of 2013 as the Learn project wrapped up, I was progressed to a new team tasked with completely re-designing the user interface for the company’s flag ship product also using Ruby on Rails",
+    "responsibilities_and_achievements": [ ],
+    "previous_roles": [
+      {
+        "role": "Quality Assurance Engineer",
+        "from": "Nov 2010",
+        "to": "Nov 2012"
+      }
+    ]
+  }
+]

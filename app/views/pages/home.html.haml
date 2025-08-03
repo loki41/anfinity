@@ -1,0 +1,51 @@
+/ Hero Section
+.hero
+  .overlay
+  .hero__content
+    .hero__text
+      %h1.hero__heading 
+        anthony 
+        %span.green 
+          mclaughlin
+      %p.hero__subheading Designer & Developer based in Derry
+
+    %img.hero__logo
+      = image_tag 'logo-primary.png', alt: 'anfinity logo', class: "hero__logo"
+
+/ About Section
+.section-about
+  .about-container
+    .about-text
+      %h3.about-heading Hi, I’m anthony mclaughlin
+      %p.about-paragraph
+        I'm a passionate UX designer with over 6 years of experience creating digital experiences that users love. My approach combines user research, creative problem-solving, and strategic thinking to design solutions that are both beautiful and functional.
+      %p.about-paragraph
+        I believe great design happens when we truly understand our users' needs, pain points, and goals. That's why I always start with research and testing, ensuring every design decision is backed by real user insights.
+      %p.about-paragraph
+        When I'm not designing, you can find me hiking mountain trails, experimenting with photography, or exploring new coffee shops around the city.
+
+      %h4.skills-label Core Skills
+      .skills-chips
+        - ['UX Design', 'UI Design', 'Prototyping', 'Figma', 'Interaction Design', 'Design Systems', 'HTML/CSS', 'Rails', 'Accessibility'].each do |skill|
+          %span.skill-chip= skill
+
+    .about-image
+      = image_tag 'profile_picture.png', alt: 'Picture of Anthony', class: 'profile-image'
+
+/ Featured Projects Section
+.section.featured-projects
+  = render partial: "partials/featured_projects_section", locals: { projects: @projects } 
+
+  .container
+    .featured-cta.row.box
+      .featured-cta__text
+        %h5 Want to see more work?
+        %p View all projects in my portfolio
+      .featured-cta__button
+        = render 'components/button', text: 'View Portoflio', variant: 'primary', size: 'large', url: portfolio_path
+
+
+ 
+
+/ Footer Section
+= render "partials/footer"

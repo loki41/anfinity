@@ -1,0 +1,114 @@
+@use "partials/variables" as *;
+
+
+// ------------------------------ Hero banner
+.section-hero {
+  .hero-container {
+    background: linear-gradient(to right, $primary-green-100, #ffffff);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 4rem;
+    flex-wrap: wrap;
+    height: 40vh;
+    margin-top: 80px;
+
+    @media (max-width: $breakpoint-desktop - 1) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      height: auto;
+      padding: 4rem;
+    }
+  }
+
+  .hero-text {
+    flex: 1;
+    align-items: center;
+
+    h1 {
+      font-size: $h1;
+      font-weight: $bold;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    p {
+      font-size: $body;
+      line-height: $lh-base;
+      text-align: center;
+      max-width: 800px;
+
+      @media (max-width: $breakpoint-desktop - 1) {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+//-------------------------------- Input fields
+
+input, textarea, select {
+    border-radius: $radius-small;
+    border: 1px solid $gray-400;
+    padding: 0.75rem;
+}
+
+input[type="checkbox"] {
+    background-color: #fff;
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid $gray-400;
+    border-radius: $radius-small;
+}
+
+
+//-------------------------------- flex layouts
+
+.row {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+//-------------------------------- display box
+
+.box {
+  background-color: $primary-green-50;
+  border-radius: $radius-default;
+  padding: 1rem;
+}
+
+// ------------------------------ lists
+
+li::marker {
+  color: $primary-green-500;
+}
+
+
+//------------------------------- Devise pages
+
+.devise_sessions {
+  margin-top: 80px;
+
+  .main-content {
+    padding-left: 4rem;
+  }
+} 
+
+
+
+// temp
+.thumbnail img {
+  width: 200px;
+  height: 200px;
+}

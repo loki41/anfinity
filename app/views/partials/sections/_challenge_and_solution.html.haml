@@ -1,0 +1,14 @@
+- data = project_details[:challenge_and_solution]
+- return unless data.present?
+
+.section
+  %h2 Challenge & Solution
+
+  .challenge-solution-grid
+    .challenge
+      %h4 Challenge
+      %p.mt-1= data[:challenge]
+
+    .solution
+      %h4 Solution
+      %p.mt-1= data[:solution]
