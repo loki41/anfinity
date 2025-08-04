@@ -95,9 +95,30 @@ li::marker {
 }
 
 
+//------------------------------- Notifications
+
+.notice, .alert {
+  border-radius: $radius-default;
+  position: absolute;
+  right: 40px;
+  top: 120px;
+  z-index: 5;
+}
+
+.notice {
+  background-color: $primary-green-50;
+  color: $primary-green-500;
+}
+
+.alert {
+  background-color: #d54040;
+  color: white;
+}
+
+
 //------------------------------- Devise pages
 
-.devise_sessions {
+.devise_sessions, .devise_registrations, .admin_users {
   margin-top: 80px;
 
   .main-content {

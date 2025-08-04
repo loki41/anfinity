@@ -13,6 +13,17 @@
       %p.get-in-touch-description
         I'm always open to new opportunities, collaborations, or just a friendly hello. Weather you're looking to collborate on a new project, need design consultation. I'm always excited to connect with fellow creators and innovators.
 
+
+      /-- Availability Box --favicon/
+      .availability-box
+        %h3 Current Availability
+        %p I'm currently available for new opportunities and collaborations. If you would like to work together please reach out.
+        %div.row
+          %i.circle 
+          Available for new projects
+
+    /-- Right Column --
+    .contact-right.column
       /-- Contact Info Boxes --
       .contact-box
         .icon-circle 
@@ -34,51 +45,6 @@
         .contact-info
           %strong LinkedIn
           %p= link_to "linkedin.com/in/anthony-mclaughlin-67b63128", "https://www.linkedin.com/in/anthony-mclaughlin-67b63128", target: '_blank', rel: 'noopener'
-
-      /-- Availability Box --
-      .availability-box
-        %h3 Current Availability
-        %p I'm currently available for new opportunities and collaborations. If you would like to work together please reach out.
-        %div.row
-          %i.circle 
-          Available for new projects
-
-    /-- Right Column --
-    .contact-right
-      - if flash[:success]
-        .success-message
-          %h2.send-message-title Message Sent
-          %p= flash[:success]
-          %p Typical response time. Within 24 hours. 
-      - else
-        %h2.send-message-title Send a message
-
-        = form_with url: contact_submit_path, method: :post, local: true, html: { class: 'contact-form' } do |f|
-          .form-group
-            .label-group
-              = f.label :name
-              %b *
-            = f.text_field :name, placeholder: "Your full name", required: true
-
-          .form-group
-            .label-group
-              = f.label :email
-              %b *
-            = f.email_field :email, placeholder: "your.email@example.com"
-
-          .form-group
-            .label-group
-              = f.label :subject
-              %b *
-            = f.text_field :subject, placeholder: "What's this about?"
-
-          .form-group
-            .label-group
-              = f.label :message
-              %b *
-            = f.text_area :message, rows: 5, placeholder: "What would you like to ask or say to me?"
-
-          = f.submit "Send", class: "btn btn--primary btn--medium"
 
 
 .section
