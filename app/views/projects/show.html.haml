@@ -16,9 +16,9 @@
 
       .cta-buttons.row
         - if @project.figma_file.length > 0
-          = render 'components/button', text: "Figma file", icon: 'brand-figma', variant: 'secondary', url: @project.figma_file
+          = render 'components/button', text: "Figma file", icon: 'brand-figma', variant: 'secondary', url: @project.figma_file, html_options: {target: '_blank', rel: 'noopener'}
         - if @project.figma_prototype.length > 0
-          = render 'components/button', text: "Prototype", icon: 'player-play', variant: 'tertiary', url: @project.figma_prototype
+          = render 'components/button', text: "Prototype", icon: 'player-play', variant: 'tertiary', url: @project.figma_prototype, html_options: {target: '_blank', rel: 'noopener'}
 
 
 
@@ -33,15 +33,6 @@
 = render 'partials/sections/future_opportunities', project_details: @project_details
 
 
-.cta.section
-  .cta-container.box
-    .cta-content
-      %h2 Interested in working together?
-      %p I'm always excited to take on new challenges and collaborate on meaningful projects. Let's discuss how we can create something amazing together.
-
-      .cta-buttons
-        = render 'components/button', text: "Get in Touch", variant: 'primary', url: contact_path
-        = render 'components/button', text: "Download Portfolio", variant: 'tertiary', url: contact_path
-
+= render 'partials/sections/cta_actions'
 
 = render "partials/footer"

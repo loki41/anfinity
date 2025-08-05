@@ -35,15 +35,7 @@
               %h4= title
               %p= desc
 
-  .cta.section
-    .cta-container
-      .cta-content
-        %h2 Interested in working together?
-        %p I'm always excited to take on new challenges and collaborate on meaningful projects. Let's discuss how we can create something amazing together.
-
-        .cta-buttons
-          = render 'components/button', text: "Get in Touch", variant: 'primary', url: contact_path
-          = render 'components/button', text: "Download Portfolio", variant: 'tertiary', url: contact_path
+  = render 'partials/sections/cta_actions'
 
 
 
