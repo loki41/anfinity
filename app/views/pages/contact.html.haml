@@ -30,14 +30,7 @@
           = tabler_icon("mail")
         .contact-info
           %strong Email
-          %p anthony@anfinity.co.uk
-
-      .contact-box
-        .icon-circle
-          = tabler_icon("map-pin")
-        .contact-info
-          %strong Location
-          %p Derry City, Northern Ireland
+          %p= mail_to "anthony@anfinity.co.uk"
 
       .contact-box
         .icon-circle 
@@ -46,6 +39,12 @@
           %strong LinkedIn
           %p= link_to "linkedin.com/in/anthony-mclaughlin-67b63128", "https://www.linkedin.com/in/anthony-mclaughlin-67b63128", target: '_blank', rel: 'noopener'
 
+      .contact-box
+        .icon-circle
+          = tabler_icon("map-pin")
+        .contact-info
+          %strong Location
+          %p Derry City, Northern Ireland
 
 .section
   %span.line

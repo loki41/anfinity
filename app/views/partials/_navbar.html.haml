@@ -1,3 +1,5 @@
+- has_access = user_signed_in?
+
 %nav.navbar
   .navbar__left
     = image_tag "logo-white.png", class: "navbar__logo navbar__logo--white", alt: "Logo White"
@@ -9,12 +11,14 @@
       = link_to "Home", root_path, class: "navbar__link #{'active' if current_page?(root_path)}"
       = link_to "About", about_path, class: "navbar__link #{'active' if current_page?(about_path)}"
       = link_to "Portfolio", portfolio_path, class: "navbar__link #{'active' if current_page?(portfolio_path)}"
-      - if user_signed_in? && current_user.admin?
+
+      - if has_access
         = link_to "Admin", admin_projects_path, class: "navbar__link #{'active' if current_page?(admin_projects_path)}"
 
 
   .navbar__right
-    - if user_signed_in? && current_user.admin?
+    -# - if user_signed_in? && current_user.admin?
+    - if has_access
       .nav-profile-dropdown
 
         = render 'components/button', id: 'menu-button', text: "#{current_user.email}", icon: "chevron-down", icon_position: 'right', variant: 'link', html_options: {aria: { expanded: "true", haspopup: "true" }}
