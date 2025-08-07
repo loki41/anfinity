@@ -2,6 +2,11 @@
 -# images: array of hashes (file, title, description)
 -# layout: integer (1–4)
 -# orientation: "left" or "right" (for layout 1 only)
+- return unless gallery.present?
+
+- layout = gallery[:layout]
+- images = gallery[:images]
+- orientation = gallery[:orientation]
 
 - case layout.to_i
 - when 1

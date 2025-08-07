@@ -1,5 +1,6 @@
 - description = project_details[:visual_design_approach][:description]
 - elements = project_details[:visual_design_approach][:key_elements]
+- gallery = project_details[:visual_design_approach][:gallery]
 - return unless description.present?
 
 .section
@@ -17,3 +18,5 @@
               %ul
                 - column_items.each do |item|
                   %li= item
+  
+  = render "components/gallery", gallery: gallery

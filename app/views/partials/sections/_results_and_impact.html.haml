@@ -1,6 +1,7 @@
 
 - results = project_details[:results_and_impact]
 - return unless results.present?
+- gallery = project_details[:results_and_impact][:gallery]
 
 .section
   %h2 Results & Impact
@@ -17,3 +18,11 @@
         %h3 Outcomes
         - results[:outcomes].each do |outcome|
           %li= outcome
+
+  - if gallery.present?
+    - layout = gallery[:layout]
+    - images = gallery[:images]
+    - orientation = gallery[:orientation]
+  
+
+  = render "components/gallery", gallery: gallery

@@ -9,28 +9,37 @@
 
   "tools_and_technology": ["Figma", "Lookback.io", "Rails", "Hotjar"],
 
-  "design_process": [
-    {
-      "stage": "Empathize",
-      "summary": "Conducted collaborative workshops with the Showcase and Sales teams to identify frustrations and usability issues."
-    },
-    {
-      "stage": "Define",
-      "summary": "Mapped user pain points around navigation, onboarding complexity, and content discoverability."
-    },
-    {
-      "stage": "Ideate",
-      "summary": "Created lo-fi sketches and grouped content using a two-level structure of Collections and Lessons."
-    },
-    {
-      "stage": "Prototype",
-      "summary": "Built grayscale mockups and established a reusable component-based mini design system in Figma."
-    },
-    {
-      "stage": "Test",
-      "summary": "Conducted two remote usability group sessions using Lookback.io with sales representatives."
-    }
-  ],
+  "design_process": {
+    "stages":  [{
+        "stage": "Empathize",
+        "summary": "Conducted collaborative workshops with the Showcase and Sales teams to identify frustrations and usability issues."
+      },
+      {
+        "stage": "Define",
+        "summary": "Mapped user pain points around navigation, onboarding complexity, and content discoverability."
+      },
+      {
+        "stage": "Ideate",
+        "summary": "Created lo-fi sketches and grouped content using a two-level structure of Collections and Lessons."
+      },
+      {
+        "stage": "Prototype",
+        "summary": "Built grayscale mockups and established a reusable component-based mini design system in Figma."
+      },
+      {
+        "stage": "Test",
+        "summary": "Conducted two remote usability group sessions using Lookback.io with sales representatives."
+      }
+    ],
+    "gallery":  { "layout": 1,
+                  "orientation": "left",
+                  "images": [
+                      {"file": "showcase/showcase_planning.png", "title": "Showcase planning workshop", "description": "A look at the final result of the planning workshop done with the Showcase team and a select number of key stakeholders to ensure project alignment."},
+                      {"file": "showcase/showcase_planning_flow.png", "title": "Showcase nav flow", "description": "An example of the navigation flow for the Showcase site. This flow represents the initial flow created. Several changes were made afterwards during multiple iterations thanks to continous feedback and testing."}
+    
+                  ]
+            }
+  },
 
   "user_research_and_insights": {
     "methods": ["Workshops", "Internal Interviews", "Surveys", "Usability Testing"],
@@ -54,7 +63,15 @@
       "Reusable Figma components and mini design system",
       "Grayscale wireframes evolving into hi-fi prototypes",
       "Tag-based filters and clear CTAs"
-    ]
+    ],
+    "gallery":  { "layout": 4,
+                  "orientation": "left",
+                  "images": [
+                      {"file": "showcase/showcase_concept.png", "title": "Showcase main page concept", "description": ""},
+                      {"file": "showcase/showcase_libraries.png", "title": "Showcase libraries page concept", "description": ""}
+    
+                  ]
+            }
   },
 
   "testing_and_validation": {
@@ -88,9 +105,11 @@
     "Early usability testing helped guide key structural changes."
   ],
   
-  "future_opportunities": [
-    "Explore multilingual onboarding for international users.",
-    "Introduce curated content lists that can be shared across teams.",
-    "Implement user account personalization features based on usage patterns."
-  ]
+  "future_opportunities": {
+    "opportunities": [
+      "Explore multilingual onboarding for international users.",
+      "Introduce curated content lists that can be shared across teams.",
+      "Implement user account personalization features based on usage patterns."
+    ]
+  }
 }

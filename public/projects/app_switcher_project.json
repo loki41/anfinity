@@ -9,28 +9,37 @@
 
   "tools_and_technology": ["Figma", "Rails", "3M Eye Tracking", "BrowserStack", "Internal CMS"],
 
-  "design_process": [
-    {
-      "stage": "Empathize",
-      "summary": "Collaborated with internal stakeholders and customers to understand multi-app usage pain points and login frustration."
-    },
-    {
-      "stage": "Define",
-      "summary": "Mapped access issues, user roles, and scaling challenges across customers with varying permission sets and app access."
-    },
-    {
-      "stage": "Ideate",
-      "summary": "Designed an MVP experience focusing on visibility, brand-agnostic identity, and internal-only SSO testing with a phased rollout plan."
-    },
-    {
-      "stage": "Prototype",
-      "summary": "Developed grayscale wireframes evolving into high-fidelity mockups, including future-state responsive UI and logo concepts."
-    },
-    {
-      "stage": "Test",
-      "summary": "Conducted internal usability testing, Marketing reviews, and external feedback sessions including Learning Pool Live attendees."
-    }
+  "design_process": {
+    "stages":  [{
+        "stage": "Empathize",
+        "summary": "Collaborated with internal stakeholders and customers to understand multi-app usage pain points and login frustration."
+      },
+      {
+        "stage": "Define",
+        "summary": "Mapped access issues, user roles, and scaling challenges across customers with varying permission sets and app access."
+      },
+      {
+        "stage": "Ideate",
+        "summary": "Designed an MVP experience focusing on visibility, brand-agnostic identity, and internal-only SSO testing with a phased rollout plan."
+      },
+      {
+        "stage": "Prototype",
+        "summary": "Developed grayscale wireframes evolving into high-fidelity mockups, including future-state responsive UI and logo concepts."
+      },
+      {
+        "stage": "Test",
+        "summary": "Conducted internal usability testing, Marketing reviews, and external feedback sessions including Learning Pool Live attendees."
+      }
   ],
+    "gallery":  { "layout": 2,
+                  "orientation": "left",
+                  "images": [
+                      {"file": "app_switcher/app_switcher_brand_refresh_planning.png", "title": "App switcher refresh planning phase", "description": "This is a look at just one of the boards used during the refresh planning phase. Each section on the board was a small session during which we spent time understanding the application in question to better design logos for each. The images below show case the initial pitch for the app switcher with the in flight logos being used at the time."},
+                      {"file": "app_switcher/app_switcher_original_concept.png", "title": "App switcher original concept pitch", "description": ""},
+                      {"file": "app_switcher/app_switcher_initial_dev_version.png", "title": "The app switcher that was developed initally", "description": ""}
+    
+                  ]
+            }},
 
   "user_research_and_insights": {
     "methods": ["Workshops", "Stakeholder Interviews", "Internal & External Feedback", "Event Observations"],
@@ -80,7 +89,14 @@
       "Improved login workflows and reduced support requests",
       "Streamlined app discovery, especially for admins",
       "Enabled feature scalability through the shared design system"
-    ]
+    ],
+    "gallery":  { "layout": 1,
+                  "orientation": "left",
+                  "images": [
+                      {"file": "app_switcher/app_switcher_rosette_testing.png", "title": "App switcher and the rosette", "description": "During the refresh, the decision was made to remove individual product branding and consolidate under a single name: the 'Learning Suite.' This included introducing a new suite-wide logo. However, this logo is now used across all applications and does not perform well—particularly when tested for colour-blind accessibility."}
+    
+                  ]
+            }
   },
 
   "key_learnings": [
@@ -90,10 +106,19 @@
     "Design systems help ensure long-term consistency across evolving platforms."
   ],
 
-  "future_opportunities": [
-    "Introduce contextual app surfacing based on user roles or behavior.",
-    "Add custom link capability for admins to expand their workflow tools.",
-    "Allow non-purchased apps to be displayed as upgrade opportunities.",
-    "Explore usage data from Stream Hub to personalize app access further."
-  ]
+  "future_opportunities": {
+    "opportunities": [
+          "Introduce contextual app surfacing based on user roles or behavior.",
+          "Add custom link capability for admins to expand their workflow tools.",
+          "Allow non-purchased apps to be displayed as upgrade opportunities.",
+          "Explore usage data from Stream Hub to personalize app access further."
+        ],
+    "gallery":  { "layout": 1,
+                  "orientation": "left",
+                  "images": [
+                      {"file": "app_switcher/app_switcher_future version.png", "title": "App switchers final form", "description": "The app switcher was developed in conjunction with the shared design system components, serving as the central hub that connects all products within the Learning Suite. This central position makes it an ideal location to provide customers with quick access to both internal and external resources. The updated design represents the next evolution of the app switcher, enhancing its role as a gateway to the entire suite."}
+    
+                  ]
+            }
+  }
 }

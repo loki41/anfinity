@@ -9,28 +9,28 @@
 
   "tools_and_technology": ["Figma", "Maze", "3M Eye Tracking", "Rails", "Sass"],
 
-  "design_process": [
-    {
-      "stage": "Empathize",
-      "summary": "Conducted deep-dive interviews with Sales, Support, Customer Success, and internal stakeholders to identify core frustrations and business risks."
-    },
-    {
-      "stage": "Define",
-      "summary": "Mapped out three critical user experience gaps: navigation scalability, content discoverability, and hidden or unclear content actions."
-    },
-    {
-      "stage": "Ideate",
-      "summary": "Explored design solutions that would remain compatible with the existing API and platform while delivering a more modern and intuitive experience."
-    },
-    {
-      "stage": "Prototype",
-      "summary": "Developed vertical navigation, redesigned content tiles, and an action-enhanced hover state with dedicated Info and Launch buttons."
-    },
-    {
-      "stage": "Test",
-      "summary": "Tested design iterations via Figma prototypes and 3M eye-tracking tools to validate performance and usability gains."
-    }
-  ],
+  "design_process": {
+      "stages":  [{
+        "stage": "Empathize",
+        "summary": "Conducted deep-dive interviews with Sales, Support, Customer Success, and internal stakeholders to identify core frustrations and business risks."
+      },
+      {
+        "stage": "Define",
+        "summary": "Mapped out three critical user experience gaps: navigation scalability, content discoverability, and hidden or unclear content actions."
+      },
+      {
+        "stage": "Ideate",
+        "summary": "Explored design solutions that would remain compatible with the existing API and platform while delivering a more modern and intuitive experience."
+      },
+      {
+        "stage": "Prototype",
+        "summary": "Developed vertical navigation, redesigned content tiles, and an action-enhanced hover state with dedicated Info and Launch buttons."
+      },
+      {
+        "stage": "Test",
+        "summary": "Tested design iterations via Figma prototypes and 3M eye-tracking tools to validate performance and usability gains."
+      }
+  ]},
 
   "user_research_and_insights": {
     "methods": ["Stakeholder Interviews", "Usability Testing", "Eye Tracking", "Sales Feedback"],
@@ -39,7 +39,13 @@
       "Over 70% of test participants struggled to find content actions.",
       "Stakeholders demanded better scalability and theming customisation.",
       "Customers wanted clear branding options, mobile support, and consistent UI patterns across products."
-    ]
+    ],
+    "gallery":  { "layout": 1,
+                  "orientation": "right",
+                  "images": [
+                    { "file": "lxp_dashboard/lxp_testing_taskcomplete.png", "title": "LXP task complete results", "description": "These results show how the tasks completion for identifying and opening the correct content was not successful and very inconsistent. This is just one piece of a much larger test that was conducted on the usability of the LXP. This result stands out the most as identifying and opening content is the simplest and smallest required action on the LXP. "}
+                  ]
+            }
   },
 
   "challenge_and_solution": {
@@ -54,8 +60,18 @@
       "Simplified tile interactions and hover states",
       "Dedicated action buttons for Info and Launch",
       "Theming options including light/dark mode and brand color tokens",
-      "Responsive layout optimized for both web and mobile devices"
-    ]
+      "Responsive layout optimized for both web and mobile devices",
+      "Two distinct styles—one prioritizing absolute accessibility, the other exuding luxury."
+    ],
+    "gallery":  { "layout": 2,
+                  "orientation": "right",
+                  "images": [
+                      {"file": "lxp_dashboard/lxp_dashboard_example.png", "title": "LXP dashboard example", "description": "This is a mock up of how the LXP dashboard could look and operate. With the goal of not ultering much of the primary features and functionality."},
+                      {"file": "lxp_dashboard/lxp_theming.png", "title": "LXP theming", "description": "Example of branded versions of the LXP dashboard in both light and dark modes. This showcases how even bright vibrant colours could be used effectively."},
+                      {"file": "lxp_dashboard/lxp_nav_design.png", "title": "LXP navbar example", "description": "One of the first elements in the Learning Pool shared design component system was the unified nav bar. Which was first introduced on the LXP."},
+                      {"file": "lxp_dashboard/lxp_tiles_after.png", "title": "LXP tile after", "description": " "}
+                  ]
+            }
   },
 
   "testing_and_validation": {
@@ -65,7 +81,15 @@
       "New tile interactions reduced mis-clicks and task completion time",
       "Participants preferred action buttons on hover over previous sidebar interaction",
       "Customers at Learning Pool Live responded positively to the updated design and requested early rollout"
-    ]
+    ],
+    "gallery":  { "layout": 4,
+                  "orientation": "right",
+                  "images": [
+                      {"file": "lxp_dashboard/lxp_3m_testing_1.png", "title": "LXP 3M testing dashboard", "description": "Dashboard testing using 3M eye tracking focus."},
+                      {"file": "lxp_dashboard/lxp_3m_testing_2.png", "title": "LXP 3M testing flow", "description": "Dashboard testing using 3M eye flow."},
+                      {"file": "lxp_dashboard/lxp_3m_testing_3.png", "title": "LXP 3M tiles", "description": "Tile testing using 3M."}
+                  ]
+            }
   },
 
   "results_and_impact": {
@@ -80,7 +104,14 @@
       "Improved internal confidence during customer demos and sales bids",
       "UX team praised for cross-product design system efforts",
       "Early reports from Sales indicated improved customer sentiment"
-    ]
+    ],
+    "gallery":  { "layout": 4,
+                  "orientation": "left",
+                  "images": [
+                      {"file": "lxp_dashboard/lxp_testing_taskcomplete_after.png", "title": "LXP 3M testing dashboard", "description": "Dashboard testing using 3M eye tracking focus."},
+                      {"file": "lxp_dashboard/lxp_testing_confidence_after.png", "title": "LXP 3M testing flow", "description": "Dashboard testing using 3M eye flow."}
+                  ]
+            }
   },
 
   "key_learnings": [
@@ -89,10 +120,13 @@
     "Testing even within technical constraints leads to measurable UX gains."
   ],
 
-  "future_opportunities": [
-    "Expand vertical nav patterns across other products for a unified design system.",
-    "Continue improving tile performance and transitions based on user feedback.",
-    "Evaluate the new dashboard against usage KPIs to inform next phase of improvements.",
-    "Introduce more powerful personalization tools for learners within the LXP."
-  ]
+  "future_opportunities": {
+    "opportunities": [
+      "Expand vertical nav patterns across other products for a unified design system.",
+      "Continue improving tile performance and transitions based on user feedback.",
+      "Evaluate the new dashboard against usage KPIs to inform next phase of improvements.",
+      "Introduce more powerful personalization tools for learners within the LXP."
+    ]
+  }
+  
 }

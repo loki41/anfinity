@@ -6,30 +6,26 @@
     "role": "Lead Designer"
   },
   "tools_and_technology": ["Figma", "Rails", "PostgreSQL", "Hotjar"],
-  "design_process": [
-    {
-      "stage": "Empathize",
-      "summary": "User interviews and journey mapping."
-    },
-    {
-      "stage": "Define",
-      "summary": "Mapped pain points and key user needs."
-    },
-    {
-      "stage": "Ideate",
-      "summary": "Sketches, wireframes, and brainstorming sessions."
-    }
-  ],
+  "design_process": {
+    "stages":  [{
+        "stage": "Empathize",
+        "summary": "User interviews and journey mapping."
+      },
+      {
+        "stage": "Define",
+        "summary": "Mapped pain points and key user needs."
+      },
+      {
+        "stage": "Ideate",
+        "summary": "Sketches, wireframes, and brainstorming sessions."
+      }
+  ]},
   "user_research_and_insights": {
     "methods": ["User Interviews", "Surveys", "Heatmaps"],
     "insights": [
       "“Users felt overwhelmed by the sign-up process.”",
       "“Most users dropped off during the second step.”"
-    ],
-    "gallery": [ {"file": "showcase/p1.jpg", "title": "image one", "description": "hello world this is a description"}, 
-                {"file": "showcase/p2.jpg", "title": "image one", "description": "hello world this is a description"}, 
-                {"file": "showcase/p3.jpg", "title": "image one", "description": "hello world this is a description"}
-              ]
+    ]
   },
   "challenge_and_solution": {
     "challenge": "Long and confusing onboarding",
@@ -61,5 +57,7 @@
     ]
   },
   "key_learnings": "“Iterating with real users was critical to success.”",
-  "future_opportunities": "“Explore multilingual onboarding for international users.”"
+  "future_opportunities":  {
+    "opportunities": [ "“Explore multilingual onboarding for international users.”"]
+  }
 }

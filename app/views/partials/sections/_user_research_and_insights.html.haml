@@ -20,7 +20,6 @@
             .insight-box.box
               %p= insight
 
-  - if data[:gallery].present?
-    = render partial: "components/gallery", locals: { images: data[:gallery], layout: 4, orientation: "left" }
+  = render "components/gallery", gallery: data[:gallery]
 
 

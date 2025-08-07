@@ -4,7 +4,9 @@
   %h2 Design Process
 
   .design-process-grid
-    - project_details[:design_process].each do |step|
+    - project_details[:design_process][:stages].each do |step|
       .process-step
         %h4= step[:stage]
         %p.mt-1= step[:summary]
+
+  = render "components/gallery", gallery: project_details[:design_process][:gallery]

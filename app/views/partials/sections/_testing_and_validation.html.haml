@@ -19,3 +19,5 @@
           - data[:findings].each do |finding|
             .insight-box.box
               %p= finding
+
+  = render "components/gallery", gallery: data[:gallery]
