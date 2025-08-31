@@ -51,7 +51,7 @@ test:
 
 production:
   <<: *default
-  database: your_app_production
+  database: anfinity
   username: postgres
   password: <%= ENV['SUPABASE_DB_PASSWORD'] %>
   host: <%= ENV['SUPABASE_URL'] %>
