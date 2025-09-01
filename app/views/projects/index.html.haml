@@ -9,10 +9,11 @@
   .featured-projects.white.section
     = render partial: "partials/featured_projects_section", locals: { projects: @featured_projects } 
 
-  .all-projects.white.section
-    %h2 All Projects
-    .project-grid
-      = render partial: "components/project_tile", collection: @projects, as: :project
+  - if @projects.any?
+    .all-projects.white.section
+      %h2 All Projects
+      .project-grid
+        = render partial: "components/project_tile", collection: @projects, as: :project
 
   -# Define the steps outside of the loop block
   - design_steps = [['Empathize', 'Understand the users through research and observation.'],
