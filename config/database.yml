@@ -47,3 +47,7 @@ cable:
 
 queue:
   <<: *production
+
+
+cache:
+  <<: *production
