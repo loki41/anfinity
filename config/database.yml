@@ -57,3 +57,7 @@ production:
   host: <%= ENV['DB_HOST'] %>
   port: <%= ENV['DB_PORT'] %>
   prepared_statements: false
+
+
+cable:
+  <<: *production
