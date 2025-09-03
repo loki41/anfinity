@@ -23,6 +23,17 @@
     = stylesheet_link_tag :app, "data-turbo-track": "reload"
     = javascript_include_tag "application", "data-turbo-track": "reload", defer: true
     = javascript_importmap_tags
+
+  - if Rails.env.production?
+    / Google tag (gtag.js)
+    %script{:async => "", :src => "https://www.googletagmanager.com/gtag/js?id=G-8C5LQWY97S"}
+    :javascript
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8C5LQWY97S');
+
   %body{ class: "#{body_class}" }
     = render "partials/navbar"
     .main-content
