@@ -27,6 +27,7 @@
         .nav-profile-dropdown
           %ul
             %li= link_to "Admin Panel", admin_users_path
+            %li= link_to "Project Types", admin_project_types_path
             %li= link_to "Edit Profile", edit_user_registration_path
             %li= button_to "Sign Out", destroy_user_session_path, method: :delete
     - else

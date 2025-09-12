@@ -1,3 +1,6 @@
+= link_to "Back", admin_project_types_path
+
+
 = form_with model: project, url: path, local: true, html: { multipart: true, class: "create-project" }  do |f|
   .field
     = f.label :title
@@ -10,6 +13,14 @@
   .field
     = f.label :description
     = f.text_area :description
+
+  .field
+    = f.label :project_type_id, "Project Type"
+    = f.collection_select :project_type_id, ProjectType.all, :id, :name, prompt: "Select a type"
+
+  .field
+    = f.label :new
+    = f.check_box :new
 
   .field
     = f.label :featured

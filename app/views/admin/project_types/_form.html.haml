@@ -1,0 +1,17 @@
+= link_to "Back", admin_project_types_path
+
+
+= form_with model: [:admin, project_type], local: true, html: { multipart: true, class: "create-project-type" } do |f|
+  - if project_type.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(project_type.errors.count, "error")} prohibited this project type from being saved:"
+      %ul
+        - project_type.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+
+
+  = f.submit "Save Project Type", class: "btn btn--primary btn--medium"

@@ -1,0 +1,23 @@
+.admin_projects_actions
+  %h1 Project Types
+  = render 'components/button', text: "New Project Type", variant: 'primary', url: new_admin_project_type_path
+
+
+.section
+  %table
+    %thead
+      %tr
+        %th Name
+        %th # Projects
+        %th Actions
+    %tbody
+      - @project_types.each do |type|
+        %tr
+          %td= type.name
+          %td= type.projects.count
+          %td
+            .row
+              = render 'components/button', text: "Edit", variant: 'secondary', size: 'small', url: edit_admin_project_type_path(type)
+
+              = render 'components/button', text: "Delete", icon: "trash", icon_position: 'left', variant: 'danger', size: 'small', url: admin_project_type_path(type), html_options: {method: :delete, data: { confirm: 'Are you sure?' }}
+

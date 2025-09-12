@@ -45,7 +45,7 @@ class Admin::ProjectsController < ApplicationController
   end
 
   def project_params
-    params.require(:project).permit(:title, :slug, :description, :hero_image, :json_filename, :featured, :published, :figma_file, :figma_prototype)
+    params.require(:project).permit(:title, :slug, :description, :hero_image, :json_filename, :featured, :published, :figma_file, :figma_prototype, :project_type_id, :new)
   end
 
   def require_admin

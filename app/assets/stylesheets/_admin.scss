@@ -9,7 +9,7 @@
 
 // -------------------- Create project page
 
-.create-project {
+.create-project, .create-project-type {
     padding: 2rem 4rem;
     max-width: 340px;
 
@@ -24,10 +24,11 @@
 
 //------------------------------- fixes
 
-.admin_projects {
+.admin_projects, .admin_project_types {
   margin-top: 80px;
 
   .all-projects {
     background-color: white;
   }
 }
+

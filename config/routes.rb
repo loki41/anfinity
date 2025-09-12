@@ -18,9 +18,11 @@ Rails.application.routes.draw do
   get "/contact", to: "pages#contact"
 
   resources :projects, param: :slug
+  resources :projects, only: [:index, :show]
 
   namespace :admin do
     resources :projects, except: [:show], param: :slug
+    resources :project_types
   end
 
   post '/contact', to: 'contacts#create', as: :contact_submit

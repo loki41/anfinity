@@ -138,13 +138,18 @@
     box-sizing: border-box;
   }
 
+  .project-type {
+    color: $gray-300;
+    font-size: $small;
+  }
+
   .project-title {
     align-self: flex-start;
     font-size: 1.25rem;
     font-weight: 600;
-    margin-top: auto;
     text-transform: none;
     color: white;
+    margin-top: 8px;
   }
 
   // Chips in top-left
@@ -217,3 +222,8 @@
 }
 
 
+//admin tile only
+
+.admin_projects .project-tile-wrapper {
+  min-width: 680px;
+}

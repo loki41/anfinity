@@ -1,6 +1,9 @@
 class Project < ApplicationRecord
   validates :title, :slug, presence: true
+  belongs_to :project_type
   has_one_attached :hero_image
+
+  has_many :views, dependent: :destroy
 
   scope :featured, -> { where(featured: true) }
   scope :not_featured, -> { where(featured: false) }
@@ -10,5 +13,9 @@ class Project < ApplicationRecord
 
   def to_param
     slug.presence || id.to_s
+  end
+
+  def type
+    project_type&.name
   end
 end

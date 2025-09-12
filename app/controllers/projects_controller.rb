@@ -7,6 +7,8 @@ class ProjectsController < ApplicationController
   def show
     @project = Project.find_by!(slug: params[:slug])
 
+    track_project_view unless current_user&.admin?
+
     file_path = Rails.root.join("public", "projects", @project.json_filename)
 
     if File.exist?(file_path)
@@ -16,5 +18,14 @@ class ProjectsController < ApplicationController
       @project_details = {}
       flash.now[:alert] = "JSON file not found"
     end
+  end
+
+  private
+  
+  def track_project_view
+    View.create!(
+      project: @project,
+      viewed_at: Time.current
+    )
   end
 end

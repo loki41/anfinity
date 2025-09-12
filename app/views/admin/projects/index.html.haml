@@ -6,5 +6,19 @@
 
 .section.projects
   .all-projects
-    .project-grid
-      = render partial: "components/project_tile", collection: @projects, as: :project, locals: { admin: true }
+    - @projects.each do |project|
+      .row
+        = render partial: "components/project_tile", locals: { project: project, admin: true }
+        .tile-admin-container
+          %span
+            %p Views
+            .views= project.views.count
+          .row.tile-admin-controls
+            = render 'components/button', text: "View", variant: 'primary', url: project_path(project)
+            = render 'components/button', text: "Edit", variant: 'secondary', url: edit_admin_project_path(project)
+
+            = render 'components/button', text: "Delete", icon: "trash", icon_position: 'left', variant: 'danger', url: admin_project_path(project.slug), html_options: {method: :delete, data: { confirm: 'Are you sure?' }}
+
+
+
+      

@@ -1,5 +1,5 @@
 - image_url = project.hero_image.attached? ? url_for(project.hero_image) : image_path('bg2.jpg')
-- recent = project.created_at >= 30.days.ago
+- recent = project.new?
 - featured = project.featured?
 - figma = project.figma_prototype.length > 0 || project.figma_file.length > 0
 
@@ -18,14 +18,7 @@
           - if figma
             %span= tabler_icon("brand-figma")
 
-      - if defined?(admin) && admin
-        .admin-controls
-          .dropdown
-            = link_to 'View', project_path(project)
-            = link_to 'Edit', edit_admin_project_path(project)
-            = button_to 'Delete', admin_project_path(project.slug), method: :delete, data: { confirm: 'Are you sure?' }
-
-
       .project-overlay
+        .project-type= project.type
         %h3.project-title= project.title
 
