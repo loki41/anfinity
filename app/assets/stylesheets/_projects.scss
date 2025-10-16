@@ -201,20 +201,7 @@
   }
 }
 
-.tool-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
 
-  .tool-chip {
-    background-color: $primary-green-100;
-    color: $gray-800;
-    font-size: $small;
-    padding: 0.4rem 0.75rem;
-    border-radius: $radius-default;
-  }
-}
 
 // --------------------------- design process
 

@@ -1,0 +1,7 @@
+- return unless block['content'].present?
+
+.block.list_block{ class: "#{join_with_spaces(block['classes'])}"}
+    %h4= block['title']
+    %ul
+        - block['content'].each do |item|
+            %li= simple_format(item)

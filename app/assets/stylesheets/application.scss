@@ -6,12 +6,15 @@
 @use "about";
 @use "admin";
 @use "contact";
+@use "dev";
+
 @use "components/tiles";
 @use "components/navbar";
 @use "components/footer";
 @use "components/button";
 @use "components/icon";
 @use "components/gallery";
+@use "components/layout_and_blocks";
 
 body {
     font-family: "Comfortaa", sans-serif;

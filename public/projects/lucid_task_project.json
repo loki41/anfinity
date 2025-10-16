@@ -1,0 +1,290 @@
+{
+  "project_overview": {
+    "classes": ["row", "2-col"],
+    "blocks": [
+      {
+        "type": "text",
+        "title": "Project Overview",
+        "content": "This project represents the work I completed as an interview task for the role of Product Designer at Lucid Partnership LLP — a company that specialises in audio/visual control and management products and software. The task was designed to evaluate my ability to understand user requirements, translate them into structured design flows, and deliver an interface suitable for real-world hardware constraints. Whilst the interview task was scoped to be completed within 7 days, I dedicated a total of 25 working hours to ensure a balance between research, ideation, prototyping, and delivering polished design mockups. The outcome was a unified touch panel interface concept that simplified conference room control and demonstrated adaptability across different user needs.",
+        "classes": ["col-3", "big-block-title"]
+      },
+      {
+        "type": "list",
+        "title": "Meta",
+        "content": [
+          "Timeline: 7 days",
+          "Client: Lucid Partnership LLP",
+          "Interviewer: Head of Frontend Development",
+          "Role: Designer"
+        ],
+        "classes": ["list-style-normal", "green-background", "hpad-2", "vpad-1"]
+      }
+    ]
+  },
+  "statistics": {
+    "classes": ["row"],
+    "blocks": [
+      {
+        "type": "stat",
+        "stat": "7",
+        "title": "Days",
+        "description": "The length of time provided to complete this task",
+        "classes": ["col-2", "green-stat"]
+      },
+      {
+        "type": "stat",
+        "stat": "25",
+        "title": "Hours",
+        "description": "Working hours spent on completing before delivery",
+        "classes": ["col-2", "green-stat"]
+      },
+      {
+        "type": "stat",
+        "stat": "4",
+        "title": "Designs",
+        "description": "Created, some with additional layouts",
+        "classes": ["col-2", "green-stat"]
+      },
+      {
+        "type": "stat",
+        "stat": "2",
+        "title": "Prototypes",
+        "description": "Created, showcasing the various designs",
+        "classes": ["col-2", "green-stat"]
+      }
+    ]
+  },
+
+  "the_challenge": {
+    "title": "The Challenge",
+    "classes": ["row"],
+    "blocks": [
+      {
+        "type": "text",
+        "content": "Modern conference rooms at [Your Favourite Company of Choice] need intuitive controls for lighting, audiovisual (AV), and climate systems. Current solutions are fragmented, forcing users (employees, clients) to juggle multiple remotes or apps, leading to frustration. The task was to design a unified touch panel interface that simplifies these controls for a seamless user experience.",
+        "classes": ["col-1"]
+      }
+    ]
+  },
+
+  "constraints": {
+    "classes": ["row"],
+    "blocks": [
+      {
+        "type": "list",
+        "title": "Constraints",
+        "content": [
+          "Must be designed for the Crestron TS-1070 touch panel (resolution: 1920 x 1200)",
+          "Support two user modes: Quick (presets) and Advanced (manual controls)",
+          "Use accessible touch targets",
+          "Submit via email within 7 days",
+          "Mockups delivered via Figma link or PDF",
+          "Short rationale and optional workflow diagram"
+        ],
+        "classes": ["list-style-normal", "col-2"]
+      },
+      {
+        "type": "list",
+        "title": "Interface Requirements",
+        "content": [
+          "Home Screen: An overview of systems with quick adjustments",
+          "Lighting Control: Manage zones, presets, and brightness levels",
+          "Climate Control: Adjust temperature, fan speed, or presets",
+          "Audio/Video Control: Control display, audio sources, and microphones",
+          "Adaptation to the Crestron TS-1070 and support for both user modes"
+        ],
+        "classes": ["list-style-normal", "col-2"]
+      }
+    ]
+  },
+
+  "design_process": {
+    "title": "Design Process",
+    "classes": ["row"],
+    "blocks": [
+      { "type": "text", "title": "Discover", "content": "Task breakdown using the provided document. Personas generated using Chat-GPT then refined manually.", "classes": ["text-center", "pad-2", "big-block-title" ] },
+      { "type": "text", "title": "Define", "content": "Researched available conference room controls to determine what needed to be included in the interface.", "classes": ["text-center", "pad-2", "big-block-title" ] },
+      { "type": "text", "title": "Ideate", "content": "Mapped journey flows and created information architecture diagrams, followed by hand-drawn wireframes.", "classes": ["text-center", "pad-2", "big-block-title" ] },
+      { "type": "text", "title": "Prototype", "content": "Created multiple variations of Android-inspired navigation layouts based on likely conference room requirements.", "classes": ["text-center", "pad-2", "big-block-title" ] },
+      { "type": "text", "title": "Iterate", "content": "Designed an additional screen for the optional challenge: a tab-less version of the interface.", "classes": ["text-center", "pad-2", "big-block-title" ] }
+    ]
+  },
+
+  "discovery": {
+    "title": "Discovery",
+    "classes": ["row"],
+    "blocks": [
+      {
+        "type": "gallery",
+        "layout": 5,
+        "orientation": "left", 
+        "content": [
+          {"file": "lucid/Personas.png", "title": "User persona's", "description": "Journey flow mapping typical user tasks."},
+          {"file": "lucid/Lights_Journey_Flows.png", "title": "Journey flows - Lights", "description": "Information architecture to structure the interface."}
+        ]
+      }
+    ]
+  },
+
+  "visual_design_approach": {
+    "title": "Visual Design Approach",
+    "classes": ["row"],
+    "blocks": [
+      {
+        "type": "list",
+        "content": [
+            "Designed for clarity and ease of use, ensuring an intuitive experience for conference room users.",
+            "Prioritised quick, one-tap access to essential room functions such as lighting, audio, and climate control.",
+            "Integrated purposeful iconography to enhance state awareness and reinforce user understanding of active or inactive controls.",
+            "Considered potential secondary use cases for the device, including meeting reminders and scheduling integration.",
+            "Explored multiple layout variations to provide flexibility across different room configurations and hardware setups.",
+            "Ensured full customisation and theming capabilities to align with company branding and environment aesthetics."
+        ],
+        "classes": ["list-style-normal", "col-1", "two-col-list"]
+      }
+    ]
+  },
+
+  "visual_design_approach_continued": {
+    "classes": ["column"],
+    "blocks": [
+      {
+        "type": "gallery",
+        "layout": 5,
+        "orientation": "right",
+        "content": [
+          {"file": "lucid/Ideation_5.png", "title": "Lighting Control", "description": "Lighting control with zones and presets."},
+          {"file": "lucid/Meeting_Columns_1.png", "title": "Climate Control", "description": "Temperature and fan settings interface."}
+        ],
+        "classes": ["col-2"]
+      },
+      {
+        "type": "list",
+        "content": [
+          "Overemphasis on meeting reminders and scheduling features, drawing focus away from core room control functionality.",
+          "Background visuals risk being visually distracting, particularly if animated or overly dynamic.",
+          "Fine-tune controls are difficult to locate, reducing discoverability and ease of adjustment.",
+          "Overall layout lacks visual balance, leading to inconsistent hierarchy and spatial rhythm.",
+          "Insufficient state feedback for climate controls, reducing user confidence in adjustments."
+        ],
+        "classes": ["list-style-boxes","red-boxes", "col-1", "two-col-list"]
+      }  
+    ]
+  },
+
+  "final_concept": {
+    "title": "Final Concept",
+    "classes": ["row"],
+    "blocks": [
+      {
+        "type": "text",
+        "content": "In the final concept submitted, I refined the layout to achieve a more balanced and visually stable composition. Placing the room controls along the horizontal axis created greater flexibility for future controls, offering more scalability than a vertically constrained layout. The room details—such as name, date, and time—were given improved prominence and hierarchy, making them easier for users to identify at a glance. Control label height was also increased to enhance readability, addressing earlier feedback that text appeared too small in previous iterations. The meeting scheduling feature was intentionally removed, as it was not part of the original brief; however, space remains available in the central area should this functionality be required in future iterations.<br> <img src='/projects/lucid/Ideation_9.png' class='half-size'>",
+        "classes": ["col-2"]
+      },
+      { "type": "image", 
+        "content": {"file": "lucid/Action_Row_Concept_1_cover.png",
+                    "title": "LXP dashboard example", 
+                    "description": "This is a mock up of how the LXP dashboard could look and operate. With the goal of not ultering much of the primary features and functionality."
+                  },
+        "classes": ["col-2"]
+      }
+    ]
+  },
+
+  "final_concept_continued": {
+    "classes": ["row"],
+    "blocks": [
+      {
+        "type": "gallery",
+        "layout": 5,
+        "orientation": "right",
+        "title": "Settings panel.",
+        "description": "Drawing inspiration from Android’s gesture-based navigation, the swipe-up interaction provides users with seamless access to detailed manual controls for all room systems.",
+        "content": [
+          {"file": "lucid/Action_Row_Concept_3.png", "title": "Settings panel - Lights", "description": "Light controls providing customisation of brightness, light tone and light colour."},
+          {"file": "lucid/Action_Row_Concept_2.png", "title": "Settings panel - Spotlights", "description": "Grainular control over which of the spotlights are on or off."},
+          {"file": "lucid/Action_Row_Concept_4.png", "title": "Settings panel - AC", "description": "Full control over air conditioning features."}
+        ]
+      }
+    ]
+  },
+
+  "additional_challenge_visual_design_approach": {
+    "title": "Additional task - Tabless design",
+    "classes": ["row", "green-background", "pad-2"],
+    "blocks": [
+      {
+        "type": "text",
+        "content": "As part of the interview brief, an optional challenge invited designers to explore alternative navigation methods beyond standard tab-based interfaces. I chose to take on this additional task to challenge myself creatively and address usability concerns identified in the original concept. This led me to experiment with neomorphism for the first time an approach that offered a subtle sense of depth and tactility while maintaining simplicity and visual clarity. The goal was to create a more intuitive, gesture-driven interface that reduced visual clutter and improved state awareness across controls. The following points outline the key visual design considerations and principles applied in this additional concept.",
+        "classes": ["col-2"]
+      },
+      {
+        "type": "list",
+        "content": [
+                "Emphasised clarity and simplicity to ensure intuitive control of conference room systems.",
+                "Applied a clean, minimal visual language to clearly communicate system states and feedback.",
+                "Explored a subtle use of neomorphism to create visual depth and tactile feedback while maintaining accessibility and contrast standards.",
+                "Incorporated large, accessible touch targets to support precision and inclusivity across user types.",
+                "Minimised visual noise by reducing unnecessary imagery and interface clutter.",
+                "Selected a balanced colour palette, avoiding overly bright or saturated tones to reduce eye strain and prevent screen burn-in."
+        ],
+        "classes": ["col-2", "list-style-normal"]
+      }
+    ]
+  },
+
+  "additional_challenge_continued": {
+    "classes": ["row"],
+    "blocks": [
+      { "type": "image", 
+        "content": {"file": "lucid/tabless_concept_screen.png",
+                    "title": "Concept for the Lucid tab-less additional task.", 
+                    "description": "This is a mock up of how the LXP dashboard could look and operate. With the goal of not ultering much of the primary features and functionality."
+                  },
+        "classes": ["col-2"]
+      },
+      {
+        "type": "text",
+        "title": "Tab-less concept",
+        "content": "For the additional task, I explored a new visual direction by incorporating neomorphism for the first time. This approach aimed to create clear visual separation between different groups of room controls while maintaining a cohesive and tactile interface. The use of soft depth and subtle lighting was also a deliberate choice to minimise the risk of screen burn-in on the Crestron TS-1070, ensuring long-term display durability without sacrificing visual appeal. By combining soft shadows, layered surfaces, and lighting cues, the design provides users with an immediate sense of hierarchy and interactivity. Rich graphical representations were introduced to visually distinguish each room feature, while subtle animations and contextual visual feedback communicate active states and transitions in a natural, intuitive way. This combination of visual depth and responsive behaviour helps users understand system status at a glance, without overwhelming the interface.",
+        "classes": ["col-2"]
+      }      
+    ]
+  },
+
+  "final_concept_continued_gallery1": {
+    "classes": ["row"],
+    "blocks": [
+      {
+        "type": "gallery",
+        "layout": 1,
+        "orientation": "right",
+        "content": [
+          {"file": "lucid/Ideation_1.png", "title": "Lo-Fi tab-less mockup", "description": "The early low-fidelity wireframe emphasised contextual details like the room name, date, and time, with limited interactive functionality. Only the air conditioning controls offered multiple adjustments, revealing the need to rebalance focus toward core room interactions."},
+          {"file": "lucid/AC_component.png", "title": "Air Conditioning control widget", "description": "This image illustrates the various states of the air conditioning controls, showcasing how visual feedback reinforces functionality. When active, the AC icon brightens, while the inactive state appears dimmed. Switching between heating and cooling is represented through both an icon change and a shift in the air stream colour, while fan speed adjustments are visually communicated by the expanding size of the air stream element."},
+          {"file": "lucid/lights_and_tv_component.png", "title": "Lighting & Media control widgets", "description": "The lighting and media control widgets follow the same visual feedback pattern, brightening when active and dimming when turned off to provide clear state awareness. Each widget also includes quick-access actions that allow users to seamlessly switch between different modes or presets, enabling fast adjustments without navigating deeper into settings."},
+          {"file": "lucid/Concept_spec_outline.png", "title": "Concept anatomy", "description": "My design handover process focuses on clarity and completeness, ensuring developers have all necessary context to implement designs accurately. This image showcases the first page of the design specification, which outlines key interface elements, visual styles, and interaction behaviours for the selected frame, providing a clear reference for development and QA teams."}
+        ]
+      }
+    ]
+  },
+
+  "what_i_would_do_differently": {
+    "title": "What I Would Do Differently",
+    "classes": ["row"],
+    "blocks": [
+      {
+        "type": "list",
+        "content": [
+            "Conduct more in-depth research, including customer interviews and contextual inquiries, to better understand real user needs.",
+            "Spend additional time interacting with actual conference room systems to gain first-hand insight into existing control pain points.",
+            "Collaborate more closely with peers and stakeholders to align design decisions with technical and business requirements.",
+            "Re-evaluate the tab-less design aesthetic to improve spatial efficiency and content hierarchy.",
+            "Introduce usability testing earlier in the process to validate assumptions and iterate based on user feedback.",
+            "Enhance component robustness to better support dynamic state changes, transitions, and visual feedback animations."
+        ],
+        "classes": ["list-style-boxes", "col-1", "extra-li-padding"]
+      }
+    ]
+  }
+}

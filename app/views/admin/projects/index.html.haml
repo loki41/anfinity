@@ -17,7 +17,7 @@
             = render 'components/button', text: "View", variant: 'primary', url: project_path(project)
             = render 'components/button', text: "Edit", variant: 'secondary', url: edit_admin_project_path(project)
 
-            = render 'components/button', text: "Delete", icon: "trash", icon_position: 'left', variant: 'danger', url: admin_project_path(project.slug), html_options: {method: :delete, data: { confirm: 'Are you sure?' }}
+            = button_to 'Delete', admin_project_path(project), method: :delete, class: "btn btn--danger btn--medium"
 
 
 

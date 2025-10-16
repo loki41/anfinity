@@ -29,9 +29,17 @@
 !/tmp/storage/.keep
 
 /public/assets
+/public/archive
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
 /app/assets/builds/*
 !/app/assets/builds/.keep
+
+
+# Developer testing ground files to ignore
+app/assets/stylesheets/dev.scss
+app/controllers/dev_controller.rb
+app/helpers/dev_helper.rb
+app/views/dev/

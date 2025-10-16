@@ -1,0 +1,77 @@
+-# locals:
+-# images: array of hashes (file, title, description)
+-# layout: integer (1–5)
+-# orientation: "left" or "right" (for layout 1 only)
+
+
+-# LAYOUTS:
+-# 
+-# (1) = Vertically staggered rows of text then image. Each row will alternate the position of the text and image
+-# (2) = One large image in the first position. The rest of the images will be thumbs INCLUDES info text and description area
+-# (3) = Same as previous with NO info area
+-# (4) = Straight row of images all images have equal dimensions.
+-# (5) = All thumbs that display in a grid format.
+
+
+
+- return unless block['content'].present?
+
+- layout = block['layout']
+- images = block['content']
+- orientation = block['orientation']
+
+.block.gallery_block{ class: "#{join_with_spaces(block['classes'])}"}
+
+    - case layout.to_i
+    - when 1
+        - orientation_toggle = (orientation == "right")
+        - images.each do |img|
+            .gallery-row.layout-1{ class: orientation_toggle ? "right" : "left" }
+                - if orientation_toggle
+                    .text
+                        = render "components/blocks/text", block: { "title": img["title"], "content": img["description"] }
+                    .image
+                    = image_tag("/projects/#{img['file']}")
+                - else
+                    .image
+                    = image_tag("/projects/#{img['file']}")
+                    .text
+                        = render "components/blocks/text", block: { "title": img["title"], "content": img["description"] }
+                - orientation_toggle = !orientation_toggle
+
+    - when 2
+        - main = images.first
+        - thumbs = images.drop(1)
+        .gallery-row.layout-2
+            .image-large
+                = image_tag("/projects/#{main['file']}")
+            .info
+                = render "components/blocks/text", block: { "title": main["title"], "content": main["description"] }
+                .thumbnails
+                    - thumbs.each do |thumb|
+                        = image_tag("/projects/#{thumb['file']}")
+
+    - when 3
+        - main = images.first
+        - rest = images.drop(1)
+        .gallery-row.layout-3
+            .image-large
+                = image_tag("/projects/#{main['file']}")
+            .grid-images
+            - rest.each do |thumb|
+                = image_tag("/projects/#{thumb['file']}")
+
+    - when 4
+        .gallery-row.layout-4
+            - images.each do |img|
+                = image_tag("/projects/#{img['file']}")
+
+    
+    - when 5
+        - thumbs = images
+        .gallery-row.layout-5
+            .info
+                = render "components/blocks/text", block: { "title": block["title"], "content": block["description"] }
+            .thumbnails
+                - thumbs.each do |thumb|
+                    = image_tag("/projects/#{thumb['file']}")

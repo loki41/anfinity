@@ -85,9 +85,20 @@
       color: $text-color;
     }
 
-    .row {
+    .status {
+        align-items: center;
         color: $gray-600;
+        display: flex;
         font-size: $label;
+        gap: 1rem;
+
+        .circle {
+            background-color: #27c727;
+            border-radius: 999px;
+            display: block;
+            height: 8px;
+            width: 8px;
+        }
     }
   }
 }
@@ -217,10 +228,3 @@
 }
 
 
-.circle {
-    background-color: #27c727;
-    border-radius: 999px;
-    display: block;
-    height: 8px;
-    width: 8px;
-}

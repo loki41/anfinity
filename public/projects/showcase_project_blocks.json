@@ -1,0 +1,228 @@
+{
+  "project_overview": {
+    "title": "Project Overview",
+    "classes": ["row"],
+    "blocks": [
+      {
+        "type": "text",
+        "content": "The Showcase website plays a pivotal role in Learning Pool's sales pipeline, serving as a platform for exploring both off-the-shelf and bespoke e-learning content. Originally built on top of an LMS instance, the site was constrained by a complex interface, limited customization, and a rigid structure that made content exploration cumbersome for both customers and internal sales teams. This redesign project aimed to reimagine Showcase as a purpose-built, customer-facing site with a simplified content structure, improved navigation, and enhanced visual presentation. By removing the LMS constraints, we could focus on delivering a clean, intuitive user experience designed around real sales workflows and content discovery needs.",
+        "classes": ["col-2"]
+      },
+                
+        { "type": "list", 
+            "title": "Meta", 
+            "content": [
+                "Timeline: 4 months",
+                "People: Customer Success, Content Lead, Product Owner for Showcase",
+                "Role: Lead UX Designer"
+            ], 
+            "classes": ["green-background", "list-style-normal", "hpad-2", "vpad-1"]
+        }
+      
+    ]
+  },
+
+  "tools_and_technology": {
+    "classes": ["row"], 
+    "blocks":  [ { "type": "tags", 
+                  "title": "Tools & Technology", 
+                  "content": [ "Figma", "FigJam", "Miro", "Jira", "Maze", "Lookback.io", "Hotjar", "Forms"]
+                }
+              ]
+  },
+
+
+ "design_process": {
+    "title": "Design Process", 
+    "classes": ["row"], 
+    "blocks":  [ { "type": "text", "title": "Empathize", "content": "Conducted collaborative workshops with the Showcase and Sales teams to identify frustrations and usability issues.", "classes": ["text-center", "pad-2", "big-block-title" ] },
+                 { "type": "text", "title": "Define", "content": "Mapped user pain points around navigation, onboarding complexity, and content discoverability.", "classes": ["text-center", "pad-2", "big-block-title" ]},
+                 { "type": "text", "title": "Ideate", "content": "Created lo-fi sketches and grouped content using a two-level structure of Collections and Lessons.", "classes": ["text-center", "pad-2", "big-block-title" ]},
+                 { "type": "text", "title": "Prototype", "content": "Built grayscale mockups and established a reusable component-based mini design system in Figma.", "classes": ["text-center", "pad-2", "big-block-title" ]},
+                 { "type": "text", "title": "Test", "content": "Conducted two remote usability group sessions using Lookback.io with sales representatives.", "classes": ["text-center", "pad-2", "big-block-title" ]}
+                ]
+  },
+
+  "design_process_continued": {
+    "classes": ["row"],
+    "blocks": [
+        {
+        "type": "gallery",
+        "layout": 1,
+        "orientation": "left",
+        "content": [
+          {
+            "file": "showcase/showcase_planning.png",
+            "title": "Showcase planning workshop",
+            "description": "A look at the final result of the planning workshop done with the Showcase team and a select number of key stakeholders to ensure project alignment."
+          },
+          {
+            "file": "showcase/showcase_planning_flow.png",
+            "title": "Showcase navigation flow",
+            "description": "An example of the navigation flow for the Showcase site. This flow represents the initial design, which evolved through several iterations based on continuous feedback and testing."
+          }
+        ],
+        "classes": ["col-3"]
+      }
+    ]
+  },
+
+  "user_research_and_insights": {
+    "title": "User Research & Insights",
+    "classes": ["row"],
+    "blocks": [
+      {
+        "type": "list",
+        "content": [
+          "Sales teams struggled to onboard users due to automatic content assignment.",
+          "Customers couldn’t browse the full catalog and often needed direct links from sales teams.",
+          "The site lacked a consistent visual identity aligned with Learning Pool’s brand."
+        ],
+        "classes": ["list-style-boxes", "col-1", "extra-li-padding"]
+      }
+    ]
+  },
+
+
+
+ "challenge_and_solution": {
+    "title": "Challenge & Solution", 
+    "classes": ["row"], 
+    "blocks":  [ 
+                { "type": "text", 
+                  "title": "Challenge", 
+                  "content": "The LMS-based Showcase website was confusing to navigate, difficult to administrate, and poorly aligned with the Learning Pool brand. Users often dropped off or became overwhelmed due to automated onboarding and disjointed content discovery.",
+                  "classes": ["col-2"]
+                },
+
+                { "type": "text", 
+                  "title": "Solution", 
+                  "content": "We replaced the LMS with a standalone experience focused on simplicity, branding, and structure. The redesign introduced a two-tier content model (Collections > Lessons), image-led design elements, and a clearer information architecture to help both sales teams and customers engage with content more effectively.",
+                  "classes": ["col-2"]
+                }
+                ]
+  },
+
+  "visual_design_approach": {
+    "title": "Visual Design Approach",
+    "classes": ["row"],
+    "blocks": [
+      {
+        "type": "text",
+        "content": "We aimed for a visually inviting, brand-consistent design that prioritized discoverability and responsiveness. The layout emphasized reducing friction and increasing scannability across devices while maintaining consistency with Learning Pool’s design system.",
+        "classes": ["col-2"]
+      },
+      {
+        "type": "list",
+        "content": [
+          "Image-led content tiles with accessible scrims",
+          "Mobile-first layout with optimized collection views",
+          "Reusable Figma components and mini design system",
+          "Grayscale wireframes evolving into high-fidelity prototypes",
+          "Tag-based filters and clear calls to action (CTAs)"
+        ],
+        "classes": ["list-style-boxes", "col-2"]
+      }
+    ]
+  },
+
+  "visual_design_approach_continued": {
+    "classes": ["row"],
+    "blocks": [
+      {
+        "type": "gallery",
+        "layout": 4,
+        "orientation": "left",
+        "content": [
+          {
+            "file": "showcase/showcase_concept.png",
+            "title": "Showcase main page concept",
+            "description": "An early high-fidelity concept for the Showcase homepage, emphasizing discoverability and clean visual hierarchy."
+          },
+          {
+            "file": "showcase/showcase_libraries.png",
+            "title": "Showcase libraries page concept",
+            "description": "The redesigned libraries view introduced clearer navigation and accessible filtering options for exploring learning content."
+          }
+        ],
+        "classes": ["col-3"]
+      }
+    ]
+  },
+
+  "testing_and_validation": {
+    "title": "Testing & Validation",
+    "classes": ["row"],
+    "blocks": [
+      {
+        "type": "list",
+        "content": [
+          "Users initially struggled with understanding the filter options.",
+          "The tag-only third level of content proved undiscoverable.",
+          "Participants responded positively to the simplified layout and strong brand visuals."
+        ],
+        "classes": ["list-style-boxes", "col-1"]
+      }
+    ]
+  },
+
+  "results_and_impact": {
+    "title": "Results & Impact",
+    "classes": ["row"],
+    "blocks": [
+      {
+        "type": "list",
+        "content": [
+          "Introduced a third content level accessible via navigation rather than tags alone.",
+          "Redesigned filters to be visible and more intuitive.",
+          "Added a new 'libraries' view for enhanced navigation.",
+          "Improved mobile interactions, particularly for collection tiles."
+        ],
+        "classes": ["list-style-check", "col-1"]
+      },
+      {
+        "type": "list",
+        "content": [
+          "15% increase in sales within six months post-launch.",
+          "50% reduction in time required to complete a sale.",
+          "Improved cross-department collaboration with the UX team.",
+          "Internal recognition from C-suite leadership.",
+          "Increased inbound UX support requests from other departments."
+        ],
+        "classes": ["list-style-metrics", "col-1"]
+      }
+    ]
+  },
+
+  "key_learnings": {
+    "title": "Key Learnings",
+    "classes": ["row"],
+    "blocks": [
+      {
+        "type": "list",
+        "content": [
+          "Iterating with real users was critical to the project’s success.",
+          "Cross-department collaboration enhanced visibility and stakeholder buy-in.",
+          "Early usability testing guided key structural and navigational improvements."
+        ],
+        "classes": ["list-style-boxes", "col-1", "extra-li-padding"]
+      }
+    ]
+  },
+
+  "future_opportunities": {
+    "title": "Future Opportunities",
+    "classes": ["row"],
+    "blocks": [
+      {
+        "type": "list",
+        "content": [
+          "Explore multilingual onboarding for international users.",
+          "Introduce curated content lists shareable across teams.",
+          "Implement personalized user accounts based on browsing and engagement patterns."
+        ],
+        "classes": ["list-style-boxes", "col-1", "extra-li-padding"]
+      }
+    ]
+  }
+}

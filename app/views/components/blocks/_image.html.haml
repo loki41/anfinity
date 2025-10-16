@@ -1,0 +1,6 @@
+- return unless block['content'].present?
+
+.block.image_block{ class: "#{join_with_spaces(block['classes'])}"}
+    .image
+        - img = block['content']
+        = image_tag("/projects/#{img['file']}", title: img['title'], alt: img['description'])

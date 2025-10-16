@@ -1,0 +1,8 @@
+- return unless block[:content].present?
+
+.block.tags_block{ class: "#{join_with_spaces(block[:classes])}"}
+    - if block[:title]
+        %h4= block[:title]
+    .tool-chips
+        - block[:content].each do |tool|
+            %span.tool-chip= tool

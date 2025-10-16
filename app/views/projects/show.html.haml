@@ -21,17 +21,14 @@
           = render 'components/button', text: "Prototype", icon: 'player-play', variant: 'tertiary', url: @project.figma_prototype, html_options: {target: '_blank', rel: 'noopener'}
 
 
-
-= render 'partials/sections/overview_and_meta', project_details: @project_details
-= render 'partials/sections/design_process', project_details: @project_details
-= render 'partials/sections/user_research_and_insights', project_details: @project_details
-= render 'partials/sections/challenge_and_solution', project_details: @project_details
-= render 'partials/sections/visual_design_approach', project_details: @project_details
-= render 'partials/sections/testing_and_validation', project_details: @project_details
-= render 'partials/sections/results_and_impact', project_details: @project_details
-= render 'partials/sections/key_learnings', project_details: @project_details
-= render 'partials/sections/future_opportunities', project_details: @project_details
-
+- @project_details.each do |title, content|
+  .section{ class: title }
+    - if content['title']
+      %h2= content['title']
+    
+    .layout{ class: "#{join_with_spaces(content['classes'])}"}
+      - content['blocks'].each do |block|
+        = render "components/blocks/#{block['type']}", block: block
 
 = render 'partials/sections/cta_actions'
 

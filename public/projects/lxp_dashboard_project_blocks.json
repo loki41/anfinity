@@ -1,0 +1,283 @@
+{
+
+  "project_overview": {
+    "classes": ["row", "2-col"], 
+    "blocks":  [ { "type": "text", 
+                  "title": "Project Overview", 
+                  "content": "The LXP Dashboard redesign aimed to address growing concerns from sales and enterprise customers around usability, scalability, and visual design. The existing dashboard was often described as outdated, cramped, and unintuitive. Leading to lost bids and poor learner engagement. Our objective was to overhaul the user experience, focusing on navigation, content prioritization, and user actions, all while operating within the constraints of the existing platform architecture.",
+                  "classes": ["col-3", "big-block-title"]
+                },
+                
+                { "type": "list", 
+                  "title": "Meta", 
+                  "content": [
+                      "Timeline: 6 months",
+                      "People: UX Team, Bids Team, Customer Success, Stakeholders",
+                      "Role: Lead UX Designer"
+                    ], 
+                  "classes": ["green-background", "list-style-normal", "hpad-2", "vpad-1"]
+                }
+              ]
+  },
+
+  "tools_and_technology": {
+    "classes": ["row"], 
+    "blocks":  [ { "type": "tags", 
+                  "title": "Tools & Technology", 
+                  "content": [ "Figma", "FigJam", "Miro", "Jira", "Maze", "3M Eye Tracking", "Amplitude", "Forms"]
+                }
+              ]
+  },
+
+  "design_process": {
+    "title": "Design Process", 
+    "classes": ["row"], 
+    "blocks":  [ { "type": "text", "title": "Empathize", "content": "Conducted deep-dive interviews with Sales, Support, Customer Success, and internal stakeholders to identify core frustrations and business risks.", "classes": ["text-center", "pad-2", "big-block-title" ] },
+                 { "type": "text", "title": "Define", "content": "Mapped out three critical user experience gaps: navigation scalability, content discoverability, and hidden or unclear content actions.", "classes": ["text-center", "pad-2", "big-block-title" ]},
+                 { "type": "text", "title": "Ideate", "content": "Explored design solutions that would remain compatible with the existing API and platform while delivering a more modern and intuitive experience.", "classes": ["text-center", "pad-2", "big-block-title" ]},
+                 { "type": "text", "title": "Prototype", "content": "Developed vertical navigation, redesigned content tiles, and an action-enhanced hover state with dedicated Info and Launch buttons.", "classes": ["text-center", "pad-2", "big-block-title" ]},
+                 { "type": "text", "title": "Test", "content": "Tested design iterations via Figma prototypes and 3M eye-tracking tools to validate performance and usability gains.", "classes": ["text-center", "pad-2", "big-block-title" ]}
+                ]
+  },
+
+  "user_research_and_insights": {
+    "title": "User Research & Insights", 
+    "classes": ["row"], 
+    "blocks":  [ 
+                { "type": "list", 
+                  "title": "Research Methods", 
+                  "content": [
+                      "Stakeholder Interviews",
+                      "Usability Testing",
+                      "3M Eye Tracking",
+                      "Customer Feedback",
+                      "Amplitude Statistics",
+                      "Product Report Analtyics"
+                    ], 
+                  "classes": ["list-style-normal", "col-1"]
+                },
+
+                { "type": "list", 
+                  "title": "Key Insights", 
+                  "content": [
+                      "Introduce contextual app surfacing based on user roles or behavior.",
+                      "Add custom link capability for admins to expand their workflow tools.",
+                      "Allow non-purchased apps to be displayed as upgrade opportunities.",
+                      "Explore usage data from Stream Hub to personalize app access further."
+                    ], 
+                  "classes": ["list-style-boxes", "col-2", "italics", "extra-li-padding"]
+                }
+                ]
+  },
+
+  "user_research_and__insights_continued": {
+      "classes": ["row"], 
+      "blocks": [
+        {
+          "type": "text",
+          "title": "LXP task complete results",
+          "content": "These results show how the tasks completion for identifying and opening the correct content was not successful and very inconsistent. This is just one piece of a much larger test that was conducted on the usability of the LXP. This result stands out the most as identifying and opening content is the simplest and smallest required action on the LXP.",
+          "classes": ["col-2"]
+        },
+
+        { "type": "image", 
+          "content": {"file": "lxp_dashboard/lxp_testing_taskcomplete.png", 
+                      "title": "LXP testing task complete", 
+                      "description": "These results show how the tasks completion for identifying and opening the correct content was not successful and very inconsistent. This is just one piece of a much larger test that was conducted on the usability of the LXP. This result stands out the most as identifying and opening content is the simplest and smallest required action on the LXP."
+                    },
+          "classes": ["col-2"]
+        }
+      ]
+  },
+
+  "challenge_and_solution": {
+    "title": "Challenge & Solution", 
+    "classes": ["row"], 
+    "blocks":  [ 
+                { "type": "text", 
+                  "title": "Challenge", 
+                  "content": "The outdated dashboard UI led to poor content discovery, low engagement, and ultimately lost enterprise bids. Navigation was cramped, content was overwhelming, and core actions were hidden or unclear.",
+                  "classes": ["col-2"]
+                },
+
+                { "type": "text", 
+                  "title": "Solution", 
+                  "content": "We introduced a scalable vertical nav, simplified tile interaction with a hover state for context and action, and implemented configurable theming. These changes maintained compatibility with the existing tech stack while delivering significant UX improvements.",
+                  "classes": ["col-2"]
+                }
+                ]
+  },
+
+  "Visual_design_approach": {
+    "title": "Visual Design Approach", 
+    "classes": ["column", "green-background", "pad-1"], 
+    "subtitle": "Key Design Elements",
+    "text": "The visual strategy focused on clarity, hierarchy, and scalability. The dashboard was redesigned to accommodate future features, improve visual consistency, and enhance content legibility.",
+    "blocks":  [ 
+                { "type": "text", 
+                  "content": "The visual strategy focused on clarity of content, improving navigation and content hierarchy and making the platform scalable to varying customer needs. This required the dashboard to be redesigned keeping in mind future feature improvements and ensuring visual consistency when dealing with customer branding and imagery. \n The following is a list of the major changes made to improve the LXP.",
+                  "classes": ["col-1"]
+                },
+
+                { "type": "list", 
+                  "title": "Key Design Elements",
+                  "content": [
+                      "Scalable vertical navigation with clear labels",
+                      "Simplified tile interactions and hover states",
+                      "Dedicated action buttons for Info and Launch",
+                      "Theming options including light/dark mode and brand color tokens",
+                      "Responsive layout optimized for both web and mobile devices",
+                      "Two distinct styles—one prioritizing absolute accessibility, the other exuding luxury."
+                    ], 
+                  "classes": ["list-style-normal", "col-1", "two-col-list"]
+                }
+                ]
+  },
+
+
+
+  "Visual_design_approach_continued": {
+    "classes": ["row"], 
+    "blocks":  [ 
+                { "type": "image", 
+                  "content": {"file": "lxp_dashboard/lxp_dashboard_cover.png", 
+                              "title": "LXP dashboard example", 
+                              "description": "This is a mock up of how the LXP dashboard could look and operate. With the goal of not ultering much of the primary features and functionality."
+                            },
+                  "classes": ["col-1"]
+                },
+
+                { "type": "gallery", 
+                  "layout": 5,
+                  "orientation": "right",
+                  "content":  [
+                                {"file": "lxp_dashboard/lxp_dashboard_example.png", "title": "LXP dashboard example", "description": "This is a mock up of how the LXP dashboard could look and operate. With the goal of not ultering much of the primary features and functionality."},
+                                {"file": "lxp_dashboard/lxp_theming.png", "title": "LXP theming", "description": "Example of branded versions of the LXP dashboard in both light and dark modes. This showcases how even bright vibrant colours could be used effectively."},
+                                {"file": "lxp_dashboard/lxp_nav_design.png", "title": "LXP navbar example", "description": "One of the first elements in the Learning Pool shared design component system was the unified nav bar. Which was first introduced on the LXP."},
+                                {"file": "lxp_dashboard/lxp_tiles_after.png", "title": "LXP tile after", "description": " "}
+                              ],
+                  "classes": ["col-3"]
+                }
+                ]
+  },
+
+
+
+  "Testing_and_validation": {
+    "title": "Testing & Validation", 
+    "classes": ["row"], 
+    "blocks":  [ 
+                { "type": "list", 
+                  "title": "Testing Methods", 
+                  "content": [
+                      "3M Eye Tracking",
+                      "Figma Prototypes",
+                      "Maze Tests",
+                      "User expectation testing (in person - Moderdated)",
+                      "Customer Feedback (Live Event)"
+                    ], 
+                  "classes": ["list-style-normal", "col-1"]
+                },
+
+                { "type": "list", 
+                  "title": "Key Findings", 
+                  "content": [
+                      "Vertical nav improved discoverability of dashboard sections",
+                      "New tile interactions reduced mis-clicks and task completion time",
+                      "Participants preferred action buttons on hover over previous sidebar interaction",
+                      "Customers at Learning Pool Live responded positively to the updated design and requested early rollout"
+                    ], 
+                  "classes": ["list-style-boxes", "col-2", "italics", "extra-li-padding"]
+                }
+                ]
+  },
+
+
+  "Testing_and_validation_continued": {
+    "classes": ["row"], 
+    "blocks":  [ 
+                { "type": "gallery", 
+                  "layout": 4,
+                  "orientation": "right",
+                  "content":  [
+                                {"file": "lxp_dashboard/lxp_3m_testing_1.png", "title": "LXP 3M testing dashboard", "description": "Dashboard testing using 3M eye tracking focus."},
+                                {"file": "lxp_dashboard/lxp_3m_testing_2.png", "title": "LXP 3M testing flow", "description": "Dashboard testing using 3M eye flow."},
+                                {"file": "lxp_dashboard/lxp_3m_testing_3.png", "title": "LXP 3M tiles", "description": "Tile testing using 3M."}
+                              ]
+                }
+                ]
+  },
+
+  "results_and_impact": {
+    "title": "Results and Impact", 
+    "classes": ["row"], 
+    "blocks":  [ 
+                { "type": "list", 
+                  "title": "Changes made",
+                  "content": [
+                      "Adopted vertical navigation to support expansion",
+                      "Replaced confusing tile layout with simplified, informative hover states",
+                      "Enhanced accessibility with inclusive font and WCAG 3-compliant contrast",
+                      "Introduced customizable theming for enterprise branding"
+                    ], 
+                  "classes": ["green-background", "list-style-normal", "col-2", "hpad-2"]
+                },
+
+                { "type": "list", 
+                  "title": "Outcomes", 
+                  "content": [
+                      "Marked reduction in support tickets related to content actions",
+                      "Improved internal confidence during customer demos and sales bids",
+                      "UX team praised for cross-product design system efforts",
+                      "Early reports from Sales indicated improved customer sentiment"
+                    ], 
+                  "classes": ["green-background", "list-style-normal", "col-2", "hpad-2"]
+                }
+                ]
+  },
+
+  "results_and_impact_continued": {
+    "classes": ["row"], 
+    "blocks":  [ 
+                { "type": "gallery", 
+                  "layout": 4,
+                  "orientation": "right",
+                  "content":  [
+                                {"file": "lxp_dashboard/lxp_testing_taskcomplete_after.png", "title": "LXP 3M testing dashboard", "description": "Dashboard testing using 3M eye tracking focus."},
+                                {"file": "lxp_dashboard/lxp_testing_confidence_after.png", "title": "LXP 3M testing flow", "description": "Dashboard testing using 3M eye flow."}
+                              ]
+                }
+                ]
+  },
+
+  "key_learnings": {
+    "title": "Key Learnings", 
+    "classes": ["row"], 
+    "blocks":  [ 
+                { "type": "list", 
+                  "content": [
+                      "Conversations with Sales and Support revealed blind spots in our initial assumptions.",
+                      "Accessibility and theming were not just nice-to-haves—they were deal breakers for enterprise clients.",
+                      "Testing even within technical constraints leads to measurable UX gains."
+                    ], 
+                  "classes": ["list-style-boxes", "col-1", "extra-li-padding"]
+                }
+                ]
+  },
+
+  "future_opportunities": {
+    "title": "Future Opportunities", 
+    "classes": ["row"], 
+    "blocks":  [ 
+                { "type": "list", 
+                  "content": [
+                      "<span class='arrow'>→</span> Expand vertical nav patterns across other products for a unified design system.",
+                      "<span class='arrow'>→</span> Continue improving tile performance and transitions based on user feedback.",
+                      "<span class='arrow'>→</span> Evaluate the new dashboard against usage KPIs to inform next phase of improvements.",
+                      "<span class='arrow'>→</span> Introduce more powerful personalization tools for learners within the LXP."
+                    ], 
+                  "classes": ["list-style-boxes", "col-1", "extra-li-padding"]
+                }
+                ]
+  }
+}

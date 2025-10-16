@@ -68,15 +68,28 @@ input[type="checkbox"] {
 //-------------------------------- flex layouts
 
 .row {
-    align-items: center;
-    display: flex;
-    gap: 8px;
+    display: grid;
+    border-radius: $radius-default;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 .column {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 1rem;
+}
+
+.green-background {
+  background-color: $primary-green-50;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.italics {
+  font-style: italic;
 }
 
 
@@ -168,4 +181,10 @@ table {
       background-color: $gray-100; 
     }
   }
+}
+
+
+//------------------------------- Random block images
+.half-size {
+  width: 50%;
 }

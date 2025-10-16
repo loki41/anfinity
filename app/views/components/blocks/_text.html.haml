@@ -1,0 +1,6 @@
+- return unless block[:content].present?
+
+.block.text_block{ class: "#{join_with_spaces(block[:classes])}"}
+    - if block[:title]
+        %h4= block[:title]
+    = simple_format(block[:content])

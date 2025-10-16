@@ -1,0 +1,11 @@
+- return unless block[:stat].present?
+
+.block.stat_block{ class: "#{join_with_spaces(block[:classes])}"}
+    - if block[:icon].present?
+        = tabler_icon(block[:icon])
+    .stat-container
+        %h3= block[:stat]
+        - if block[:title]
+            .label= block[:title]
+        - if block[:description]
+            %p= block[:description]

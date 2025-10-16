@@ -1,12 +1,11 @@
 .gallery-row {
   display: flex;
   flex-wrap: wrap;
-  margin: 2rem 0;
-  gap: 1rem;
 
-  &.layout-1,
+
   &.layout-2,
-  &.layout-3 {
+  &.layout-3,
+  &.layout-5 {
     align-items: flex-end;
   }
 
@@ -21,16 +20,16 @@
     flex: 1;
   }
 
-  .image img,
-  .image-large img {
+  img {
     max-width: 680px;
     border-radius: 4px;
   }
 
-  .text,
-  .info {
-    padding: 1rem;
-  }
+  // -------------------- Removing this for the new gallery block
+  // .text,
+  // .info {
+  //   padding: 1rem;
+  // }
 
   h3 {
     width: fit-content;
@@ -43,8 +42,9 @@
   .thumbnails {
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
+    // grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 100%;
 
     img {
       height: auto;
@@ -63,6 +63,32 @@
       width: 100%;
       height: auto;
     }
+  }
+
+  &.layout-1 {
+    &.left .image, &.right .image {
+      flex: none;
+    }
+
+    &.right .text {
+      margin-right: 2rem;
+    }
+
+    &.left .text {
+      margin-left: 2rem;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    p {
+      width: 80%;
+    }
+  }
+
+  &.layout-2 {
+    gap: 2rem;
   }
 
   &.layout-3 {

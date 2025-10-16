@@ -1,0 +1,273 @@
+{
+  "project_overview": {
+    "classes": ["row", "2-col"],
+    "blocks": [
+      {
+        "type": "text",
+        "title": "Project Overview",
+        "content": "The App Switcher project was initiated to provide a seamless, centralized way for users to move between Learning Pool's suite of applications. With 15+ apps in the ecosystem, each requiring separate logins and no native navigation between them, users faced unnecessary friction. This project introduced an app switcher component integrated across platforms, backed by a shared design system and single sign-on functionality to deliver a unified, user-first experience.",
+        "classes": ["col-3", "big-block-title"]
+      },
+      {
+        "type": "list",
+        "title": "Meta",
+        "content": [
+          "Timeline: 5 months (initial release)",
+          "People: UX Team, Marketing, Engineering, Stakeholders",
+          "Role: Lead UX Designer"
+        ],
+        "classes": ["green-background", "list-style-normal", "hpad-2", "vpad-1"]
+      }
+    ]
+  },
+
+  "tools_and_technology": {
+    "classes": ["row"],
+    "blocks": [
+      {
+        "type": "tags",
+        "title": "Tools & Technology",
+        "content": ["Figma", "Rails", "3M Eye Tracking", "BrowserStack", "Internal CMS"]
+      }
+    ]
+  },
+
+  "design_process": {
+    "title": "Design Process",
+    "classes": ["row"],
+    "blocks": [
+      {
+        "type": "text",
+        "title": "Empathize",
+        "content": "Collaborated with internal stakeholders and customers to understand multi-app usage pain points and login frustration.",
+        "classes": ["text-center", "pad-2", "big-block-title"]
+      },
+      {
+        "type": "text",
+        "title": "Define",
+        "content": "Mapped access issues, user roles, and scaling challenges across customers with varying permission sets and app access.",
+        "classes": ["text-center", "pad-2", "big-block-title"]
+      },
+      {
+        "type": "text",
+        "title": "Ideate",
+        "content": "Designed an MVP experience focusing on visibility, brand-agnostic identity, and internal-only SSO testing with a phased rollout plan.",
+        "classes": ["text-center", "pad-2", "big-block-title"]
+      },
+      {
+        "type": "text",
+        "title": "Prototype",
+        "content": "Developed grayscale wireframes evolving into high-fidelity mockups, including future-state responsive UI and logo concepts.",
+        "classes": ["text-center", "pad-2", "big-block-title"]
+      },
+      {
+        "type": "text",
+        "title": "Test",
+        "content": "Conducted internal usability testing, Marketing reviews, and external feedback sessions including Learning Pool Live attendees.",
+        "classes": ["text-center", "pad-2", "big-block-title"]
+      }
+    ]
+  },
+
+  "planning_and_extras": {
+    "classes": "row",
+    "blocks": [
+      {
+        "type": "gallery",
+        "layout": 2,
+        "orientation": "left",
+        "content": [
+          {"file": "app_switcher/app_switcher_brand_refresh_planning.png", "title": "App switcher refresh planning phase", "description": "This is a look at just one of the boards used during the refresh planning phase. Each section on the board was a small session during which we spent time understanding the application in question to better design logos for each. The images below showcase the initial pitch for the app switcher with the in-flight logos being used at the time."},
+          {"file": "app_switcher/app_switcher_original_concept.png", "title": "App switcher original concept pitch", "description": ""},
+          {"file": "app_switcher/app_switcher_initial_dev_version.png", "title": "The app switcher that was developed initially", "description": ""}
+        ],
+        "classes": ["col-1"]
+      }
+    ]
+  },
+
+  "user_research_and_insights": {
+    "title": "User Research & Insights",
+    "classes": ["row"],
+    "blocks": [
+      {
+        "type": "list",
+        "title": "Research Methods",
+        "content": ["Workshops", "Stakeholder Interviews", "Internal & External Feedback", "Event Observations"],
+        "classes": ["list-style-normal", "col-1"]
+      },
+      {
+        "type": "list",
+        "title": "Key Insights",
+        "content": [
+          "Many users were manually bookmarking and logging into each application daily, revealing friction in accessing the ecosystem.",
+          "Users experienced confusion when app icons lacked distinctive branding or relied solely on colour differentiation.",
+          "The small coloured dots on each product icon were often mistaken for notification indicators, leading to further misunderstanding.",
+          "Administrators, rather than learners, were the primary users of the app switcher - shaping a more persona-focused design approach.",
+          "Marketing's rebrand guidelines significantly influenced icon recognisability and accessibility, underscoring the need for closer cross-team collaboration."
+        ],
+        "classes": ["list-style-boxes", "col-2", "italics", "extra-li-padding"]
+      }
+    ]
+  },
+
+  "challenge_and_solution": {
+    "title": "Challenge & Solution",
+    "classes": ["row"],
+    "blocks": [
+      {
+        "type": "text",
+        "title": "Challenge",
+        "content": "With no central place for users to view or access their applications—and rebranding constraints removing names and icons—users struggled to navigate the ecosystem effectively.",
+        "classes": ["col-2"]
+      },
+      {
+        "type": "text",
+        "title": "Solution",
+        "content": "We built an SSO-powered app switcher embedded across apps, featuring scalable UI and accessible iconography. A compromise between Product and Marketing allowed icon/name usage in product UX while preserving brand intent.",
+        "classes": ["col-2"]
+      }
+    ]
+  },
+
+  "visual_design_approach": {
+    "title": "Visual Design Approach",
+    "classes": ["column", "green-background", "pad-1"],
+    "blocks": [
+      {
+        "type": "text",
+        "content": "The UI design evolved through multiple stages—from grayscale popovers to branded, responsive components. A balance was struck between brand minimalism and product usability.",
+        "classes": ["col-1"]
+      },
+      {
+        "type": "list",
+        "title": "Key Design Elements",
+        "content": [
+          "Popover UI with app grouping by function",
+          "Accessible, color-independent visual identifiers",
+          "Stream Suite naming and labeling conventions",
+          "Mobile-first responsive implementation",
+          "Logo concept exploration with cross-team workshops"
+        ],
+        "classes": ["list-style-normal", "col-1", "two-col-list"]
+      }
+    ]
+  },
+
+  "testing_and_validation": {
+    "title": "Testing & Validation",
+    "classes": ["row"],
+    "blocks": [
+      {
+        "type": "list",
+        "title": "Testing Methods",
+        "content": ["Internal Alpha Testing", "Customer Beta Feedback", "Event-based Observations", "Icon Learnability Mockups"],
+        "classes": ["list-style-normal", "col-1"]
+      },
+      {
+        "type": "list",
+        "title": "Key Findings",
+        "content": [
+          "Popover needed to scale visually for customers with many apps.",
+          "Customers misinterpreted color dots on icons as notifications.",
+          "Users preferred named labels and app grouping despite branding restrictions.",
+          "Workshop-driven icon exploration resulted in higher recognition rates."
+        ],
+        "classes": ["list-style-boxes", "col-2", "italics", "extra-li-padding"]
+      }
+    ]
+  },
+
+  "results_and_impact": {
+    "title": "Results & Impact",
+    "classes": ["row"],
+    "blocks": [
+      {
+        "type": "list",
+        "title": "Changes Made",
+        "content": [
+          "Implemented SSO across selected apps with app switcher integration",
+          "Introduced branded-but-accessible icons and labels post-marketing collaboration",
+          "Designed a shared dialog component used both inline and within the vertical nav",
+          "Created space within Stream Hub for app switcher management"
+        ],
+        "classes": ["green-background", "list-style-normal", "col-2", "pad-2"]
+      },
+      {
+        "type": "list",
+        "title": "Outcomes",
+        "content": [
+          "Positive user sentiment from customers and internal users",
+          "Improved login workflows and reduced support requests",
+          "Streamlined app discovery, especially for admins",
+          "Enabled feature scalability through the shared design system"
+        ],
+        "classes": ["green-background", "list-style-normal", "col-2", "pad-2"]
+      }
+    ]
+  },
+
+  "changes_made_continued": {
+    "classes": ["row"],
+    "blocks": [
+      {
+        "type": "gallery",
+        "layout": 1,
+        "orientation": "left",
+        "content": [
+          {"file": "app_switcher/app_switcher_rosette_testing.png", "title": "App switcher and the rosette", "description": "During the refresh, the decision was made to remove individual product branding and consolidate under a single name: the 'Learning Suite.' This included introducing a new suite-wide logo. However, this logo is now used across all applications and does not perform well—particularly when tested for colour-blind accessibility."}
+        ],
+        "classes": ["col-3"]
+      }
+    ]
+  },
+
+  "key_learnings": {
+    "title": "Key Learnings",
+    "classes": ["row"],
+    "blocks": [
+      {
+        "type": "list",
+        "content": [
+          "User access to multiple products is highly fragmented without shared UX conventions.",
+          "Branding decisions need to be tested for accessibility and usability.",
+          "Customer feedback—even from small interactions—can uncover major UX wins.",
+          "Design systems help ensure long-term consistency across evolving platforms."
+        ],
+        "classes": ["list-style-boxes", "col-1", "extra-li-padding"]
+      }
+    ]
+  },
+
+  "future_opportunities": {
+    "title": "Future Opportunities",
+    "classes": ["row"],
+    "blocks": [
+      {
+        "type": "list",
+        "content": [
+          "Introduce contextual app surfacing based on user roles or behavior.",
+          "Add custom link capability for admins to expand their workflow tools.",
+          "Allow non-purchased apps to be displayed as upgrade opportunities.",
+          "Explore usage data from Stream Hub to personalize app access further."
+        ],
+        "classes": ["list-style-boxes", "col-1", "extra-li-padding"]
+      }      
+    ]
+  },
+
+  "future_opportunities_continued": {
+    "classes": ["row"],
+    "blocks": [
+      {
+        "type": "gallery",
+        "layout": 1,
+        "orientation": "left",
+        "content": [
+          {"file": "app_switcher/app_switcher_future version.png", "title": "App switcher's final form", "description": "The app switcher was developed in conjunction with the shared design system components, serving as the central hub that connects all products within the Learning Suite. This central position makes it an ideal location to provide customers with quick access to both internal and external resources. The updated design represents the next evolution of the app switcher, enhancing its role as a gateway to the entire suite."}
+        ],
+        "classes": ["col-3"]
+      }
+    ]
+  }
+}
