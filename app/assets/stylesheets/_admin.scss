@@ -11,13 +11,27 @@
 
 .create-project, .create-project-type {
     padding: 2rem 4rem;
-    max-width: 340px;
 
     .field {
         display: flex;
         flex-direction: column;
         gap: 8px;
         margin: 16px 0px;
+        max-width: 340px;
+    }
+
+    .field-gallery {
+      max-width: 1200px;
+
+      .cover-option img{
+        cursor: pointer;
+        height: auto; 
+        width: 100px; 
+      }
+
+      input[type="radio"] {
+        margin: 0;
+      }
     }
 }
 

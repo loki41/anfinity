@@ -264,7 +264,7 @@
         "layout": 1,
         "orientation": "left",
         "content": [
-          {"file": "app_switcher/app_switcher_future version.png", "title": "App switcher's final form", "description": "The app switcher was developed in conjunction with the shared design system components, serving as the central hub that connects all products within the Learning Suite. This central position makes it an ideal location to provide customers with quick access to both internal and external resources. The updated design represents the next evolution of the app switcher, enhancing its role as a gateway to the entire suite."}
+          {"file": "app_switcher/app_switcher_future_version_cover.png", "title": "App switcher's final form", "description": "The app switcher was developed in conjunction with the shared design system components, serving as the central hub that connects all products within the Learning Suite. This central position makes it an ideal location to provide customers with quick access to both internal and external resources. The updated design represents the next evolution of the app switcher, enhancing its role as a gateway to the entire suite."}
         ],
         "classes": ["col-3"]
       }

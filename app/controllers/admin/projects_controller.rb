@@ -2,6 +2,7 @@ class Admin::ProjectsController < ApplicationController
   before_action :set_project, only: [:edit, :update, :destroy]
 
   helper_method :available_json_files
+  helper_method :available_cover_images
 
   def index
     @projects = Project.all
@@ -59,6 +60,14 @@ class Admin::ProjectsController < ApplicationController
   def available_json_files
     Dir.glob(Rails.root.join("public", "projects", "*.json")).map do |path|
       File.basename(path)
+    end
+  end
+
+  def available_cover_images
+    Dir.glob(Rails.root.join('public', '**', '*_cover.{png,jpg,jpeg,gif,webp}'), File::FNM_CASEFOLD)
+     .map do |path|
+       # Convert absolute file system path to a public URL
+       path.sub(Rails.root.join('public').to_s, '')
     end
   end
 end

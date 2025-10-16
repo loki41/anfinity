@@ -1,6 +1,6 @@
 
 
-- image_url = @project.hero_image.attached? ? url_for(@project.hero_image) : image_path('bg2.jpg')
+- image_url = @project.hero_image ? url_for(@project.hero_image) : image_path('bg2.jpg')
 
 .section-hero-portfolio{ style: "background-image: url(#{image_url});" }
   .hero-overlay

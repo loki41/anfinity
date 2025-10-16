@@ -1,4 +1,4 @@
-- image_url = project.hero_image.attached? ? url_for(project.hero_image) : image_path('bg2.jpg')
+- image_url = project.hero_image ? url_for(project.hero_image) : image_path('bg2.jpg')
 - recent = project.new?
 - featured = project.featured?
 - figma = project.figma_prototype.length > 0 || project.figma_file.length > 0

@@ -38,9 +38,19 @@
     = f.label :figma_prototype, "Figma Prototype URL"
     = f.text_field :figma_prototype
 
-  .field
-    = f.label :hero_image
-    = f.file_field :hero_image
+  -# .field
+  -#   = f.label :hero_image
+  -#   = f.file_field :hero_image
+
+  .field.field-gallery
+    %label Hero Image
+    .cover-image-picker.row
+      - available_cover_images.each do |image|
+        .cover-option.column
+          %label{ for: image.parameterize }
+            = f.radio_button :hero_image, image, id: image.parameterize, checked: (image == f.object.hero_image)
+            = image.split('/').third
+          %img{ src: image, alt: File.basename(image), style: "width: 100px; height: auto; cursor: pointer;" }
 
   .field
     = f.label :json_filename
