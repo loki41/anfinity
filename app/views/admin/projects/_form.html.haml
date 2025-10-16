@@ -44,7 +44,7 @@
 
   .field
     = f.label :json_filename
-    = f.select :json_filename, options_for_select(available_json_files), prompt: "Choose a JSON file"
+    = f.select :json_filename, options_for_select(available_json_files, f.object.json_filename), prompt: "Choose a JSON file"
 
 
 
