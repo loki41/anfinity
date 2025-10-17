@@ -95,6 +95,11 @@
     display: flex;
     justify-content: center;
     gap: 1rem;
+
+    @media (max-width: $breakpoint-mobile) {
+      align-items: center;
+      flex-direction: column;
+    }
   }
 
   .button.primary {
@@ -159,6 +164,11 @@
 
   .project-title {
     justify-content: space-between;
+
+    .cta-buttons {
+      align-items: center;
+      justify-items: end;
+    }
   }
 
   .projects-hero-text {

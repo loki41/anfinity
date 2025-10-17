@@ -1,16 +1,16 @@
 / Hero Section
 .hero
   .overlay
-  .hero__content
-    .hero__text
-      %h1.hero__heading 
+  .hero-content
+    .hero-text
+      %h1.hero-heading 
         anthony 
         %span.green 
           mclaughlin
-      %p.hero__subheading Designer & Developer based in Derry
+      %p.hero-subheading Designer & Developer based in Derry
 
-    %img.hero__logo
-      = image_tag 'logo-primary.png', alt: 'anfinity logo', class: "hero__logo"
+    %img.hero-logo
+      = image_tag 'logo-primary.png', alt: 'anfinity logo', class: "hero-logo"
 
 / About Section
 .section-about
@@ -38,10 +38,10 @@
 
   .container
     .featured-cta.row.box
-      .featured-cta__text
+      .cta-text
         %h5 Want to see more work?
         %p View all projects in my portfolio
-      .featured-cta__button
+      .cta-button
         = render 'components/button', text: 'View Portoflio', variant: 'primary', size: 'large', url: portfolio_path
 
 

@@ -154,12 +154,17 @@
 
   // Chips in top-left
   .project-chips {
+    gap: unset;
     position: absolute;
     top: 1rem;
     left: 1rem;
     z-index: 2;
     justify-content: space-between;
     width: 95%;
+
+    @media (max-width: $breakpoint-desktop) {
+      width: 92%;
+    }
 
     .chip {
       background-color: $primary-green-500;
@@ -179,8 +184,13 @@
       }
     }
 
+    .left {
+      width: fit-content;
+    }
+
     .right {
       justify-self: flex-end;
+      width: fit-content;
     }
 
     svg {
